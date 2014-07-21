@@ -1,0 +1,12 @@
+%button {
+  @include button(simple, $base-accent-color);
+  -webkit-font-smoothing: antialiased;
+  font-size: $base-font-size;
+  font-weight: bold;
+  line-height: 1em;
+  background-image: none!important;
+  border: 0;
+  box-shadow: none;
+  text-shadow: none;
+    height: 40px;
+}

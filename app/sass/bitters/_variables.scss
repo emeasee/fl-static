@@ -1,0 +1,50 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: "proxima-nova";
+$serif: $georgia;
+$fawesome: "FontAwesome";
+$flfont: "FlIconFont";
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$gray : #D3D2D1;
+$gray-light : #F7F6F5;
+$dark-blue : #4A4A4A;
+$dark-brown : #4A4A4A;
+$mid-brown : #645A4F;
+$orange : #DB8A28;
+$blue : #48C4D5;
+$white : #fff;
+$black : #000;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Body Color
+$base-body-color: $gray-light;
+
+//  Font Colors
+$base-font-color: $dark-brown;
+$base-accent-color: $orange;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Border color
+$base-border-color: $gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
