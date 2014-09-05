@@ -16,7 +16,7 @@ module.exports = function (grunt) {
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('load-grunt-tasks')(grunt);
     // configurable paths
     var yeomanConfig = {
         app: 'app',
@@ -35,9 +35,9 @@ module.exports = function (grunt) {
                 files: ['test/spec/{,*/}*.coffee'],
                 tasks: ['coffee:test']
             },
-            styles: {
-                files: ['<%= yeoman.app %>/sass/{,*/}*.scss'],
-                tasks: ['sass']
+            compass: {
+              files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
+                tasks: ['compass:server']
             },
             livereload: {
                 options: {
@@ -49,61 +49,19 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
-            },
+            }
         },
         autoshot: {
-            default_options: {
-              options: {
-                // necessary config
-                path: 'screenshots/',
-                filename: '',
-                type: 'PNG',
-                // optional config, must set either remote or local
-                remote: 'http://localhost:<%= connect.options.port %>',
-                viewport: ['320x480','480x320','384x640','640x384','602x963','963x602','600x960','960x600','800x1280','1280x800','768x1024','1024x768']
-              },
-            },
-          },
-        sass: {
             dist: {
-              files: [{
-                expand: true,
-                cwd: '<%= yeoman.app %>/sass',
-                src: ['*.scss'],
-                dest: '<%= yeoman.app %>/styles',
-                ext: '.css'
-              }],
-
-              options: {
-                loadPath: [
-                  '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets',
-                  '<%= yeoman.app %>/bower_components/neat/app/assets/stylesheets',
-                  '<%= yeoman.app %>/bower_components/bitters/app/assets/stylesheets'
-                ]
-              }
-            }
-          },
-        responsive_images: {
-            dev: {
                 options: {
-                    sizes: [
-                        {
-                            width: 320,
-                        },
-                        {
-                            width: 640
-                        },
-                        {
-                            width: 1024
-                        }
-                    ]
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
+                    path: '/screenshots/',
+                    remote : {
+                        files: [
+                            { src: 'http://localhost:<%= connect.options.port %>', dest: 'app.jpg'}
+                        ]
+                    },
+                    viewport: ['320x480','480x320','384x640','640x384','602x963','963x602','600x960','960x600','800x1280','1280x800','768x1024','1024x768']
+                }
             }
         },
         connect: {
@@ -162,15 +120,37 @@ module.exports = function (grunt) {
             },
             server: '.tmp'
         },
+        browser_sync: {
+            dev: {
+                bsFiles: {
+                    src : '<%= yeoman.app %>/styles/style.css'
+                },
+                options: {
+                    watchTask: false,
+                    debugInfo: true,
+                    // Change to 0.0.0.0 to access externally
+                    host: 'http://localhost:<%= connect.options.port %>',
+                    server: {
+                        baseDir: '<%= yeoman.app %>'
+                    },
+                    ghostMode: {
+                        clicks: true,
+                        scroll: true,
+                        links: true,
+                        forms: true
+                    }
+                }
+            }
+        },
         jshint: {
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
             },
             all: [
-                //'Gruntfile.js',
-                //'<%= yeoman.app %>/scripts/{,*/}*.js',
-                //'!<%= yeoman.app %>/scripts/vendor/*',
-                //'test/spec/{,*/}*.js'
+                '<%= yeoman.app %>/scripts/{,*/}*.js',
+                '!<%= yeoman.app %>/scripts/vendor/*',
+                'test/spec/{,*/}*.js'
             ]
         },
         mocha: {
@@ -225,14 +205,6 @@ module.exports = function (grunt) {
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
-            docs: {
-              dest: 'dist/docs'
-            }
-        },*/
-        // not enabled since usemin task does concat and uglify
-        // check index.html to edit your build targets
-        // enable this task if you prefer defining your build targets here
-        /*uglify: {
             dist: {}
         },*/
         rev: {
@@ -408,6 +380,11 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('server', function (target) {
+      grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+        grunt.task.run(['serve:' + target]);
+      });
+
+    grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
         }
@@ -432,7 +409,6 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'sass',
         'concat',
         'uglify',
         'cssmin',
