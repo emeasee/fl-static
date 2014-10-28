@@ -409,9 +409,9 @@ HERO BANNER TOP
 
         .hero-invite{
           max-width: 500px;
-          width: 100%;
+          width: 100%!important;
           margin: 0 auto!important;
-          float: none;
+          float: none!important;
           border-radius: 8px;
           box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
           background: #F7F6F5;
