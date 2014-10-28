@@ -406,6 +406,37 @@ HERO BANNER TOP
             @include transform(rotateY(-180deg));
           }
         }
+
+        .hero-invite{
+          max-width: 500px;
+          margin: 0 auto;
+          
+          .hero-copy {
+              text-align: center;
+              margin: 0 auto;
+              max-width: 85%;
+
+              h1 {
+                  font-size: 1.2em;
+                  margin-bottom: .2em;
+
+                  @include media($large-screen) {
+                      font-size: 2.2em;
+                  }
+              }
+
+              p {
+                  margin: auto;
+                  margin-bottom: 0.5em;
+                  //font-weight: 200;
+
+                  @include media($large-screen) {
+                      font-size: 1.4em;
+                      font-style: italic;
+                  }
+              }
+          }
+        }
     }
 
     &.loggedin{
@@ -429,6 +460,7 @@ MAIN CONTENT GENERAL
   background:white;
   overflow:	hidden;
   position: relative;
+  width: 100%;
 
   button.call{
     font-size: 1.5em;

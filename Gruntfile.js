@@ -27,41 +27,24 @@ module.exports = function (grunt) {
         yeoman: yeomanConfig,
         // TODO: Make this conditional
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
+            scripts: {
+            files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
+                tasks: ['sass']
             },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
-            compass: {
-              files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
-            },
+            styles: {
+            files: ['<%= yeoman.app %>/styles/{,*/}*.{css}'],
+                tasks: ['copy:styles']
+              },
             livereload: {
                 options: {
                     livereload: LIVERELOAD_PORT
                 },
                 files: [
                     '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
+                    '.tmp/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
-            }
-        },
-        autoshot: {
-            dist: {
-                options: {
-                    path: '/screenshots/',
-                    remote : {
-                        files: [
-                            { src: 'http://localhost:<%= connect.options.port %>', dest: 'app.jpg'}
-                        ]
-                    },
-                    viewport: ['320x480','480x320','384x640','640x384','602x963','963x602','600x960','960x600','800x1280','1280x800','768x1024','1024x768']
-                }
             }
         },
         connect: {
@@ -181,26 +164,26 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        compass: {
+        sass: {
+          dist: {
+            files: [{
+              expand: true,
+              cwd: '<%= yeoman.app %>/sass',
+              src: ['*.scss'],
+              dest: '.tmp/styles',
+              ext: '.css'
+            }],
+
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/bower_components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
-                relativeAssets: false
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
+              loadPath: [
+                '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets',
+                '<%= yeoman.app %>/bower_components/neat/app/assets/stylesheets'
+              ]
             }
+          },
+          server: {
+            debugInfo: true
+          }
         },
         // not used since Uglify task does concat,
         // but still available if needed
@@ -358,20 +341,26 @@ module.exports = function (grunt) {
                         'generated/*'
                     ]
                 }]
+            },
+            styles: {
+              expand: true,
+                dot: true,
+                cwd: '<%= yeoman.app %>/styles',
+                dest: '.tmp/styles/',
+                src: '{,*/}*.css'
             }
         },
         concurrent: {
             server: [
-                'coffee:dist',
-                'compass:server'
+                'sass',
+                'copy:styles'
             ],
             test: [
-                'coffee',
-                'compass'
+                'copy:styles'
             ],
             dist: [
-                'coffee',
-                'compass:dist',
+                'sass',
+                'copy:styles',
                 'imagemin',
                 'svgmin',
                 'htmlmin'
@@ -420,13 +409,6 @@ module.exports = function (grunt) {
         //'jshint',
         'test',
         'build'
-    ]);
-
-    grunt.registerTask('screenshots', [
-        'clean:server',
-        'concurrent:server',
-        'connect:livereload',
-        'autoshot'
     ]);
 
 };
