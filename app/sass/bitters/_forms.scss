@@ -65,6 +65,10 @@ textarea {
   resize: vertical;
 }
 
+input[disabled]{
+  background: transparent;
+}
+
 input[type="search"] {
   @include appearance(none);
 }

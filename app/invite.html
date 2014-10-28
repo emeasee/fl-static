@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="styles/main.css" />
 	</head>
-	<body style="min-width: 800px">
+	<body>
 		<div id="popup" class ="popup"></div>
 		<div id="popupbackground" class ="popup_background"></div>
 
@@ -49,10 +49,50 @@
 
 		<div class="hero">
 			<div class="hero-inner">
-				<div class="hero-invite">
-					<p class="hero-copy">
-						hi
-					</p>
+				<div class="hero-invite hero-right">
+					<div class="side">
+						<h3>Thank you and welcome to Fieldlogs.</h3>
+						<p class="hero-copy">
+							To complete your invitation please choose a password for your account and click Complete Signup to be taken to your Fieldlogs Enterprise Account.
+						</p>
+						<form class="hero-signup" name="createBuyerForm">
+							<fieldset>
+									<label for="email_2">#yourEmail#</label>
+									<input id="email_2" type="email" placeholder="#yourEmail#" class="pure-input-1" disabled>
+									<label for="pass">#enterPass#</label>
+									<input id="pass" type="password" class="pure-input-1" placeholder="#password#">
+									<label for="confirmPass">#enterPassConfirm#</label>
+									<input id="confirmPass" type="password" class="pure-input-1" placeholder="#confirmPassword#">
+							</fieldset>
+							<fieldset>
+									<label for="region">#selectRegion#</label>
+									<select id="region" value="us-east-1" class="pure-input-1">
+											<option value="us-east-1">#americas#</option>
+											<option value="eu-west-1">#europeMiddleEastAfricaCIS#</option>
+											<option value="ap-northeast-1">#northernAsia#</option>
+											<option value="ap-southeast-1">#southernAsiaAustralia#</option>
+									</select>
+							</fieldset>
+
+								<!--script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+								<div id="recaptcha_div" style="margin-top: 10px; margin-bottom: 10px;"></div>
+
+
+								<!--script type="text/javascript"
+									src="http://www.google.com/recaptcha/api/challenge?k=6LewB88SAAAAAKf6zcfm1ZDRQFWsVK6otFWV75iF">
+								</script>
+								<noscript>
+									<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LewB88SAAAAAKf6zcfm1ZDRQFWsVK6otFWV75iF"
+										height="300" width="500" frameborder="0"></iframe><br>
+									<textarea name="recaptcha_challenge_field" rows="3" cols="40">
+									</textarea>
+									<input type="hidden" name="recaptcha_response_field"
+										value="manual_challenge">
+								</noscript-->
+
+							<button type="submit">#completeSignUp#</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
