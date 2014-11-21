@@ -379,10 +379,10 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'clean:server',
-            'concurrent:server',
-            'connect:livereload',
-            'open:server',
+            //'clean:server',
+            //'concurrent:server',
+            //'connect:livereload',
+            //'open:server',
             'watch'
         ]);
     });
@@ -407,8 +407,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         //'jshint',
-        'test',
-        'build'
+        //'test',
+        'serve'
     ]);
 
 };

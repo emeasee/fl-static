@@ -6,9 +6,8 @@
     "jquery": "~1.11.1"
   },
   "devDependencies": {
-    "bourbon": "~3.1.8",
-    "neat": "~1.5.0",
-    "bitters": "~0.9.3",
+    "bourbon": "~3.2.3",
+    "neat": "~1.5.1",
     "normalize-css": "~3.0.1"
   }
 }

@@ -1,0 +1,19 @@
+{
+    "path": {
+        "app/sass/main.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "includePaths": [
+                    "../bower_components/bourbon/dist/",
+                    "../bower_components/neat/app/assets/stylesheets/"
+                ],
+                "outputDir": "../styles/",
+                "imagePath": null,
+                "sourceComments": "map",
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": false,
+            "brackets-git.gitPath": "git"
+        }
+    }
+}
