@@ -4,3 +4,5 @@ vendor
 .tmp
 .sass-cache
 app/bower_components
+.github-todos
+.brackets.json
