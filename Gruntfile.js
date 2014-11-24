@@ -176,7 +176,7 @@ module.exports = function (grunt) {
 
             options: {
               loadPath: [
-                '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets',
+                '<%= yeoman.app %>/bower_components/bourbon/dist/',
                 '<%= yeoman.app %>/bower_components/neat/app/assets/stylesheets'
               ]
             }
@@ -379,10 +379,10 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            //'clean:server',
+            'clean:server',
             //'concurrent:server',
-            //'connect:livereload',
-            //'open:server',
+            'connect:livereload',
+            'open:server',
             'watch'
         ]);
     });

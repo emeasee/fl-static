@@ -1,52 +1,61 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>FieldLogs - #rtLinkField#</title>
-        <meta name="keywords" content="trekea, fieldlogs, cloud, mobile, time-stamped, real-time, rt, cloud computing, gps, acquisition, trek, trekking, live, fieldlogs" />
-        <meta name="description" content="Enact and Automate to the Last Mile">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 
-        <!-- build:js scripts/main.js -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" language="javascript" src="scripts/config.js"></script>
-        <script type="text/javascript" language="javascript" src="scripts/servletCalls.js"></script>
-        <script type="text/javascript" language="javascript" src="scripts/main.js"></script>
-        <script type="text/javascript" language="javascript" src="scripts/utils.js"></script>
-        <script type="text/javascript" language="javascript" src="scripts/string.js"></script>
-        <!-- endbuild -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FieldLogs - #rtLinkField#</title>
+    <meta name="keywords" content="trekea, fieldlogs, cloud, mobile, time-stamped, real-time, rt, cloud computing, gps, acquisition, trek, trekking, live, fieldlogs" />
+    <meta name="description" content="Enact and Automate to the Last Mile">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <script type="text/javascript" src="//use.typekit.net/bnc2nxk.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!-- build:js scripts/main.js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/config.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/servletCalls.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/utils.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/string.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:css styles/vendor/normalize.css -->
-        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-        <!-- endbuild -->
+    <script type="text/javascript" src="//use.typekit.net/bnc2nxk.js"></script>
+    <script type="text/javascript">
+        try {
+            Typekit.load();
+        } catch (e) {}
+    </script>
 
-        <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-        <link href="favicon.ico" rel="shortcut icon"/>
+    <!-- build:css styles/vendor/normalize.css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href="favicon.ico" rel="shortcut icon" />
 </head>
-    <!-- //TODO: Redesign the homepage inline with design from Jean-Marc-->
-    <body>
-      <!--[if lt IE 8]>
+<!--
+        // TODO: Redesign the homepage inline with design from Jean-Marc
+    -->
+
+<body>
+    <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="navigation">
-          <div class="menu-wrapper">
+    <header class="navigation">
+        <div class="menu-wrapper">
             <a href="javascript:void(0)" class="logo front">
-              <img src="images/splash_logo_top.png" alt="">
+                <img src="images/splash_logo_top.png" alt="">
             </a>
             <!--<p class="navigation-menu-button" id="js-mobile-menu">MENU</p>-->
             <div class="nav">
-              <ul id="navigation-menu">
-                <!--<li><a href="javascript:void(0)">Products</a></li>
+                <ul id="navigation-menu">
+                    <!--<li><a href="javascript:void(0)">Products</a></li>
                 <li><a href="javascript:void(0)">About Us</a></li>
                 <li><a href="javascript:void(0)">Contact</a></li>
                 <li class="navigation-search-bar">
@@ -60,307 +69,329 @@
                   </div>
                 </li>
                 <li class="sign-up"><a href="javascript:void(0)">Sign Up</a></li>-->
-              </ul>
+                </ul>
             </div>
-          </div>
-        </header>
-        <div class="hero">
-            <div class="hero-inner">
-                <div class="hero-left">
-                    <a href="" class="hero-image"><img src="images/Top-shot.png" alt=""></a>
-                    <div class="hero-copy">
-                        <h1>Automate and Optimize your field activities</h1>
-                        <p>Cloud enable your procedures to systematize your field work<br/>for higher operating efficiency, quality of service, and safety</p>
-                    </div>
-                    <div class="hero-links">
-                          <button class="ghost">
-                            <a href="https://play.google.com/store/apps/details?id=com.trekea.fieldlogs" class="android"><img src="images/android-logo.png"></a>
-                            <a href="https://itunes.apple.com/au/app/fieldlogs/id640497763#" class="iphone"><img src="images/apple-logo.png"></a>
-                            <span>and all major browsers!</span>
-                            <span class="dl-badge">Available free</span>
-                          </button>
-                          <a href="#more" class="more"><button class="more">Currently in Beta! <br>Find out more</button></a>
-                    </div>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <a href="" class="hero-image">
+                    <img src="images/Top-shot.png" alt="">
+                </a>
+                <div class="hero-copy">
+                    <h1>Automate and Optimize your field activities</h1>
+                    <p>Cloud enable your procedures to systematize your field work
+                        <br/>for higher operating efficiency, quality of service, and safety</p>
                 </div>
-                <div class="hero-right flip">
-                    <div class="side front">
-                        <h6>Sign up now <br> It's FREE during <a href="#">Beta!</a></h6>
-                        <form class="hero-email">
-                            <fieldset>
-                                <label for="email_1">Simply enter your email to start signing up</label>
-                                <input id="email_1" type="email" placeholder="Your Email" class="pure-input-1">
-                            </fieldset>
-                            <button id="flip-toggle">Sign up for the Beta</button>
-                        </form>
-                        <h6>If you already have an account simply sign in below</h6
-                        <form class="hero-login">
-                             <label for="user">Enter your login details</label>
-                               <input id="user" type="email" placeholder="Email" class="pure-input-1">
-                               <input id="pass" type="password" class="pure-input-1" placeholder="Password">
-                            <button type="submit" class="login">Login</button>
-                        </form>
-                    </div>
-                    <div class="side back">
-                        <form class="hero-signup">
-                           <fieldset>
-                               <label for="email_2">Simply enter your email to start signing up</label>
-                               <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
-                               <input id="pass" type="password" class="pure-input-1" placeholder="Password">
-                               <input type="password" class="pure-input-1" placeholder="Confirm Password">
-                           </fieldset>
-                           <fieldset>
-                               <label for="region">Select your Region</label>
-                               <select id="region" class="pure-input-1">
-                                   <option>North America</option>
-                                   <option>Europe</option>
-                                   <option>Asia</option>
-                               </select>
-                               <img src="http://placehold.it/315x125" alt="Captcha">
-                           </fieldset>
-                           <button type="submit">Complete sign up</button>
-                        </form>
-                    </div>
+                <div class="hero-links">
+                    <button class="ghost">
+                        <a href="https://play.google.com/store/apps/details?id=com.trekea.fieldlogs" class="android">
+                            <img src="images/android-logo.png">
+                        </a>
+                        <a href="https://itunes.apple.com/au/app/fieldlogs/id640497763#" class="iphone">
+                            <img src="images/apple-logo.png">
+                        </a>
+                        <span>and all major browsers!</span>
+                        <span class="dl-badge">Available free</span>
+                    </button>
+                    <a href="#more" class="more">
+                        <button class="more">Currently in Beta!
+                            <br>Find out more</button>
+                    </a>
                 </div>
             </div>
-            <div class="learn"><p>Find out how we can help your business</p></div>
+            <div class="hero-right flip">
+                <div class="side front">
+                    <h6>Sign up now <br> It's FREE during <a href="#">Beta!</a></h6>
+                    <form class="hero-email">
+                        <fieldset>
+                            <label for="email_1">Simply enter your email to start signing up</label>
+                            <input id="email_1" type="email" placeholder="Your Email" class="pure-input-1">
+                        </fieldset>
+                        <button id="flip-toggle">Sign up for the Beta</button>
+                    </form>
+                    <h6>If you already have an account simply sign in below</h6>
+                    <form class="hero-login">
+                        <label for="user">Enter your login details</label>
+                        <input id="user" type="email" placeholder="Email" class="pure-input-1">
+                        <input id="pass" type="password" class="pure-input-1" placeholder="Password">
+                        <button type="submit" class="login">Login</button>
+                    </form>
+                </div>
+                <div class="side back">
+                    <form class="hero-signup">
+                        <fieldset>
+                            <label for="email_2">Simply enter your email to start signing up</label>
+                            <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
+                            <input id="pass" type="password" class="pure-input-1" placeholder="Password">
+                            <input type="password" class="pure-input-1" placeholder="Confirm Password">
+                        </fieldset>
+                        <fieldset>
+                            <label for="region">Select your Region</label>
+                            <select id="region" class="pure-input-1">
+                                <option>North America</option>
+                                <option>Europe</option>
+                                <option>Asia</option>
+                            </select>
+                            <img src="http://placehold.it/315x125" alt="Captcha">
+                        </fieldset>
+                        <button type="submit">Complete sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="learn">
+            <p>Find out how we can help your business</p>
+        </div>
+    </div>
+
+    <div class="content colored" id="more">
+        <div class="heading">
+            <h4>APPLICABLE TO A WIDE VARIETY OF DOMAINS. <br/>IN FACT, WE HAVE NOT SEEN ONE WE COULD NOT COVER! TRY US!</h4>
+            <h1>Getting the last mile in field work management covered</h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/images_surveys.jpg" alt="">
+                </div>
+                <div class="card-header">
+                    <p>Surveys</p>
+                </div>
+                <div class="card-copy">
+                    <p>Road conditions
+                        <br>Itinerary
+                        <br>Industrial rigs
+                        <br>Exploration
+                        <br>Recon
+                    </p>
+                </div>
+                <!--<div class="card-stats">
+                  <ul>
+                    <li>98<span>Items</span></li>
+                    <li>298<span>Things</span></li>
+                    <li>923<span>Objects</span></li>
+                  </ul>
+                </div>-->
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/images_qhse.jpg" alt="">
+                </div>
+                <div class="card-header">
+                    <p>Quality, Health, Safety, Environment (QHSE)</p>
+                </div>
+                <div class="card-copy">
+                    <p>Hazard incident report
+                        <br>Security audit
+                        <br>Standard Operating Procedures</p>
+                </div>
+                <!--<div class="card-stats">
+                  <ul>
+                    <li>98<span>Items</span></li>
+                    <li>298<span>Things</span></li>
+                    <li>923<span>Objects</span></li>
+                  </ul>
+                </div>-->
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/images_fieldjobs.jpg" alt="">
+                </div>
+                <div class="card-header">
+                    <p>Field Jobs</p>
+                </div>
+                <div class="card-copy">
+                    <p>Maintenance
+                        <br>Delivery
+                        <br>Installation
+                        <br>Remote assistance
+                        <br>Procedures, Checklists, Standard Work Instructions</p>
+                </div>
+                <!--<div class="card-stats">
+                  <ul>
+                    <li>98<span>Items</span></li>
+                    <li>298<span>Things</span></li>
+                    <li>923<span>Objects</span></li>
+                  </ul>
+                </div>-->
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/images_documentation.jpg" alt="">
+                </div>
+                <div class="card-header">
+                    <p>Contextualization</p>
+                </div>
+                <div class="card-copy">
+                    <p>Real-time Progress Status
+                        <br>Dynamic Job Planning
+                        <br>Asset localization
+                        <br>Evidence geo-tagging</p>
+                </div>
+                <!--<div class="card-stats">
+                  <ul>
+                    <li>98<span>Items</span></li>
+                    <li>298<span>Things</span></li>
+                    <li>923<span>Objects</span></li>
+                  </ul>
+                </div>-->
+            </div>
         </div>
 
-        <div class="content colored" id="more">
-            <div class="heading">
-                <h4>APPLICABLE TO A WIDE VARIETY OF DOMAINS. <br/>IN FACT, WE HAVE NOT SEEN ONE WE COULD NOT COVER! TRY US!</h4>
-                <h1>Getting the last mile in field work management covered</h1>
-            </div>
-            <div class="cards">
-              <div class="card">
-                <div class="card-image">
-                  <img src="images/images_surveys.jpg" alt="">
-                </div>
-                <div class="card-header">
-                  <p>Surveys</p>
-                </div>
-                <div class="card-copy">
-                  <p>Road conditions <br>
-                    Itinerary <br>
-                    Industrial rigs <br>
-                    Exploration <br>
-                    Recon</p>
-                </div>
-                <!--<div class="card-stats">
-                  <ul>
-                    <li>98<span>Items</span></li>
-                    <li>298<span>Things</span></li>
-                    <li>923<span>Objects</span></li>
-                  </ul>
-                </div>-->
-              </div>
+        <button class="call">Start your free trial now</button>
+    </div>
 
-              <div class="card">
-                <div class="card-image">
-                  <img src="images/images_qhse.jpg" alt="">
-                </div>
-                <div class="card-header">
-                  <p>Quality, Health, Safety, Environment (QHSE)</p>
-                </div>
-                <div class="card-copy">
-                  <p>Hazard incident report <br>
-                    Security audit <br>
-                    Standard Operating Procedures</p>
-                </div>
-                <!--<div class="card-stats">
-                  <ul>
-                    <li>98<span>Items</span></li>
-                    <li>298<span>Things</span></li>
-                    <li>923<span>Objects</span></li>
-                  </ul>
-                </div>-->
-              </div>
+    <div class="content" id="images">
 
-              <div class="card">
-                <div class="card-image">
-                  <img src="images/images_fieldjobs.jpg" alt="">
-                </div>
-                <div class="card-header">
-                  <p>Field Jobs</p>
-                </div>
-                <div class="card-copy">
-                  <p>Maintenance <br>
-                    Delivery <br>
-                    Installation <br>
-                    Remote assistance<br>
-                    Procedures, Checklists, Standard Work Instructions</p>
-                </div>
-                <!--<div class="card-stats">
-                  <ul>
-                    <li>98<span>Items</span></li>
-                    <li>298<span>Things</span></li>
-                    <li>923<span>Objects</span></li>
-                  </ul>
-                </div>-->
-              </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="images/images_documentation.jpg" alt="">
-                </div>
-                <div class="card-header">
-                  <p>Contextualization</p>
-                </div>
-                <div class="card-copy">
-                  <p>Real-time Progress Status <br>
-                    Dynamic Job Planning<br>
-                    Asset localization <br>
-                    Evidence geo-tagging</p>
-                </div>
-                <!--<div class="card-stats">
-                  <ul>
-                    <li>98<span>Items</span></li>
-                    <li>298<span>Things</span></li>
-                    <li>923<span>Objects</span></li>
-                  </ul>
-                </div>-->
-              </div>
-            </div>
-
-            <button class="call">Start your free trial now</button>
-          </div>
-
-          <div class="content" id="images">
-
-            <div class="heading">
-                <h4>THE LAST MILE IN FIELD WORK MANAGEMENT</h4>
-                <h1>Everything to keep your remote work in line with your business</h1>
-            </div>
-            <div class="content-ribbon" id="media">
-                <div class="text">
-                    <div class="l-box">
-                        <img src="images/media-rich_icon.png" alt="">
-                        <h3>
+        <div class="heading">
+            <h4>THE LAST MILE IN FIELD WORK MANAGEMENT</h4>
+            <h1>Everything to keep your remote work in line with your business</h1>
+        </div>
+        <div class="content-ribbon" id="media">
+            <div class="text">
+                <div class="l-box">
+                    <img src="images/media-rich_icon.png" alt="">
+                    <h3>
                             Create media-rich evidentiary track records.
                         </h3>
-                        <p>Any task is augmented by collecting geolocation automatically. Any media (pictures, videos, recordings, etc) can also be recorded at the task level. We further provide assistance to the user in the form of maps or directions. </p>
-                    </div>
-                </div>
-
-                <div class="image">
-                    <div class="l-box">
-                        <img src="images/Media_rich-shot.png" align="right" alt="Placeholder image for example.">
-                    </div>
+                    <p>Any task is augmented by collecting geolocation automatically. Any media (pictures, videos, recordings, etc) can also be recorded at the task level. We further provide assistance to the user in the form of maps or directions.</p>
                 </div>
             </div>
 
-            <div class="content-ribbon" id="rt">
-                <div class="text">
-                    <div class="l-box">
-                        <img src="images/rt-collab_icon.png" alt="">
-                        <h3>
+            <div class="image">
+                <div class="l-box">
+                    <img src="images/Media_rich-shot.png" align="right" alt="Placeholder image for example.">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-ribbon" id="rt">
+            <div class="text">
+                <div class="l-box">
+                    <img src="images/rt-collab_icon.png" alt="">
+                    <h3>
                             Real-Time collaboration for better decisions.
                         </h3>
-                        <p>Let the right team connect and collaborate around the jobs events as they unfold.</p>
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="l-box">
-                        <img src="images/RT-shot.png" alt="Placeholder image for example.">
-                    </div>
+                    <p>Let the right team connect and collaborate around the jobs events as they unfold.</p>
                 </div>
             </div>
+            <div class="image">
+                <div class="l-box">
+                    <img src="images/RT-shot.png" alt="Placeholder image for example.">
+                </div>
+            </div>
+        </div>
 
-            <div class="content-ribbon last" id="streamline">
-                <div class="text">
-                    <div class="l-box">
-                        <img src="images/streamline_icon.png" alt="">
-                        <h3>
+        <div class="content-ribbon last" id="streamline">
+            <div class="text">
+                <div class="l-box">
+                    <img src="images/streamline_icon.png" alt="">
+                    <h3>
                             Streamline your field processes and improve quality.
                         </h3>
-                        <p>Replace paper- or Excel-based templates with an easy to write mobile front end to collect and analyze field jobs.</p>
-                    </div>
-                </div>
-
-                <div class="image">
-                    <div class="l-box">
-                        <img src="images/Streamline-shot.png" align="right" alt="Placeholder image for example.">
-                    </div>
+                    <p>Replace paper- or Excel-based templates with an easy to write mobile front end to collect and analyze field jobs.</p>
                 </div>
             </div>
 
-            <div class="heading">
-                <h4>THE LAST MILE IN FIELD WORK MANAGEMENT</h4>
-                <h1>Enterprise level quality and security as standard</h1>
+            <div class="image">
+                <div class="l-box">
+                    <img src="images/Streamline-shot.png" align="right" alt="Placeholder image for example.">
+                </div>
             </div>
+        </div>
 
-            <div class="bullets">
-              <div class="bullet four-col-bullet">
+        <div class="heading">
+            <h4>THE LAST MILE IN FIELD WORK MANAGEMENT</h4>
+            <h1>Enterprise level quality and security as standard</h1>
+        </div>
+
+        <div class="bullets">
+            <div class="bullet four-col-bullet">
                 <div class="bullet-icon bullet-icon-1">
-                  <img src="images/lower-cost_icon.png" alt="">
+                    <img src="images/lower-cost_icon.png" alt="">
                 </div>
                 <div class="bullet-content">
-                  <h2>Lower cost and TCO with this all in one app</h2>
-                  <p>Use the template editor to create your mobile enabled workflows for your context. Create all the ones you need and have your workforce use them!</p>
-                  </div>
-              </div>
-              <div class="bullet four-col-bullet">
+                    <h2>Lower cost and TCO with this all in one app</h2>
+                    <p>Use the template editor to create your mobile enabled workflows for your context. Create all the ones you need and have your workforce use them!</p>
+                </div>
+            </div>
+            <div class="bullet four-col-bullet">
                 <div class="bullet-icon bullet-icon-2">
-                  <img src="images/box_icon.png" alt="">
+                    <img src="images/box_icon.png" alt="">
                 </div>
                 <div class="bullet-content">
-                  <h2>Ready out of the box and simple to adopt</h2>
-                  <p>Reuse free templates from our repository and tailor them to your needs. They are also instantly deployable. </p>
+                    <h2>Ready out of the box and simple to adopt</h2>
+                    <p>Reuse free templates from our repository and tailor them to your needs. They are also instantly deployable.</p>
                 </div>
-              </div>
-              <div class="bullet four-col-bullet">
-                <div class="bullet-icon bullet-icon-3">
-                  <img src="images/seamless_icon.png" alt="">
-                </div>
-                <div class="bullet-content">
-                  <h2>Seamless integration in your enterprise processes</h2>
-                  <p>Create jobs dynamically based on metadata sourced from your enterprise applications. Integrate data collected automatically within your IT systems</p>
-                </div>
-              </div>
-              <div class="bullet four-col-bullet">
-                <div class="bullet-icon bullet-icon-3">
-                  <img src="images/cloud_icon.png" alt="">
-                </div>
-                <div class="bullet-content">
-                  <h2>Fully featured website and secured Cloud</h2>
-                  <p>Fully featured website and secured end-to-end Cloud encrypted communication</p>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <div class="content colored signup" id="info">
-             <div class="signup bottom">
-                 <div class="heading">
-                     <h4>GET SET UP IN NO TIME</h4>
-                     <h1>Free for 30 days, lowest cost after that. Volume discounts available!</h1>
-                 </div>
-                    <div class="l-box">
-                        <form class="hero-email">
-                            <fieldset>
-                                <label for="email_1">Simply enter your email to start signing up</label>
-                                <input id="email_1" type="email" placeholder="Your Email" class="pure-input-1">
-                            </fieldset>
-                            <button id="flip-toggle">Sign up for Beta</button>
-                        </form>
-                    </div>
-
+            <div class="bullet four-col-bullet">
+                <div class="bullet-icon bullet-icon-3">
+                    <img src="images/seamless_icon.png" alt="">
+                </div>
+                <div class="bullet-content">
+                    <h2>Seamless integration in your enterprise processes</h2>
+                    <p>Create jobs dynamically based on metadata sourced from your enterprise applications. Integrate data collected automatically within your IT systems</p>
+                </div>
             </div>
+            <div class="bullet four-col-bullet">
+                <div class="bullet-icon bullet-icon-3">
+                    <img src="images/cloud_icon.png" alt="">
+                </div>
+                <div class="bullet-content">
+                    <h2>Fully featured website and secured Cloud</h2>
+                    <p>Fully featured website and secured end-to-end Cloud encrypted communication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content colored signup" id="info">
+        <div class="signup bottom">
+            <div class="heading">
+                <h4>GET SET UP IN NO TIME</h4>
+                <h1>Free for 30 days, lowest cost after that. Volume discounts available!</h1>
+            </div>
+            <div class="l-box">
+                <form class="hero-email">
+                    <fieldset>
+                        <label for="email_1">Simply enter your email to start signing up</label>
+                        <input id="email_1" type="email" placeholder="Your Email" class="pure-input-1">
+                    </fieldset>
+                    <button id="flip-toggle">Sign up for Beta</button>
+                </form>
+            </div>
+
+        </div>
     </div>
 
     <div class="footer">
         <div class="inner">
-                <div class="left">
-                    <a href="" class="privacy">Privacy Policy</a>
-                    <a href="" class="user-agreement">User Agreement</a>
-                    <a href="" class="site-map">Site Map</a>
-                </div>
-                <div class="right">© Trekea Mobile, Inc.</div>
+            <div class="left">
+                <a href="" class="privacy">Privacy Policy</a>
+                <a href="" class="user-agreement">User Agreement</a>
+                <a href="" class="site-map">Site Map</a>
             </div>
+            <div class="right">© Trekea Mobile, Inc.</div>
         </div>
-</div>
-<script type="text/javascript">
-  var FHChat = {product_id: "b934d7897b3d"};
-  FHChat.customAttributes=[];FHChat.sendCustomAttributes=function(data){this.customAttributes.push(data)};!function(){var a,b;return b=document.createElement("script"),a=document.getElementsByTagName("script")[0],b.src="https://chat-client-js.firehoseapp.com/chat-min.js",b.async=!0,a.parentNode.insertBefore(b,a)}();
-</script>
+    </div>
+
+    <script type="text/javascript">
+        var FHChat = {
+            product_id: "b934d7897b3d"
+        };
+        FHChat.customAttributes = [];
+        FHChat.sendCustomAttributes = function (data) {
+            this.customAttributes.push(data)
+        };
+        ! function () {
+            var a, b;
+            return b = document.createElement("script"), a = document.getElementsByTagName("script")[0], b.src = "https://chat-client-js.firehoseapp.com/chat-min.js", b.async = !0, a.parentNode.insertBefore(b, a)
+        }();
+    </script>
 </body>
 
 </html>
