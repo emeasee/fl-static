@@ -497,6 +497,9 @@ MAIN CONTENT GENERAL
     padding-bottom: $base-font-size * 1.5;
     border-bottom: 1px solid $gray;
     @include outer-container();
+    &.last{
+     border-bottom: 0px;
+    }
     .text{
       position:relative;
       z-index: 999;
