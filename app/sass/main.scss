@@ -261,8 +261,7 @@ HERO BANNER TOP
               h1 {
                   font-size: 1.2em;
                   margin-bottom: .2em;
-
-                  @include media($large-screen) {
+                 @include media($large-screen) {
                       font-size: 2.2em;
                   }
               }
@@ -478,6 +477,7 @@ MAIN CONTENT GENERAL
       line-height: normal;
       width: 70%;
       margin: 0 auto;
+      background-repeat: no-repeat;
       @include media($large-screen){
         font-size: 3em;
       }
@@ -510,20 +510,25 @@ MAIN CONTENT GENERAL
         display: table-cell;
         vertical-align: middle;
         background: white;
-        opacity:0.9;
         h3{
           padding-bottom:$base-font-size;
         }
+        ul{
+          li{
+            list-style-type: disc;
+            margin: $base-font-size 0 0 0;
+            line-height: normal;
+         }
+        }
         @include media($large-screen){
           background: none;
-          opacity:1;
         }
       }
       @include media($large-screen){
-        @include span-columns(6);
+        @include span-columns(8);
       }
       @include media($medium-screen){
-        @include span-columns(4);
+        @include span-columns(5);
         height: 550px;
         .l-box{
           text-align: left;
@@ -541,7 +546,7 @@ MAIN CONTENT GENERAL
         @include span-columns(8);
         .l-box{
           position: absolute;
-          left: 35%;
+          left: 38%;
           img{
             width: auto;
           }
