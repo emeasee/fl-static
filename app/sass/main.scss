@@ -514,18 +514,30 @@ MAIN CONTENT GENERAL
           padding-bottom:$base-font-size;
         }
         ul{
+          margin-bottom: $base-font-size * 2;
           li{
-            list-style-type: disc;
+            list-style-type: none;
             margin: $base-font-size 0 0 0;
             line-height: normal;
          }
         }
+        button{
+          margin-bottom: $base-font-size;
+        }
         @include media($large-screen){
           background: none;
         }
+        @include media($medium-screen){
+          background: none;
+            ul{
+                li{
+                    list-style-type: disc;
+                }
+            }
+        }
       }
       @include media($large-screen){
-        @include span-columns(8);
+        @include span-columns(6);
       }
       @include media($medium-screen){
         @include span-columns(5);
@@ -543,10 +555,10 @@ MAIN CONTENT GENERAL
         }
       }
       @include media($medium-screen){
-        @include span-columns(8);
+        @include span-columns(7);
         .l-box{
           position: absolute;
-          left: 38%;
+          left: 40%;
           img{
             width: auto;
           }
