@@ -6,4 +6,4 @@ vendor
 app/bower_components
 .github-todos
 .brackets.json
-.watsonrc
+.todos
