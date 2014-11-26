@@ -206,7 +206,8 @@ header.navigation {
 HERO BANNER TOP
 ******************/
 .hero {
-    $hero-background: lighten($base-accent-color,48%);
+    //$hero-background: lighten($base-accent-color,48%);
+    background: url('');
     $hero-color: $base-font-color;
     //@include striped-bg($hero-background, 2%);
     padding-bottom: 4em;
@@ -527,22 +528,19 @@ MAIN CONTENT GENERAL
         }
         @include media($large-screen){
           background: none;
-        }
-        @include media($medium-screen){
-          background: none;
             ul{
                 li{
                     list-style-type: disc;
                 }
             }
         }
+        @include media($medium-screen){
+          background: none;
+        }
       }
       @include media($large-screen){
-        @include span-columns(6);
-      }
-      @include media($medium-screen){
-        @include span-columns(5);
         height: 550px;
+          @include span-columns(5);
         .l-box{
           text-align: left;
         }
@@ -555,8 +553,7 @@ MAIN CONTENT GENERAL
           width: 100%;
         }
       }
-      @include media($medium-screen){
-        @include span-columns(7);
+      @include media($large-screen){
         .l-box{
           position: absolute;
           left: 40%;
@@ -564,9 +561,6 @@ MAIN CONTENT GENERAL
             width: auto;
           }
         }
-      }
-      @include media($large-screen){
-        @include span-columns(6);
       }
       @include media($x-large-screen){
         .l-box{
