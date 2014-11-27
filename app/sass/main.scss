@@ -4,14 +4,14 @@
 
 body{
   overflow-x: hidden;
+  background: $gray;
 }
 
 /*****************
 HEADER
-//TODO: Make header transparent and hang over the large main image [Issue: https://github.com/emeasee/fl-static/issues/18]
 ******************/
 header.navigation {
-  $navigation-background: $white;
+  $navigation-background: white;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 90px;
@@ -21,30 +21,38 @@ header.navigation {
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
 
-  background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
+  background-color: transparent;
+  //border-bottom: 1px solid darken($navigation-background, 10);
   font-family: $sans-serif;
   height: $navigation-height;
   width: 100%;
   z-index: 999;
-  position: relative;
+  position: absolute;
 
   .menu-wrapper {
     @include outer-container;
+    width: 80%;
     position: relative;
     z-index: 9999;
+    max-width: 1180px;
   }
 
   .logo {
-    float: left;
     max-height: $navigation-height;
     padding-left: 1em;
     padding-right: 2em;
+    margin: 0 auto;
+    background-image: url(../images/splash_logo_top.png);
+
+    background-position: left;
+    background-repeat: no-repeat;
 
     &.front{
-      width: 100%;
+      width: 300px;
       display: block;
       text-align: center;
+        float: left;
+      height: $navigation-height;
     }
 
     img {
@@ -76,7 +84,7 @@ header.navigation {
 
   .nav {
     @include media ($large-screen) {
-      float: left;
+      float: right;
     }
   }
 
@@ -94,6 +102,7 @@ header.navigation {
       display: inline;
       margin: 0;
       padding: 0;
+      margin-right: $base-font-size * 6;
     }
   }
 
@@ -215,28 +224,37 @@ HERO BANNER TOP
     $hero-color-image: $white;
 
     @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat);
-
-    padding-bottom: $base-font-size * 10;
+    padding-top: $base-font-size * 5;
+    margin: 0 auto;
+    max-width: $x-large-screen;
 
     @include perspective(3000px);
       .learn{
-          display: none;
+          @include span-columns(12);
+          display: table;
           text-align:center;
           padding-bottom: 1em;
           color: $hero-color-image;
           background: rgba(72, 185, 249, .8);
-
+          cursor:pointer;
+          min-height: $base-font-size * 14;
+          font-size: $base-font-size / 1.4;
           .heading {
               display: table-cell;
               vertical-align: middle;
               & > *{
                   font-weight: 100;
               }
+              i{
+                  position:absolute;
+                  height: 0px;
+                  margin-top:-4%;
+                      opacity:0.8;
+              }
           }
 
           @include media($large-screen){
-            @include span-columns(12);
-            display: table;
+            font-size: $base-font-size;
             min-height: $base-font-size * 10;
           }
         }
@@ -244,7 +262,7 @@ HERO BANNER TOP
     .hero-inner {
         @include outer-container;
         @include clearfix;
-        padding: $base-font-size;
+        padding: $base-font-size/2;
         margin: auto;
         text-align: center;
         color: $hero-color;
@@ -268,10 +286,12 @@ HERO BANNER TOP
         }
 
         .hero-left{
+          width: 100%;
           display: table!important;
-            height: 600px;
-            color: $hero-color-image;
+          height: 400px;
+          color: $hero-color-image;
           .hero-align{
+
               display: table-cell;
               vertical-align: middle;
               .hero-copy {
@@ -301,7 +321,7 @@ HERO BANNER TOP
                 max-width: 70%;
                 position:relative;
                   button{
-                    margin: 0 1em 0 0;
+                    margin: 1em 1em 0 0;
                     height:65px;
                     white-space: normal;
                     float: left;
@@ -332,15 +352,12 @@ HERO BANNER TOP
 
                   }
                 }
-                @include media($large-screen){
-                  button.ghost{
-                    margin-right: 0.5em;
-                  }
-                }
               }
           }
             @include media($large-screen){
-              @include span-columns(9);
+              @include span-columns(8);
+                height: 570px;
+                width: 70%;
               .hero-links{
                 margin-bottom:0em;
               }
@@ -348,13 +365,15 @@ HERO BANNER TOP
         }
 
         .hero-right{
+          display:none;
           .side{
             border-radius: 8px;
             box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
-            background: #F7F6F5;
+            background: RGBA(247, 246, 245, 0.95);
+            background-color: 1B1B1B;
             padding: 1em;
             position: relative;
-            height: 580px;
+            height: 560px;
             .hero-email{
               margin-bottom: 2em;
             }
@@ -378,8 +397,12 @@ HERO BANNER TOP
               @include transform(rotateY( 180deg ));
             }
           }
+          @include media($medium-screen){
+            display:block;
+          }
           @include media($large-screen){
-            @include span-columns(3);
+            @include span-columns(3.2);
+            display:block;
             &.flip{
               .side{
 
@@ -415,6 +438,9 @@ HERO BANNER TOP
         }
       }
     }
+    @include media($large-screen){
+        padding-bottom: $base-font-size * 10;
+    }
 }
 
 /*****************
@@ -427,6 +453,7 @@ MAIN CONTENT GENERAL
   overflow:	hidden;
   position: relative;
   width: 100%;
+  max-width: $x-large-screen;
 
   button.call{
     font-size: 1.5em;
@@ -434,8 +461,8 @@ MAIN CONTENT GENERAL
   }
   &.colored{
     background:$gray-light;
-    border-top: 1px solid $gray;
-    border-bottom: 1px solid $gray;
+    //border-top: 1px solid $gray;
+    //border-bottom: 1px solid $gray;
     padding-bottom:$base-font-size * 3;
   }
   &.loggedin{
@@ -463,6 +490,7 @@ MAIN CONTENT GENERAL
       width: 70%;
       margin: 0 auto;
       background-repeat: no-repeat;
+
       @include media($large-screen){
         font-size: 2.4em;
       }
@@ -556,9 +584,6 @@ MAIN CONTENT GENERAL
       }
     }
   }
-  button{
-
-  }
   .signup{
     .l-box{
       width: 80%;
@@ -575,6 +600,134 @@ MAIN CONTENT GENERAL
       @include media($medium-screen){
         width: 60%;
       }
+    }
+  }
+}
+
+/*****************
+GRID ITEMS
+******************/
+
+.grid-items {
+  $grid-items-background: $base-body-color;
+  $grid-item-background: darken($base-body-color, 60);
+  $grid-item-imgs:
+    '../images/example-1.png',
+    '../images/example-2.png',
+    '../images/example-3.png',
+    '../images/example-4.png',
+    '../images/example-5.png',
+    '../images/example-6.png',
+    '../images/example-7.png',
+    '../images/example-8.png',
+    '../images/example-9.png',
+    '../images/example-10.png',
+    '../images/example-11.png';
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 1;
+  $grid-item-mid-columns: 2;
+  $grid-item-big-columns: 3;
+  $grid-item-color: white;
+  $grid-item-height: 225px;
+
+  @include clearfix;
+
+  padding-bottom: $base-font-size * 2;
+
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    height: $grid-item-height;
+    background: $grid-item-background;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+    padding: 2em;
+    border-top: 0;
+//    border-bottom: $grid-item-border-size solid $grid-items-background;
+//    border-left: $grid-item-border-size /2 solid $grid-items-background;
+//    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    text-align: center;
+    cursor: default;
+
+    @include media($medium-screen) {
+      width: 25%;
+    }
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+     &:hover {
+         background: transparentize($grid-item-background, 0.3);
+     }
+
+  }
+
+  .grid-item img {
+      display: block;
+      height: 3em;
+      margin: auto;
+      margin-bottom: 1em;
+    }
+
+  .grid-item h1 {
+      color: $grid-item-color;
+      font-size: 1.3em;
+      margin-top: 3.5em;
+      margin-bottom: .4em;
+    }
+
+  .grid-item p {
+      margin: auto;
+      color: transparentize($grid-item-color, .3);
+      @include media($medium-screen) {
+        max-width: 70%;
+      }
+    }
+
+    .grid-item-mid {
+        @include media($large-screen) {
+          @include grid-item-columns($grid-item-mid-columns);
+        }
+        p {
+          @include media($medium-screen) {
+            max-width: 60%;
+          }
+        }
+  }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+
+  .grid-item-image {
+        @for $i from 1 through length($grid-item-imgs) {
+            // assign images from $grid-item-imgs list
+          &:nth-child(#{$i}) {
+          $background-from-list: nth($grid-item-imgs, $i);
+          background-image: url($background-from-list);
+          //background-color: $grid-item-background;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+      }
+    }
+  }
+  p.go-grid{
+    float:left;
+      line-height: 14em;
+      padding-left: 2em;
+    @include media($large-screen){
+        float:none;
+        line-height: 3em;
+        padding: 0;
     }
   }
 }
@@ -979,6 +1132,17 @@ DOCUMENTATION MAIN
       }
     }
   }
+}
+
+/********************      Chat module custom CSS      *************************/
+
+#fchat{
+    right: 50%!important;
+    margin-right: -35%;
+    @include media($large-screen){
+        right: 20px!important;
+        margin: 0;
+    }
 }
 
 /********************  OLD REQUIRED or ADDITIONAL CSS  *************************/
