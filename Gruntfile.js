@@ -25,7 +25,6 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        // TODO: Make this conditional [Issue: https://github.com/emeasee/fl-static/issues/22]
         watch: {
             styles: {
               files: ['<%= yeoman.app %>/styles/{,*/}*.{css}'],
@@ -225,7 +224,7 @@ module.exports = function (grunt) {
         concurrent: {
             dist: [
                 'imagemin',
-                'svgmin',
+                //'svgmin',
                 'htmlmin'
             ]
         }
