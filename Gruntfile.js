@@ -25,70 +25,33 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        // TODO: Make this conditional
+        // TODO: Make this conditional [Issue: https://github.com/emeasee/fl-static/issues/22]
         watch: {
-            scripts: {
-            files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
-                tasks: ['sass']
-            },
             styles: {
-            files: ['<%= yeoman.app %>/styles/{,*/}*.{css}'],
+              files: ['<%= yeoman.app %>/styles/{,*/}*.{css}'],
                 tasks: ['copy:styles']
               },
-            livereload: {
-                options: {
-                    livereload: LIVERELOAD_PORT
-                },
-                files: [
-                    '<%= yeoman.app %>/*.html',
-                    '.tmp/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
-            }
-        },
-        connect: {
-            options: {
-                port: 9000,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: '0.0.0.0'
-            },
-            livereload: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            lrSnippet,
-                            mountFolder(connect, '.tmp'),
-                            mountFolder(connect, yeomanConfig.app)
-                        ];
-                    }
-                }
-            },
-            test: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            mountFolder(connect, '.tmp'),
-                            mountFolder(connect, 'test')
-                        ];
-                    }
-                }
-            },
-            dist: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            mountFolder(connect, yeomanConfig.dist)
-                        ];
-                    }
-                }
-            }
-        },
-        open: {
-            server: {
-                path: 'http://localhost:<%= connect.options.port %>'
-            }
 
+        },
+        browser_sync: {
+            dev: {
+                bsFiles: {
+                    src : ["<%= yeoman.app %>/styles/main.css", "<%= yeoman.app %>/*.html", "<%= yeoman.app %>/scripts/**/*.js"]
+                },
+                options: {
+                    watchTask: false,
+                    debugInfo: true,
+                    server: {
+                        baseDir: "app/"
+                    },
+                    ghostMode: {
+                        clicks: true,
+                        scroll: true,
+                        links: true,
+                        forms: true
+                    }
+                }
+            }
         },
         clean: {
             dist: {
@@ -103,93 +66,6 @@ module.exports = function (grunt) {
             },
             server: '.tmp'
         },
-        browser_sync: {
-            dev: {
-                bsFiles: {
-                    src : '<%= yeoman.app %>/styles/style.css'
-                },
-                options: {
-                    watchTask: false,
-                    debugInfo: true,
-                    // Change to 0.0.0.0 to access externally
-                    host: 'http://localhost:<%= connect.options.port %>',
-                    server: {
-                        baseDir: '<%= yeoman.app %>'
-                    },
-                    ghostMode: {
-                        clicks: true,
-                        scroll: true,
-                        links: true,
-                        forms: true
-                    }
-                }
-            }
-        },
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
-            },
-            all: [
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
-            ]
-        },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
-        },
-        coffee: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: 'test/spec',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/spec',
-                    ext: '.js'
-                }]
-            }
-        },
-        sass: {
-          dist: {
-            files: [{
-              expand: true,
-              cwd: '<%= yeoman.app %>/sass',
-              src: ['*.scss'],
-              dest: '.tmp/styles',
-              ext: '.css'
-            }],
-
-            options: {
-              loadPath: [
-                '<%= yeoman.app %>/bower_components/bourbon/dist/',
-                '<%= yeoman.app %>/bower_components/neat/app/assets/stylesheets'
-              ]
-            }
-          },
-          server: {
-            debugInfo: true
-          }
-        },
-        // not used since Uglify task does concat,
-        // but still available if needed
-        /*concat: {
-            dist: {}
-        },*/
         rev: {
             dist: {
                 files: {
@@ -202,8 +78,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-
         modernizr: {
 
             // Path to the build you're using for development.
@@ -254,7 +128,6 @@ module.exports = function (grunt) {
             // Have custom Modernizr tests? Add paths to their location here.
             "customTests" : []
         },
-
         useminPrepare: {
             options: {
                 dest: '<%= yeoman.dist %>'
@@ -292,7 +165,6 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                    '<%= yeoman.dist %>/styles/main.css': [
-                       '.tmp/styles/{,*/}*.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
                     ]
                 }
@@ -351,16 +223,7 @@ module.exports = function (grunt) {
             }
         },
         concurrent: {
-            server: [
-                'sass',
-                'copy:styles'
-            ],
-            test: [
-                'copy:styles'
-            ],
             dist: [
-                'sass',
-                'copy:styles',
                 'imagemin',
                 'svgmin',
                 'htmlmin'
@@ -379,20 +242,10 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'clean:server',
-            //'concurrent:server',
-            'connect:livereload',
-            'open:server',
-            'watch'
+            'browser_sync'
+            //'watch'
         ]);
     });
-
-    grunt.registerTask('test', [
-        'clean:server',
-        'concurrent:test',
-        'connect:test',
-        'mocha'
-    ]);
 
     grunt.registerTask('build', [
         'clean:dist',
@@ -406,8 +259,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
-        //'jshint',
-        //'test',
         'serve'
     ]);
 

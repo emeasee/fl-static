@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="170px" height="59px" viewBox="0 0 170 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>glass_logo_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M40.5015295,19.7185027 L28.0462586,30.6886568 L24.5475899,27.6336792 L40.9928686,18.8661716 L10.9727472,0 L0,38.7064584 L45,51 L40.5015295,19.7185027 Z"></path>
+        <path id="path-3" d="M27.1931325,43.5981324 L32,35.3271005 L27.879829,0 L0,7.00934588 L0.961375825,45 L27.1931325,43.5981324 Z"></path>
+        <path id="path-5" d="M25.3959184,0 L33.1673471,0 L34,30 L0,30 L25.3959184,0 Z"></path>
+    </defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="glass_logo_white" sketch:type="MSArtboardGroup">
+            <g id="Google_Glass_logo" sketch:type="MSLayerGroup" transform="translate(-6.000000, 1.000000)">
+                <g id="g3087">
+                    <g id="path3058-Clipped">
+                        <mask id="mask-2" sketch:name="path3846" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="path3846"></g>
+                        <path d="M37.4619178,20.5001442 C34.6651105,16.9670113 31.8571087,15.0359454 27.0466285,15.0004355 C19.1248606,14.9419616 12.4053848,20.7779043 12.0175182,28.7810198 C11.6296515,36.7841353 17.7295569,43.5899716 25.6420368,43.9822811 C33.5545167,44.3745907 38.6121333,38.2048163 39,30.2016968 L30.3829396,30.2016968" id="path3058" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    </g>
+                    <g id="path3848-Clipped" transform="translate(43.000000, 2.000000)">
+                        <mask id="mask-4" sketch:name="path3854" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="path3854"></g>
+                        <path d="M7,13 L7,41 L29,41" id="path3848" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
+                    </g>
+                    <g id="path3856-Clipped" transform="translate(78.000000, 14.000000)">
+                        <mask id="mask-6" sketch:name="path3862" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <g id="path3862"></g>
+                        <path d="M2,31 L29,0 L29,30.146793" id="path3856" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" mask="url(#mask-6)"></path>
+                    </g>
+                    <path d="M138.577528,19.6441172 C136.673748,16.0826302 132.312439,14.5632143 128.485487,15.1078258 C126.664265,15.3328255 124.785307,15.7958202 123.406266,17.097807 C121.429245,18.766766 120.29165,21.7639355 121.490198,24.2093368 C122.996856,26.9083043 126.120417,27.9414632 128.934869,28.605448 C132.168514,29.4389228 135.742521,29.9562216 138.298226,32.3138621 C140.11022,33.9441886 140.355581,36.7201075 139.595068,38.925802 C138.515182,41.9277975 135.36684,43.7849762 132.273769,43.821495 C128.11185,44.5322011 123.409811,43.1337376 121.08001,39.3918828" id="path3864" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                    <g id="use3866" transform="translate(151.000000, 15.000000)" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.5775278,4.48397527 C15.6737484,1.04529814 11.312439,-0.421724111 7.48548725,0.104107685 C5.66426521,0.321348757 3.78530694,0.768378142 2.40626645,2.02546885 C0.429245168,3.63687748 -0.708349584,6.53069632 0.490198292,8.89177346 C1.99685639,11.4976731 5.12041663,12.4952059 7.93486887,13.1362946 C11.1685135,13.9410289 14.742521,14.4404898 17.2982258,16.7168323 C19.1102203,18.2909407 19.3555813,20.9711383 18.5950682,23.1007743 C17.5151817,25.9992528 14.3668403,27.7923908 11.2737686,27.8276503 C7.11185003,28.5138493 2.40981061,27.1636088 0.080009949,23.5507834" id="path3864"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

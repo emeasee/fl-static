@@ -84,18 +84,24 @@
                     <div class="hero-links">
                         <button>Get the App Now</button>
                         <button class="more">Key Features</button>
+                        <div class="platforms">
+                            <i class="fa fa-apple fa-lg"></i>
+                            <i class="fa fa-android fa-lg"></i>
+                            <i class="fa fa-laptop fa-lg"></i>
+                            <i class="glass"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-right flip">
-                <div class="side front">
+            <div class="hero-right flip" id="flipdiv">
+                <div class="side front" id="flipfront">
                     <h6>Sign up now <br> FREE for single users <br/><a href="#">Enterprise</a> set up available</h6>
                     <form class="hero-email">
                         <fieldset>
                             <label for="email_1">Simply enter your email to start signing up</label>
                             <input id="email_1" type="email" placeholder="Your Email" class="pure-input-1">
                         </fieldset>
-                        <button id="flip-toggle">Sign up for the Beta</button>
+                        <button id="flip-toggle">Sign up now</button>
                     </form>
                     <h6>Already have an account?</h6>
                     <form class="hero-login">
@@ -105,7 +111,7 @@
                         <button type="submit" class="login">Login</button>
                     </form>
                 </div>
-                <div class="side back">
+                <div class="side back" id="flipback">
                     <form class="hero-signup">
                         <fieldset>
                             <label for="email_2">Simply enter your email to start signing up</label>
@@ -129,13 +135,12 @@
         </div>
         <!--
         //TODO: Connect the learn element up as a link in JS [Issue: https://github.com/emeasee/fl-static/issues/20]
-        //TODO: Fix learn element responsive design [Issue: https://github.com/emeasee/fl-static/issues/21]
         -->
 
         <div class="learn">
             <div class="heading">
-                <h4>SEE SOME EXAMPLES</h4>
-                <h1>Explore our library<br> of Standard Work now<i class="fa fa-arrow-circle-right fa-2x"></i></h1>
+                <h4>AGRICULTURE &middot; QHSE &middot; SPORTS &middot; OIL &amp; GAS</h4>
+                <h1>Explore our library of <br>Standard Work <span>NOW</span><i class="fa fa-arrow-circle-right fa-2x"></i></h1>
             </div>
         </div>
     </div>
@@ -193,22 +198,33 @@
 
         <div class="heading">
             <h4>KEY FEATURES</h4>
-            <h1>Go the last mile in deploying Standard Operating Procedures</h1>
+            <h1>How we can help your business</h1>
         </div>
         <div class="content-ribbon" id="media">
             <div class="text">
                 <div class="l-box">
-                    <img src="images/media-rich_icon.png" alt="">
                     <h3>
-                            Create media-rich evidentiary track records.
-                        </h3>
-                    <p>Any task is augmented by collecting geolocation automatically. Any media (pictures, videos, recordings, etc) can also be recorded at the task level. We further provide assistance to the user in the form of maps or directions.</p>
+                        Product
+                    </h3>
+                    <ul>
+                      <li>Web-based Standard Work (a FieldLogs Template) editor
+                      <span>Matured definition language including conditions, loops, branches</span></li>
+                      <li>Broad Field Data Capture options</li>
+                      <li>Start &amp; Resume Jobs across devices including Google Glass</li>
+                      <li>Real-time Job sharing and Team collaboration</li>
+                      <li>‘Google-like’ Search anywhere</li>
+                      <li>Post completion Job edition <span>Full history retained</span></li>
+                      <li>Template prototyping - observe and capture raw Jobs, convert to a Standard Work template via the Editor</li>
+                      <li>Time &amp; GPS-stamping of all actions</li>
+                      <li>Full-media support (video, photo, etc.) across all actions - at design &amp; run-time</li>
+                    </ul>
+                    <button class="call">Sign up free</button>
                 </div>
             </div>
 
             <div class="image">
                 <div class="l-box">
-                    <img src="images/Media_rich-shot.png" align="right" alt="Placeholder image for example.">
+                    <img src="images/Product-shot.png" align="right" alt="Placeholder image for example.">
                 </div>
             </div>
         </div>
@@ -216,80 +232,57 @@
         <div class="content-ribbon" id="rt">
             <div class="text">
                 <div class="l-box">
-                    <img src="images/rt-collab_icon.png" alt="">
                     <h3>
-                            Real-Time collaboration for better decisions.
-                        </h3>
-                    <p>Let the right team connect and collaborate around the jobs events as they unfold.</p>
+                        Technology
+                    </h3>
+                    <ul>
+                      <li>Cloud first, Mobile first</li>
+                      <li>Native Smartphone, Tablet, Google Glass support.</li>
+                      <li>Browser support: Chrome, Firefox, Safari, IE</li>
+                      <li>Rich, granular and stateless API set for data access</li>
+                      <li>Full API set for dynamic Template generation</li>
+                      <li>Grid-based scalability</li>
+                      <li>Built for high volume media capture and brokering
+                      <span><a href="#glass">See continuing video capture on Google Glass during job execution</a></span></li>
+                    </ul>
+                    <button class="call">Sign up free</button>
                 </div>
             </div>
             <div class="image">
                 <div class="l-box">
-                    <img src="images/RT-shot.png" alt="Placeholder image for example.">
+                    <img src="images/Tech-shot.png" alt="Placeholder image for example.">
                 </div>
             </div>
         </div>
 
-        <div class="content-ribbon last" id="streamline">
+        <div class="content-ribbon" id="streamline">
+            <div class="heading">
+                <h4>ENTERPRISE OPTION</h4>
+                <h1>Enterprise Strength and Security as Standard</h1>
+            </div>
             <div class="text">
                 <div class="l-box">
-                    <img src="images/streamline_icon.png" alt="">
                     <h3>
-                            Streamline your field processes and improve quality.
-                        </h3>
-                    <p>Replace paper- or Excel-based templates with an easy to write mobile front end to collect and analyze field jobs.</p>
+                        Enterprise
+                        <p>(Available January 2015)</p>
+                    </h3>
+                    <ul>
+                      <li>Enterprise roles &amp; rules (Template and Job access authorization)
+                      <span>Includes Job assignment exceptions and delegation/proxy</span></li>
+                      <li>Multi-user Template edition with fit-to-purpose workflows</li>
+                      <li>Complex and dynamic Job definition with enterprise-level workflow support</li>
+                      <li>Strong password encryption</li>
+                      <li>Secure, HTTPS communication throughout all communication paths</li>
+                      <li>Audit trail on all authorization and organization design changes</li>
+                      <li>Multi-tiered back-ups on Amazon Web Services</li>
+                      <li>OEM options available</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="image">
                 <div class="l-box">
-                    <img src="images/Streamline-shot.png" align="right" alt="Placeholder image for example.">
-                </div>
-            </div>
-        </div>
-
-        <div class="content colored extras" id="security">
-            <div class="heading">
-                <h4>EXTRA FEATURES</h4>
-                <h1>Enterprise level quality and security as standard</h1>
-            </div>
-
-            <div class="bullets">
-                <div class="bullet four-col-bullet">
-                    <div class="bullet-icon bullet-icon-1">
-                        <img src="images/lower-cost_icon.png" alt="">
-                    </div>
-                    <div class="bullet-content">
-                        <h2>Lower cost and TCO with this all in one app</h2>
-                        <p>Use the template editor to create your mobile enabled workflows for your context. Create all the ones you need and have your workforce use them!</p>
-                    </div>
-                </div>
-                <div class="bullet four-col-bullet">
-                    <div class="bullet-icon bullet-icon-2">
-                        <img src="images/box_icon.png" alt="">
-                    </div>
-                    <div class="bullet-content">
-                        <h2>Ready out of the box and simple to adopt</h2>
-                        <p>Reuse free templates from our repository and tailor them to your needs. They are also instantly deployable.</p>
-                    </div>
-                </div>
-                <div class="bullet four-col-bullet">
-                    <div class="bullet-icon bullet-icon-3">
-                        <img src="images/seamless_icon.png" alt="">
-                    </div>
-                    <div class="bullet-content">
-                        <h2>Seamless integration in your enterprise processes</h2>
-                        <p>Create jobs dynamically based on metadata sourced from your enterprise applications. Integrate data collected automatically within your IT systems</p>
-                    </div>
-                </div>
-                <div class="bullet four-col-bullet">
-                    <div class="bullet-icon bullet-icon-3">
-                        <img src="images/cloud_icon.png" alt="">
-                    </div>
-                    <div class="bullet-content">
-                        <h2>Fully featured website and secured Cloud</h2>
-                        <p>Fully featured website and secured end-to-end Cloud encrypted communication</p>
-                    </div>
+                    <img src="images/Enterprise-shot.png" align="right" alt="Placeholder image for example.">
                 </div>
             </div>
         </div>
