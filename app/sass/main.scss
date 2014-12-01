@@ -566,6 +566,7 @@ MAIN CONTENT GENERAL
             span{
                 display:block;
                 font-size: 0.8em;
+                font-style: italic;
             }
          }
         }
@@ -608,6 +609,12 @@ MAIN CONTENT GENERAL
           max-width: none;
           width: 100%;
         }
+        p{
+           font-size: 1.1em;
+            i{
+                padding-top: 5px;
+            }
+        }
       }
       @include media($large-screen){
         .l-box{
@@ -626,6 +633,7 @@ MAIN CONTENT GENERAL
     }
   }
   .signup{
+      display:none;
     .l-box{
       width: 80%;
       margin:0 auto;
@@ -636,11 +644,12 @@ MAIN CONTENT GENERAL
       fieldset{
       }
       @include media($large-screen){
-        width: 40%;
-      }
-      @include media($medium-screen){
         width: 60%;
       }
+
+    }
+    @include media($medium-screen){
+      display:block;
     }
   }
 }
@@ -715,10 +724,12 @@ GRID ITEMS
   .grid-item h1 {
       color: $grid-item-color;
       font-size: 1.3em;
-      margin-top: 2em;
+      font-weight: bolder;
+      margin-top: 1.5em;
       margin-bottom: .4em;
       @include media($large-screen) {
-          margin-top: 3.5em;
+          margin-top: 3em;
+          font-size: 1.6em;
       }
     }
 
@@ -783,6 +794,7 @@ CARDS MAIN
 .cards {
   @include clearfix;
   @include outer-container();
+  max-width: 80%
 }
 
 .card {
@@ -804,9 +816,9 @@ CARDS MAIN
   position: relative;
   text-align: center;
 
-  @include media($medium-screen) {
-    @include span-columns(3);
-    @include omega(4n);
+  @include media($large-screen) {
+    @include span-columns(6);
+    @include omega(2n);
   }
 
   .card-image {
@@ -861,6 +873,10 @@ CARDS MAIN
     p{
       display: table-cell;
       vertical-align: middle;
+    }
+    span{
+      font-size: 0.8em;
+      font-weight: 100;
     }
   }
 
@@ -977,6 +993,70 @@ BULLETS MAIN
     display: inline-block;
   }
 }
+
+/*****************
+TOOLTIPS
+******************/
+.tooltip-item {
+  $tooltip-background: white;
+  $tooltip-color: $base-font-color;
+  $tooltip-width: 16em;
+  $tooltip-arrow-width: 8px;
+  $tooltip-shadow: 0 2px 2px silver;
+  $tooltip-distance-from-item: 140%;
+  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.2;
+
+  border: 1px solid $base-border-color;
+  padding: .5em 1em;
+  border-radius: $base-border-radius;
+  position: relative;
+  margin-bottom: $base-line-height;
+
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltip {
+    position: absolute;
+    left: 50%;
+    @include box-sizing(border-box);
+    @include transition (all 0.2s ease-in-out);
+    bottom: $tooltip-distance-from-item;
+    background-color: $tooltip-background;
+    border-radius: $base-border-radius;
+    color: $tooltip-color;
+    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
+    line-height: 1.5em;
+    margin-left: -($tooltip-width/2);
+    opacity: 0;
+    padding: 1em;
+    box-shadow: $tooltip-shadow;
+    text-align: center;
+    visibility: hidden;
+    min-width: $tooltip-width;
+    z-index: 10;
+    font-family: $serif;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      postion:absolute;
+      left:46%;
+      margin-left: -$tooltip-arrow-width;
+      border: $tooltip-arrow-width solid transparent;
+      color: $tooltip-background;
+      content: '▼';
+      text-shadow: $tooltip-shadow;
+      font-size: 1.4em;
+      pointer-events: none;
+      bottom: $tooltip-arrow-distance-from-box;
+    }
+  }
+}
+
 
 
 /*****************
