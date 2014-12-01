@@ -42,6 +42,10 @@ $( document ).ready(function() {
 		$("label#lblAnswerCaptcha").css('display','none');
 	}
 
+     $('#js-expander-trigger').click(function(){
+      $(this).toggleClass("expander-hidden");
+     });
+
 	$("button#flip-toggle").on("click touchend", function(event){
 		var el = document.getElementById("top");
 		el.scrollIntoView(true);

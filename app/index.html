@@ -44,7 +44,7 @@
 //TODO: Redesign the homepage inline with design from Jean-Marc [Issue: https://github.com/emeasee/fl-static/issues/8]
 -->
 
-<body>
+<body id="top">
     <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -82,8 +82,8 @@
                         Capture &amp; interpret field operation data in real-time and across teams</p>
                     </div>
                     <div class="hero-links">
-                        <button>Get the App Now</button>
-                        <button class="more">Key Features</button>
+                        <a href="">Get the App Now</a>
+                        <a href="#features" class="more">Key Features</a>
                         <div class="platforms">
                             <i class="fa fa-apple fa-lg"></i>
                             <i class="fa fa-android fa-lg"></i>
@@ -192,16 +192,16 @@
         </div>
 
 
-        <button class="call">Start your free trial now</button>
+        <button id="flip-toggle2">Start your free trial now</button>
     </div>
 
-    <div class="content" id="images">
+    <div class="content" id="features">
 
         <div class="heading">
             <h4>KEY FEATURES</h4>
             <h1>Designed to help your business grow</h1>
         </div>
-        <div class="content-ribbon" id="media">
+        <div class="content-ribbon" id="product">
             <div class="text">
                 <div class="l-box">
                     <h3>
@@ -230,7 +230,7 @@
             </div>
         </div>
 
-        <div class="content-ribbon" id="rt">
+        <div class="content-ribbon" id="tech">
             <div class="text">
                 <div class="l-box">
                     <h3>
@@ -256,7 +256,7 @@
             </div>
         </div>
 
-        <div class="content-ribbon" id="streamline">
+        <div class="content-ribbon" id="enterprise">
             <div class="heading">
                 <h4>ENTERPRISE OPTION</h4>
                 <h1>Enterprise Strength and Security as Standard</h1>
@@ -314,20 +314,32 @@
                       <li>Full video &amp; sound recording (optional) while executing a Job</li>
                       <li>Native Android App. Complete offline mode support.</li>
                     </ul>
-                    <button class="call">Download Glass App</button>
                 </div>
             </div>
-            <!--
-            //TODO: Add form that slide appears when button is pressed [Issue: https://github.com/emeasee/fl-static/issues/15]
-            -->
-
         </div>
-
+            <div class="expander">
+                <button id="js-expander-trigger" class="expander-trigger expander-hidden">Download Glass App</button>
+                <div id="js-expander-content" class="expander-content">
+                  <fieldset>
+                      <label for="">Name</label>
+                      <input type="text" placeholder="Your Name">
+                  </fieldset>
+                   <fieldset>
+                      <label for="">Email</label>
+                      <input type="email" placeholder="Your Email">
+                  </fieldset>
+                  <fieldset>
+                      <label for="">Reason for use?</label>
+                      <input type="text" placeholder="How do you want to use the Glass app?">
+                  </fieldset>
+                  <button type="submit">Submit Request</button>
+              </div>
+          </div>
     </div>
 
     <div class="content colored signup" id="info">
             <div class="heading">
-                <h4>GET SET UP IN NO TIME</h4>
+                <h4>SIGN UP</h4>
                 <h1>Get set up in no time</h1>
             </div>
 
@@ -358,7 +370,6 @@
                   Audit trial on every change<br>
                   Multi-tiered back-ups
                    <br><i>Agressive volume discount available</i>
-
 <!--
                     $10 user/month after 100 users<br>
                     $5 user/month after 1000 users<br>
@@ -373,10 +384,10 @@
             <div class="l-box">
                 <form class="hero-email">
                     <fieldset>
-                        <label for="email_1">Enter your email to sign up</label>
-                        <input id="email_1" type="email" placeholder="Your Email" class="pure-input-1">
+                        <label for="email_3">Enter your email to sign up</label>
+                        <input id="email_3" type="email" placeholder="Your Email" class="pure-input-1">
                     </fieldset>
-                    <button id="flip-toggle">Complete sign up</button>
+                    <button id="flip-toggle2">Complete sign up</button>
                 </form>
             </div>
 

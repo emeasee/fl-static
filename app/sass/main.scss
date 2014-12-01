@@ -328,16 +328,17 @@ HERO BANNER TOP
                 overflow: auto;
                 max-width: 70%;
                 position:relative;
-                button{
+                a{
+                  @extend button;
                   margin: 1em 1em 0 0;
                   height:65px;
                   white-space: normal;
                   float: left;
                   width: auto;
                   font-size: $base-font-size * 1.3;
+                  line-height: 2.5em;
 
                   &.more{
-                    @extend button;
                     background-color: $dark-brown;
                   }
                 }
@@ -536,7 +537,7 @@ MAIN CONTENT GENERAL
   }
   .content-ribbon{
     margin-bottom: $base-font-size * 1.5;
-    padding-bottom: $base-font-size * 1.5;
+    padding-bottom: $base-font-size * 3;
     border-bottom: 1px solid $gray;
     @include outer-container();
     &.last{
@@ -993,6 +994,59 @@ BULLETS MAIN
     display: inline-block;
   }
 }
+
+/*****************
+EXPANDER
+******************/
+$expander-arrow-width: 5px;
+$expander-toggle-size: 1em;
+$expander-toggle-arrow-size: $expander-toggle-size;
+$expander-toggle-margin: 1em;
+
+.expander {
+  margin: 0 auto;
+  width: 90%;
+  max-width: $max-width/1.1;
+}
+
+.expander-trigger {
+  @include user-select(none);
+  border-bottom: 1px solid $gray-light;
+  cursor: pointer;
+  display: block;
+  font-size: $expander-toggle-size;
+  margin-bottom: $expander-toggle-size;
+  padding-bottom: $expander-toggle-size / 4;
+  &:before {
+    content: '\25BC';
+    font-size: $expander-toggle-arrow-size;
+    margin-right: .5em;
+  }
+}
+
+.expander-hidden {
+  &:before {
+    content: '\25BA';
+  }
+}
+
+.expander-hidden + .expander-content {
+  display: none;
+}
+
+.expander-content{
+    overflow: auto;
+    padding:$base-font-size;
+    background: $gray-light;
+    margin-bottom: 2em;
+  fieldset{
+    float:left;
+      width:32%;
+      margin: 0.5%;
+      text-align: left;
+  }
+}
+
 
 /*****************
 TOOLTIPS
