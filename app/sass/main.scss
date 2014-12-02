@@ -42,13 +42,14 @@ header.navigation {
     padding-left: 1em;
     padding-right: 2em;
     margin: 0 auto;
-    background-image: url(../images/splash_logo_top.png);
+    background-image: url(../images/splash_logo_top_new.svg);
 
     background-position: left;
     background-repeat: no-repeat;
 
     &.front{
-      width: 300px;
+      max-width: 300px;
+        width:100%;
       display: block;
       text-align: center;
         float: left;
@@ -241,7 +242,7 @@ HERO BANNER TOP
           background: rgba(72, 185, 249, .8);
           cursor:pointer;
           min-height: $base-font-size * 14;
-          font-size: $base-font-size / 1.4;
+          font-size: $base-font-size / 1.2;
           .heading {
               display: table-cell;
               vertical-align: middle;
@@ -253,14 +254,18 @@ HERO BANNER TOP
                   font-size: 1em;
               }
               i{
-                  position:absolute;
-                  height: 0px;
-                  margin-top:-4%;
-                  margin-left: 3%;
                   opacity:0.8;
               }
           }
-
+          @include media($medium-screen){
+              i{
+                position:absolute;
+                height: 0px;
+                margin-top:-3%;
+                margin-left: 6%;
+                  font-size: 2em;
+              }
+          }
           @include media($large-screen){
             font-size: $base-font-size;
             min-height: $base-font-size * 10;
@@ -307,7 +312,7 @@ HERO BANNER TOP
                   margin: 0 auto;
                   max-width: 70%;
                   h1 {
-                      font-size: 1.4em;
+                      font-size: 1.6em;
                       margin-bottom: .4em;
                       font-weight: 100;
                      @include media($large-screen) {
@@ -316,10 +321,10 @@ HERO BANNER TOP
                   }
                   p {
                       margin: auto;
-                      margin-bottom: 2em;
-
+                      font-size: 1.2em;
                       @include media($large-screen) {
                           font-size: 1.2em;
+                          margin-bottom: 2em;
                       }
                   }
               }
@@ -334,13 +339,17 @@ HERO BANNER TOP
                   height:65px;
                   white-space: normal;
                   float: left;
-                  width: auto;
+                  width: 100%;
                   font-size: $base-font-size * 1.3;
                   line-height: 2.5em;
 
                   &.more{
                     background-color: $dark-brown;
                   }
+                  @include media($medium-screen){
+                    width: auto;
+                  }
+
                 }
                 .platforms{
                     float:left;
@@ -397,7 +406,7 @@ HERO BANNER TOP
         .hero-right{
           display:none;
           .side{
-            border-radius: 8px;
+            border-radius: $base-border-radius;
             box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
             background: RGBA(247, 246, 245, 0.95);
             background-color: 1B1B1B;
@@ -486,7 +495,7 @@ MAIN CONTENT GENERAL
   max-width: $x-large-screen;
 
   button.call{
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: normal;
   }
   &.colored{
@@ -632,27 +641,30 @@ MAIN CONTENT GENERAL
         }
       }
     }
-  }
-  .signup{
-      display:none;
-    .l-box{
-      width: 80%;
-      margin:0 auto;
-      border-radius: 8px;
-      background: #FFFFFF;
-      padding: $base-font-size;
-      box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
-      fieldset{
+      &#glass{
+        margin-bottom: -30px;
       }
-      @include media($large-screen){
-        width: 60%;
-      }
-
-    }
-    @include media($medium-screen){
-      display:block;
-    }
   }
+//  .signup{
+//      display:none;
+//    .l-box{
+//      width: 80%;
+//      margin:0 auto;
+//      border-radius: 8px;
+//      background: #FFFFFF;
+//      padding: $base-font-size;
+//      box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
+//      fieldset{
+//      }
+//      @include media($large-screen){
+//        width: 60%;
+//      }
+//
+//    }
+//    @include media($medium-screen){
+//      display:block;
+//    }
+//  }
 }
 
 /*****************
@@ -795,7 +807,7 @@ CARDS MAIN
 .cards {
   @include clearfix;
   @include outer-container();
-  max-width: 80%
+  max-width: 60%
 }
 
 .card {
@@ -868,7 +880,7 @@ CARDS MAIN
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     padding: $base-line-height/3 $gutter/2;
-    min-height: 65px;
+    min-height: 35px;
     display: table;
     width: 100%;
     p{
@@ -886,6 +898,16 @@ CARDS MAIN
     font-size: .9em;
     line-height: 1.5em;
     min-height: 158px;
+    b.large{
+        font-size: 1.7em;
+        padding-top: $base-font-size*1.5;
+        display: block;
+        span{
+            font-size:0.7em;
+            line-height:2em;
+            font-weight: normal;
+        }
+    }
   }
 
   .card-stats {
@@ -1017,6 +1039,7 @@ $expander-toggle-margin: 1em;
   font-size: $expander-toggle-size;
   margin-bottom: $expander-toggle-size;
   padding-bottom: $expander-toggle-size / 4;
+  background: $dark-brown;
   &:before {
     content: '\25BC';
     font-size: $expander-toggle-arrow-size;
@@ -1040,12 +1063,192 @@ $expander-toggle-margin: 1em;
     background: $gray-light;
     margin-bottom: 2em;
   fieldset{
-    float:left;
-      width:32%;
-      margin: 0.5%;
-      text-align: left;
+    margin: 0.5%;
+    text-align: left;
+    span{
+        color: red;
+    }
+
+    @include media($large-screen){
+        float:left;
+        width:49%;
+    }
+  }
+  button{
+    margin-top: $base-font-size;
   }
 }
+
+/*****************
+MODAL BOX
+******************/
+.modal {
+  $modal-padding: 3em;
+  $modal-background: $base-body-color;
+  $modal-close-color: $gray-light;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    $img-width: 300px;
+    border-radius: $img-width/2;
+    display: block;
+    max-width: $img-width;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .btn {
+    @extend button;
+  }
+
+  .text{
+      color: $base-accent-color;
+      text-decoration: underline;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-window { // overlay
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, .85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: $modal-padding /2;
+    right: $modal-padding /2;
+    @include size(1.5em);
+    cursor: pointer;
+    background: $modal-background;
+
+    &:after,
+    &:before {
+      @include position(absolute, 3px 3px 0 50%);
+      @include transform(rotate(45deg));
+      @include size(.15em 1.5em);
+      background: $dark-brown;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: lighten($dark-brown, 40);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity .25s ease);
+    border-radius: $base-border-radius;
+    background: $modal-background;
+    margin: auto;
+    max-height: 95%;
+    position: relative;
+    overflow: auto;
+    width: 95%;
+      max-width: $max-width /2 ;
+    padding: $modal-padding /2;
+    margin-top: .6em;
+
+    @include media($medium-screen) {
+      padding: $modal-padding;
+      width: 60%;
+      max-height: 60%;
+      margin-top: 10em;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
+      margin-top: 10em;
+    }
+
+    h1 {
+      color: $base-font-color;
+      margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize;
+      font-size:1.5em;
+    }
+
+    p.body, p.intro {
+      font-size: $base-font-size;
+      max-width: 100% !important;
+      text-align: left;
+
+      &.intro {
+        color: $orange;
+        line-height: 1.6em;
+      }
+
+      &.body {
+        color: $base-font-color;
+        line-height: 1.45em;
+
+        @include media($medium-screen) {
+          @include columns(2 8em);
+        }
+      }
+    }
+
+    p.large{
+        font-size: 1.4em;
+        text-align: center;
+        line-height: 1.3em;
+        padding-top: 1em;
+        @include media($large-screen){
+            float: left;
+            width: 33%;
+            height: 100px;
+
+        }
+    }
+    a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: .5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-window .modal-inner {
+    top: 0;
+  }
+}
+
 
 
 /*****************

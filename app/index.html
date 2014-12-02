@@ -77,8 +77,8 @@
             <div class="hero-left">
                 <div class="hero-align">
                     <div class="hero-copy">
-                        <h1>Cloud for Standard Work &amp; Field Data Capture</h1>
-                        <p>Define and optimize your company "Job Execution Framework"<br>
+                        <h1><b><i>Standard Work &amp; Field Data Capture</i></b> for the Cloud</h1>
+                        <p>Define and optimize your company "Job Execution Framework".
                         Capture &amp; interpret field operation data in real-time and across teams</p>
                     </div>
                     <div class="hero-links">
@@ -135,13 +135,12 @@
         </div>
         <!--
         //TODO: Connect the learn element up as a link in JS [Issue: https://github.com/emeasee/fl-static/issues/20]
-        //TODO: Fix icon in learn banner pushing mobile layout [Issue: https://github.com/emeasee/fl-static/issues/24]
         -->
 
         <div class="learn">
             <div class="heading">
-                <h4>AGRICULTURE &middot; QHSE &middot; SPORTS &middot; OIL &amp; GAS</h4>
-                <h1>Explore our library of <br>Standard Work <span>NOW</span><i class="fa fa-arrow-circle-right fa-2x"></i></h1>
+                <h1>Explore our library of <br>Standard Work<i class="fa fa-arrow-circle-right"></i></h1>
+                <h4>AGRICULTURE &middot; QHSE &middot; SPORTS &middot; OIL &amp; GAS &middot; FIELD DATA &middot; MEDICAL</h4>
             </div>
         </div>
     </div>
@@ -192,14 +191,46 @@
         </div>
 
 
-        <button id="flip-toggle2">Start your free trial now</button>
+        <div class="modal">
+          <label for="modal-1">
+            <div class="btn js-btn call">Sign up now</div>
+          </label>
+          <input class="modal-state" id="modal-1" type="checkbox" />
+          <div class="modal-window">
+            <div class="modal-inner">
+              <label class="modal-close" for="modal-1"></label>
+              <h1>Sign up for a new FREE account</h1>
+              <p class="intro">Please enter a valid email address so you can confirm your account</p>
+              <form class="hero-signup">
+                    <fieldset>
+                        <label for="email_2">Your Email Address</label>
+                        <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
+                        <label for="pass">Enter a Password</label>
+                        <input id="pass" type="password" class="pure-input-1" placeholder="Password">
+                        <label for="confirm">Confirm your Password</label>
+                        <input type="password" class="pure-input-1" placeholder="Confirm Password">
+                    </fieldset>
+                    <fieldset>
+                        <label for="region">Select your Region</label>
+                        <select id="region" class="pure-input-1">
+                            <option>North America</option>
+                            <option>Europe</option>
+                            <option>Asia</option>
+                        </select>
+                        <img src="http://placehold.it/315x125" alt="Captcha">
+                    </fieldset>
+                    <button type="submit">Complete sign up</button>
+                </form>
+            </div>
+          </div>
+        </div>
     </div>
 
     <div class="content" id="features">
 
         <div class="heading">
             <h4>KEY FEATURES</h4>
-            <h1>Designed to help your business grow</h1>
+            <h1>Enable your processes to the last mile</h1>
         </div>
         <div class="content-ribbon" id="product">
             <div class="text">
@@ -225,7 +256,7 @@
             <div class="image">
                 <div class="l-box">
                     <img src="images/Product-shot.png" align="right" alt="Placeholder image for example.">
-                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> Runtime</p>
+                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> the Runtime</p>
                 </div>
             </div>
         </div>
@@ -251,15 +282,15 @@
             <div class="image">
                 <div class="l-box">
                     <img src="images/Tech-shot.png" alt="Placeholder image for example.">
-                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> Jobs</p>
+                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> the Job Viewer</p>
                 </div>
             </div>
         </div>
 
         <div class="content-ribbon" id="enterprise">
             <div class="heading">
-                <h4>ENTERPRISE OPTION</h4>
-                <h1>Enterprise Strength and Security as Standard</h1>
+                <h4>ENTERPRISE ADDITION</h4>
+                <h1>Enterprise Strength for the Mobile Workforce</h1>
             </div>
             <div class="text">
                 <div class="l-box">
@@ -284,7 +315,7 @@
             <div class="image">
                 <div class="l-box">
                     <img src="images/Enterprise-shot.png" align="right" alt="Placeholder image for example.">
-                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> Editor</p>
+                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> the Editor</p>
                 </div>
             </div>
         </div>
@@ -321,15 +352,19 @@
                 <button id="js-expander-trigger" class="expander-trigger expander-hidden">Download Glass App</button>
                 <div id="js-expander-content" class="expander-content">
                   <fieldset>
-                      <label for="">Name</label>
+                      <label for="">Name <span>*</span></label>
                       <input type="text" placeholder="Your Name">
                   </fieldset>
                    <fieldset>
-                      <label for="">Email</label>
+                      <label for="">Email <span>*</span></label>
                       <input type="email" placeholder="Your Email">
                   </fieldset>
                   <fieldset>
-                      <label for="">Reason for use?</label>
+                      <label for="">Phone Number <span>*</span></label>
+                      <input type="text" placeholder="Your Phone Number">
+                  </fieldset>
+                  <fieldset>
+                      <label for="">Reason for use? <span>*</span></label>
                       <input type="text" placeholder="How do you want to use the Glass app?">
                   </fieldset>
                   <button type="submit">Submit Request</button>
@@ -348,49 +383,72 @@
               <div class="card">
                 <div class="ribbon-wrapper"><div class="ribbon">FREE</div></div>
                 <div class="card-header">
-                  Individual Users<br/>Unlimited use<br><span>Start right away</span>
+                  Individual Users
                 </div>
                 <div class="card-copy">
-                  <p>Multi-platform<br>
-                  Create Templates and Jobs<br>
-                  Run and Share and Jobs in Real-Time<br>
-                  Full Cloud-based storage<br>
-                  Email &amp; Chat Support</p>
+                  <p><b class="large">Unlimited use<br><span>Start right away</span></b></p>
                 </div>
               </div>
 
               <div class="card">
                 <div class="card-header">
-                  Enterprise Users<br/>$20 per user per month<br><span>Upgrade once you have an account</span>
+                  Enterprise Users
                 </div>
                 <div class="card-copy">
-                  <p><i>Also includes:</i><br>
-                  Access authorization across multi-users<br>
-                  Multi-user Template edition<br>
-                  Audit trial on every change<br>
-                  Multi-tiered back-ups
-                   <br><i>Agressive volume discount available</i>
-<!--
-                    $10 user/month after 100 users<br>
-                    $5 user/month after 1000 users<br>
-                    $2 user/month after 10000 users<br>
--->
-                    </p>
+                  <p><b class="large">$20 per user per month<br><span>Upgrade once you have an account</span></b></p>
+                    <div class="modal">
+                      <label for="modal-2">
+                        <div class="text js-btn">Agressive volume discount available</div>
+                      </label>
+                      <input class="modal-state" id="modal-2" type="checkbox" />
+                      <div class="modal-window">
+                        <div class="modal-inner">
+                          <label class="modal-close" for="modal-2"></label>
+                          <h1>Volume Discount pricing</h1>
+                          <p class="intro">See below for a rouge pricing breakdown for volume Enterprise accounts.</p>
+                          <p class="large">$10 user/month after 100 users </p>
+                          <p class="large">$5 user/month after 1000 users</p>
+                          <p class="large">$2 user/month after 10000 users</p>
+                          <p>Contact us for further details</p>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
         </div>
-        <div class="signup bottom">
-            <div class="l-box">
-                <form class="hero-email">
+        <div class="modal">
+          <label for="modal-3">
+            <div class="btn js-btn call">Sign up now</div>
+          </label>
+          <input class="modal-state" id="modal-3" type="checkbox" />
+          <div class="modal-window">
+            <div class="modal-inner">
+              <label class="modal-close" for="modal-3"></label>
+              <h1>Sign up for a new FREE account</h1>
+              <p class="intro">Please enter a valid email address so you can confirm your account</p>
+              <form class="hero-signup">
                     <fieldset>
-                        <label for="email_3">Enter your email to sign up</label>
-                        <input id="email_3" type="email" placeholder="Your Email" class="pure-input-1">
+                        <label for="email_2">Your Email Address</label>
+                        <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
+                        <label for="pass">Enter a Password</label>
+                        <input id="pass" type="password" class="pure-input-1" placeholder="Password">
+                        <label for="confirm">Confirm your Password</label>
+                        <input type="password" class="pure-input-1" placeholder="Confirm Password">
                     </fieldset>
-                    <button id="flip-toggle2">Complete sign up</button>
+                    <fieldset>
+                        <label for="region">Select your Region</label>
+                        <select id="region" class="pure-input-1">
+                            <option>North America</option>
+                            <option>Europe</option>
+                            <option>Asia</option>
+                        </select>
+                        <img src="http://placehold.it/315x125" alt="Captcha">
+                    </fieldset>
+                    <button type="submit">Complete sign up</button>
                 </form>
             </div>
-
+          </div>
         </div>
     </div>
 
