@@ -1086,7 +1086,7 @@ MODAL BOX
   $modal-padding: 3em;
   $modal-background: $base-body-color;
   $modal-close-color: $gray-light;
-  $modal-image-height: 135px;
+  $modal-image-height: 235px;
   $modal-image-width: $modal-image-height;
 
   label {
@@ -1178,14 +1178,11 @@ MODAL BOX
     @include media($medium-screen) {
       padding: $modal-padding;
       width: 60%;
-      max-height: 60%;
-      margin-top: 10em;
+      max-height: 90%;
+      margin-top: 3em;
     }
 
-    @include media($large-screen) {
-      width: 50%;
-      margin-top: 10em;
-    }
+
 
     h1 {
       color: $base-font-color;

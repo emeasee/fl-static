@@ -115,6 +115,36 @@ $( document ).ready(function() {
 		return false;
 	});
 
+	$('form[name=captchaForm]').submit(function(){
+		if(validateCaptcha()) {
+			if(global_currentMode == MODE_FORGOT_PWD) {
+
+				if(validateSendPasswordForm()) {
+					doSendPasswordRequest();
+				}
+			}
+			else {
+				doCreateNewBuyer(global_emailInput, global_buyerIdInput, global_passInput, global_confirmPassInput, global_regionInput);
+			}
+		}
+		hideRecaptcha();
+		return false;
+	});
+
+	$('form[name=validateNewUserInvitationForm]').submit(function(){
+		if(validateCreateBuyerForm("email_2", "pass", "confirmPass")) {
+			/*global_emailInput = "email_2";
+			global_buyerIdInput = "email_2";
+			global_passInput = "pass";
+			global_confirmPassInput = "confirmPass";
+			global_regionInput = "region";
+			global_currentMode = MODE_CREATE_BUYER;
+			showRecaptchaPopup(MODE_CREATE_BUYER);*/
+			validateNewUserInvitation("pass", "region", "captchaChallenge", "captchaResponse");
+		}
+		return false;
+	});
+
 	$("button#captchaButton").on("click", function(event){
 		if(validateCaptcha()) {
 			if(global_currentMode == MODE_FORGOT_PWD) {

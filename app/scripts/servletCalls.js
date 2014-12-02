@@ -1,26 +1,9 @@
-
-
 	function doLogin() {
-		var buyerId = document.getElementById("login").value;
-		var pwd = document.getElementById("password").value;
+			var buyerId = document.getElementById("login").value;
+			var pwd = document.getElementById("password").value;
 
 
-		var params = "buyerId="+buyerId+"&pwd="+pwd+"&appId="+config.applicationId+"&customerId="+config.customerId+"&op="+config.operation;
-		var fullUrl = config.loginURL + "?" + params;
-
-		/*xmlHttpRequest.open("GET", fullUrl, true);
-		xmlHttpRequest.onreadystatechange = processLogin;
-		xmlHttpRequest.send(null);*/
-
-		 $.ajax({
-			type: "GET",
-			async: false,
-			dataType: "jsonp",
-			url: fullUrl,
-			success: function(response) {
-				processLogin(response);
-			}
-		});
+			doMainSiteLogin(buyerId, pwd, "processLogin");
 	}
 
 	function validateLoginForm() {
@@ -32,10 +15,18 @@
 			showMessage(strings.ENTER_EMAIL_ADDRESS, "300", "120", "");
 			return false;
 		}
+		if(buyerId.length > 400) {
+			showMessage(strings.EMAIL_ADDRESS_TOO_LONG, "300", "120", "");
+			return false;
+		}
 
 		//Validate password
 		if(pwd == "") {
 			showMessage(strings.ENTER_PASSWORD, "300", "120", "");
+			return false;
+		}
+		if(pwd.length > 16) {
+			showMessage(strings.PASSWORD_TOO_LONG, "300", "120", "");
 			return false;
 		}
 
@@ -45,7 +36,7 @@
 	function processLogin(response) {
 		var rememberMe = document.getElementById("remember").checked;
 
-		if(response.indexOf("error") > -1) {
+		if( response.indexOf("error") > -1 ) {
 			showMessage(getResponseMessage(response), "300", "120", "");
 		} else {
 			response = replaceAll("&#061;", "=", response);
@@ -77,31 +68,8 @@
 		var captchaChallenge = Recaptcha.get_challenge();/*document.getElementsByName("recaptcha_challenge_field")[0].value;*/
 		var captchaResponse = Recaptcha.get_response();/*document.getElementsByName("recaptcha_response_field")[0].value;*/
 
-		var params = "buyerId="+buyerId
-					+"&pwd="+pwd
-					+"&appId="+config.applicationId
-					+"&customerId="+config.customerId
-					+"&email="+email
-					+"&region="+region
-					+"&locale="+navigator.language
-					+"&captchaChallenge="+captchaChallenge+"&captchaResponse="+captchaResponse;
-		var fullUrl = config.createNewBuyerURL + "?" + params;
-
-		 $.ajax({
-			type: "GET",
-			async: false,
-			dataType: "jsonp",
-			url: fullUrl,
-			error : function(jqXHR, textStatus, errorThrown) {
-				alert(textStatus);
-			},
-			success: function(response) {
-				processCreateBuyerResponse(response, buyerId);
-			}
-		});
-
+		doMainSiteCreateBuyer(buyerId, pwd, region, navigator.language, captchaChallenge, captchaResponse, "processCreateBuyerResponse");
 	}
-
 
 	function processCreateBuyerResponse(response, buyerId) {
 		//SUCCESS
@@ -111,7 +79,7 @@
 			var requestId = successmessage.split("created -- ")[1];
 
 			var message = replaceAll(keywords.BUYERID, buyerId, strings.ACCOUNT_CREATION_SUCCESS);
-			redirectTo("signup.html?requestId="+requestId);
+			redirectTo(config.staticSiteRoot + "signup.html?requestId="+requestId);
 			//showMessage(message, "400", "160",  "");
 			return;
 		}
@@ -146,7 +114,7 @@
 				return;
 			}
 
-			showMessage(errormessage, "400", "160", "");
+			showMessage(errormessage, "500", "200", "");
 			return;
 		} else {
 			//No captcha error => the captcha has been validated, we have to reload the recaptcha component
@@ -169,6 +137,11 @@
 			return false;
 		}
 
+		if(email.length > 400) {
+			showMessage(strings.EMAIL_ADDRESS_TOO_LONG, "300", "120", "");
+			return false;
+		}
+
 		var atpos=email.indexOf("@");
 		var dotpos=email.lastIndexOf(".");
 		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
@@ -179,6 +152,11 @@
 		//Validate password
 		if(pwd == "") {
 			showMessage(strings.ENTER_PASSWORD, "300", "120", "");
+			return false;
+		}
+
+		if(pwd.length > 16) {
+			showMessage(strings.PASSWORD_TOO_LONG, "300", "120", "");
 			return false;
 		}
 		if( pwd != confirmPwd) {
@@ -198,24 +176,7 @@
 		var captchaChallenge = Recaptcha.get_challenge();/*document.getElementsByName("recaptcha_challenge_field")[0].value;*/
 		var captchaResponse = Recaptcha.get_response();/*document.getElementsByName("recaptcha_response_field")[0].value;*/
 
-		var params = "customerId="+config.customerId
-					+"&id="+emailPwd
-					+"&appId="+config.applicationId
-					+"&captchaChallenge="+captchaChallenge+"&captchaResponse="+captchaResponse;
-		var fullUrl = config.forgotMyPassword + "?" + params;
-
-		 $.ajax({
-			type: "GET",
-			async: false,
-			dataType: "jsonp",
-			url: fullUrl,
-			error : function(jqXHR, textStatus, errorThrown) {
-				alert(textStatus);
-			},
-			success: function(response) {
-				processSendPasswordResponse(response, emailPwd);
-			}
-		});
+    doMainSiteResetPassword(emailPwd, captchChallenge, captchaResponse, "processSendPasswordResponse");
 	}
 
 	function processSendPasswordResponse(response, emailPwd) {
@@ -226,7 +187,7 @@
 			var requestId = successmessage.split("created -- ")[1];
 
 			var message = replaceAll(keywords.EMAIL_ADDRESS, emailPwd, strings.NEW_PASSWORD_SENT);
-			redirectTo("signup.html?requestId="+requestId);
+			redirectTo(staticSiteRoot+"signup.html?requestId="+requestId);
 			//showMessage(message, "400", "160",  "");
 			return;
 		}
@@ -265,6 +226,10 @@
 			showMessage(strings.ENTER_EMAIL_ADDRESS, "300", "120", "");
 			return false;
 		}
+		if(emailPwd.length > 400) {
+			showMessage(strings.EMAIL_ADDRESS_TOO_LONG, "300", "120", "");
+			return false;
+		}
 
 		var atpos=emailPwd.indexOf("@");
 		var dotpos=emailPwd.lastIndexOf(".");
@@ -288,28 +253,11 @@
 
 	function doSendActivationEmail_forBuyer() {
 		var buyerId = document.getElementById("email_2").value
-		var params = "buyerId="+buyerId+"&customerId="+config.customerId;
-		doSendActivationEmail(params);
+		doMainSiteSendValidationEmail(buyerId, null, "processActivationEmail");
 	}
 
 	function doSendActivationEmail_forRequestId() {
-		var params = "id="+getUrlParameterValue("requestId");
-		doSendActivationEmail(params);
-	}
-
-	function doSendActivationEmail(params) {
-
-		var fullUrl = config.sendActivationEmail + "?" + params;
-
-		 $.ajax({
-			type: "GET",
-			async: false,
-			dataType: "jsonp",
-			url: fullUrl,
-			success: function(response) {
-				processActivationEmail(response);
-			}
-		});
+		doMainSiteSendValidationEmail(null, getUrlParameterValue("requestId"), "processActivationEmail");
 	}
 
 	function processActivationEmail(response) {
@@ -348,4 +296,21 @@
 			$('#flipback').css('display','block');
 		}
 		$(".flip").addClass('flipped');
+	}
+
+
+	function validateNewUserInvitation(pwdInput, regionInput, captchaChallenge, captchaResponse) {
+
+		var requestId = getUrlParameterValue('id');
+		var pwd = document.getElementById(pwdInput).value;
+		var region = document.getElementById(regionInput).value;
+
+		var captchaChallenge = "";//Recaptcha.get_challenge();/*document.getElementsByName("recaptcha_challenge_field")[0].value;*/
+		var captchaResponse = "";//Recaptcha.get_response();/*document.getElementsByName("recaptcha_response_field")[0].value;*/
+
+		doMainSiteValidateNewUserInvitation(requestId, pwd, region, navigator.language, captchaChallenge, captchaResponse, "processValidateUserInvitationResponse");
+	}
+
+	function processValidateUserInvitationResponse(answer) {
+		window.alert('Invitation Sent : '+answer);
 	}

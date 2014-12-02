@@ -8,8 +8,10 @@ var strings = {
 
 	ENTER_EMAIL_ADDRESS: 		"#enterEmailAddress#",
 	INVALID_EMAIL_ADDRESS: 		"#invalidEmailAddress#",
+	EMAIL_ADDRESS_TOO_LONG: 	"#EmailAddressTooLong#",
 	ENTER_PASSWORD: 			"#enterPassword#",
 	PASSWORDS_NOT_IDENTICAL: 	"#passwordsNotIdentical#",
+	PASSWORD_TOO_LONG: 			"#PasswordTooLong#",
 	ENTER_CAPTCHA: 				"#enterCaptcha#",
 
 	ACTIVATION_EMAIL_SENT: 		"#activationEmailSent#",

@@ -21,9 +21,9 @@
 	}
 
 	function getResponseMessage(response) {
-		var startIdx = response.indexOf("&quot;");
-		startIdx = startIdx + 6;
-		var endIdx = response.indexOf("&quot;", startIdx);
+		var startIdx = response.indexOf("\"");
+		startIdx = startIdx + 1;
+		var endIdx = response.indexOf("\"", startIdx);
 
 		var error = response.substring(startIdx,endIdx)
 		var decodedError = decodeXml(error);
