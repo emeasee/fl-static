@@ -11,7 +11,7 @@ body{
 HEADER
 ******************/
 header.navigation {
-  $navigation-background: white;
+  $navigation-background: $dark-brown;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 90px;
@@ -21,13 +21,17 @@ header.navigation {
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
 
-  background-color: transparent;
+  background-color: $navigation-background;
   //border-bottom: 1px solid darken($navigation-background, 10);
   font-family: $sans-serif;
   height: $navigation-height;
   width: 100%;
   z-index: 999;
-  position: absolute;
+
+  &.hero{
+      position: absolute;
+      background-color: transparent;
+  }
 
   .menu-wrapper {
     @include outer-container;
@@ -808,7 +812,7 @@ CARDS MAIN
 .cards {
   @include clearfix;
   @include outer-container();
-  max-width: 60%
+  max-width: 60%;
 }
 
 .card {
@@ -832,7 +836,7 @@ CARDS MAIN
 
   @include media($large-screen) {
     @include span-columns(6);
-    @include omega(2n);
+    //@include omega(2n);
   }
 
   .card-image {
@@ -884,6 +888,7 @@ CARDS MAIN
     min-height: 35px;
     display: table;
     width: 100%;
+    font-size: 1.4em;
     p{
       display: table-cell;
       vertical-align: middle;
@@ -962,6 +967,17 @@ CARDS MAIN
     }
   }
 }
+
+.wide{
+    max-width: 90%;
+    padding-top: $base-font-size * 2;
+    .card{
+      @include media($large-screen) {
+        @include span-columns(3);
+        @include omega(4n);
+      }
+    }
+  }
 
 /*****************
 BULLETS MAIN
