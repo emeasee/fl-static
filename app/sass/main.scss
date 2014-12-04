@@ -28,7 +28,7 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
-  &.hero{
+  &.heronav{
       position: absolute;
       background-color: transparent;
   }
@@ -649,6 +649,10 @@ MAIN CONTENT GENERAL
       &#glass{
         margin-bottom: -30px;
       }
+
+      &#library{
+          border: none;
+      }
   }
 //  .signup{
 //      display:none;
@@ -841,7 +845,7 @@ CARDS MAIN
 
   .card-image {
     overflow: hidden;
-    max-height: 95px;
+    max-height: 125px;
 
     img {
       width: 100%;
@@ -969,12 +973,15 @@ CARDS MAIN
 }
 
 .wide{
-    max-width: 90%;
-    padding-top: $base-font-size * 2;
+    max-width: 100%;
     .card{
+        text-align: left;
+      .card-header{
+          font-size: 1em;
+      }
       @include media($large-screen) {
-        @include span-columns(3);
-        @include omega(4n);
+        @include span-columns(4);
+        @include omega(3n);
       }
     }
   }
@@ -1353,18 +1360,35 @@ DOCUMENTATION MAIN
 
   @include clearfix;
   border-radius: $tab-border-radius;
-  border: $tab-border;
+  //border: $tab-border;
   margin-bottom: $base-line-height;
-  overflow: hidden;
+  //overflow: hidden;
 
   .vertical-tabs {
     display: none;
-
+    p{
+        text-align: left;
+        padding: 0.5em 1em;
+        margin-bottom: 0;
+        border-bottom: $tab-border;
+    }
+    a{
+        color: $base-font-color;
+        span{
+            float: right;
+        }
+        &.is-active{
+            color: $orange;
+        }
+    }
     @include media($vertical-tab-mode) {
       background-color: $tab-inactive-color;
+      border-radius: $tab-border-radius;
+        box-shadow: -2px 2px 2px darken($base-body-color, 5);
       display: inline;
       float: left;
       width: 20%;
+      margin-top: 1.5em;
       &.scrolling{
         position: fixed;
         top: 10px;
@@ -1399,6 +1423,7 @@ DOCUMENTATION MAIN
       font-weight: bold;
       margin-right: -1px;
       padding: $base-line-height/2 $gutter/2;
+      text-align: left;
 
       &.is-active {
         background-color: $tab-content-background;
@@ -1414,6 +1439,12 @@ DOCUMENTATION MAIN
   .vertical-tab-content-container {
     display: block;
     margin: 0 auto;
+
+    a{
+        span{
+            float: right;
+        }
+    }
 
     & a:focus {
       outline: none;
@@ -1513,12 +1544,16 @@ DOCUMENTATION MAIN
     &.is-active {
       background: $tab-active-color;
       border-bottom: none;
+        color: $orange;
     }
 
     &.is-next{
       position: fixed;
       width: 100%;
       bottom: 0;
+        &:before{
+            content: "Next Section: ";
+        }
     }
 
     @include media($vertical-tab-mode) {
@@ -1533,11 +1568,11 @@ DOCUMENTATION MAIN
 /********************      Chat module custom CSS      *************************/
 
 #fchat{
-    right: 50%!important;
-    margin-right: -35%;
-    @include media($large-screen){
+    display:none;
+    @include media($medium-screen){
         right: 20px!important;
         margin: 0;
+        display: block;
     }
 }
 
