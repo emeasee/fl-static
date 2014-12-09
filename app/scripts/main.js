@@ -46,6 +46,10 @@ $( document ).ready(function() {
       $(this).toggleClass("expander-hidden");
      });
 
+    $('.learn').click(function(){
+       window.location.href = 'library.html';
+    });
+
 	$("button#flip-toggle").on("click touchend", function(event){
 		var el = document.getElementById("top");
 		el.scrollIntoView(true);
