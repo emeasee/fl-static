@@ -142,7 +142,7 @@ header.navigation {
 
   .sign-up {
     @include media ($large-screen) {
-      @include position(absolute, 0px 0px 0 0);
+      //@include position(absolute, 0px 0px 0 0);
       padding-right: 1em;
 
       a {
@@ -378,23 +378,7 @@ HERO BANNER TOP
                     }
                 }
                 .ghost{
-                  @extend button;
-                  background-color: transparent;
-                  border: 1px solid $dark-brown;
-                  color:$dark-brown;
-                  opacity: 0.8;
-                  cursor: default!important;
-                  text-align: left;
-                  width: 100%;
-                  float:left;
-                  &:hover{
-                    background-color: transparent!important;
-                    box-shadow:none!important;
-                  }
-                  @include media($large-screen){
-                      width: auto;
-
-                  }
+                  @include ghost-button;
                 }
               }
           }
@@ -502,6 +486,7 @@ MAIN CONTENT GENERAL
   button.call{
     font-size: 1.8em;
     font-weight: normal;
+    cursor: pointer;
   }
   &.colored{
     background:$gray-light;
@@ -907,7 +892,7 @@ CARDS MAIN
     padding: $base-line-height/2 $gutter/2;
     font-size: .9em;
     line-height: 1.5em;
-    min-height: 158px;
+    min-height: 120px;
     b.large{
         font-size: 1.7em;
         padding-top: $base-font-size*1.5;
@@ -940,6 +925,10 @@ CARDS MAIN
 
       &:last-child {
         border-right: 0;
+      }
+
+      img{
+        max-height:40px;
       }
 
       span {
@@ -1198,6 +1187,62 @@ MODAL BOX
       max-width: $max-width /2 ;
     padding: $modal-padding /2;
     margin-top: .6em;
+
+    &.template{
+        max-width: $max-width / 1.1;
+
+        .mod_right{
+            width: 85%;
+            float:right;
+            .intro{
+                color: $base-font-color;
+                font-weight: 600;
+            }
+            a.btn{
+                @extend button;
+                white-space: normal;
+                margin: 1em 0.5em;
+                line-height: 1.7em!important;
+                 &.ghost{
+                  @include ghost-button;
+                }
+            }
+              .stats {
+                padding: $base-line-height/2 $gutter/2;
+                overflow: auto;
+
+                ul li {
+                  display: inline;
+                  color: $base-font-color;
+                  font-weight: 800;
+                  font-size: 1.2em;
+                  float: left;
+                  border-right: 1px solid transparentize($base-font-color, .8);
+                  line-height: 1.1em;
+                  padding: 0 .7em 0 .7em;
+
+                  &:first-child {
+                    padding-left: 0;
+                  }
+
+                  &:last-child {
+                    border-right: 0;
+                  }
+
+                  span {
+                    color: $base-font-color;
+                    font-size: .7em;
+                    display: block;
+                    font-weight: normal;
+                  }
+                }
+              }
+        }
+        .mod_left{
+            width: 10%;
+            float:left;
+        }
+    }
 
     @include media($medium-screen) {
       padding: $modal-padding;

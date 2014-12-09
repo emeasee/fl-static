@@ -1,0 +1,10 @@
+@mixin ghost-button{
+  @extend button;
+  background-color: transparent;
+  border: 1px solid $dark-brown;
+  color:$dark-brown;
+  &:hover{
+    background-color: transparent!important;
+    box-shadow:none!important;
+  }
+}
