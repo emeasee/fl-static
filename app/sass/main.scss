@@ -46,7 +46,7 @@ header.navigation {
     padding-left: 1em;
     padding-right: 2em;
     margin: 0 auto;
-    background-image: url(../images/splash_logo_top.svg);
+    background-image: url(../images/splash_logo_top_new.svg);
 
     background-position: left;
     background-repeat: no-repeat;
@@ -142,15 +142,17 @@ header.navigation {
 
   .sign-up {
     @include media ($large-screen) {
-      //@include position(absolute, 0px 0px 0 0);
-      padding-right: 1em;
+      position:absolute;
+      right: 0;
+      top: 0;
+      padding-right: 0em;
 
-      a {
+        a.call {
         @include transition (all 0.2s ease-in-out);
         background: $navigation-nav-button-background;
         border-radius: $base-border-radius;
         color: white;
-        font-size: .8em;
+        font-size: 1em;
         font-weight: 800;
         padding: .6em 1em;
         text-transform: uppercase;
@@ -159,6 +161,9 @@ header.navigation {
           background: lighten($navigation-nav-button-background, 10);
         }
       }
+    }
+    .modal > *{
+        line-height: normal!important;
     }
   }
 
