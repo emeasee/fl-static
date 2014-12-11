@@ -529,6 +529,14 @@ MAIN CONTENT GENERAL
         font-size: 2.4em;
       }
     }
+    h2{
+     max-width: 75%;
+     margin: 0 auto;
+     font-size: 1.1em;
+     @include media($large-screen){
+        font-size: 2em;
+     }
+    }
     h4{
       color: #DD7527;
       font-size: 0.9em;
@@ -807,6 +815,37 @@ CARDS MAIN
   @include clearfix;
   @include outer-container();
   max-width: 60%;
+
+  &.wide{
+    max-width: 100%;
+    .card{
+        text-align: left;
+      .card-header{
+          font-size: 1em;
+      }
+      @include media($large-screen) {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+    }
+  }
+
+  &.single{
+    max-width: 80%;
+    .card{
+      .card-stats{
+        margin: 0 auto;
+        margin-bottom: $base-font-size;
+      }
+      @include media($large-screen) {
+        @include span-columns(12);
+        @include omega(1n);
+        .card-stats{
+          max-width: 60%;
+        }
+      }
+    }
+  }
 }
 
 .card {
@@ -908,7 +947,17 @@ CARDS MAIN
             font-weight: normal;
         }
     }
+    a.btn{
+        @extend button;
+        white-space: normal;
+        margin: 1em 0.5em;
+        line-height: 1.7em!important;
+         &.ghost{
+          @include ghost-button;
+        }
+    }
   }
+
 
   .card-stats {
     padding: $base-line-height/2 $gutter/2;
@@ -930,6 +979,21 @@ CARDS MAIN
 
       &:last-child {
         border-right: 0;
+      }
+
+      &.btn{
+          float: right;
+          padding:0;
+      }
+      a{
+        @extend button;
+          white-space: normal;
+          line-height: 1.4em!important;
+          width: 40px;
+           &.ghost{
+            @include ghost-button;
+            padding: 7px 10px;
+          }
       }
 
       img{
@@ -965,20 +1029,6 @@ CARDS MAIN
     }
   }
 }
-
-.wide{
-    max-width: 100%;
-    .card{
-        text-align: left;
-      .card-header{
-          font-size: 1em;
-      }
-      @include media($large-screen) {
-        @include span-columns(4);
-        @include omega(3n);
-      }
-    }
-  }
 
 /*****************
 BULLETS MAIN

@@ -13,7 +13,7 @@
   src: url('../styles/fonts/fieldlogs.eot?#iefix') format('embedded-opentype'), url('../styles/fonts/fieldlogs.woff') format('woff'), url('../styles/fonts/fieldlogs.ttf') format('truetype'), url('../styles/fonts/fieldlogs.svg#FlIconFont') format('svg'); }
 
 /* line 1, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/bitters/extends/button */
-button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost, input[type="submit"] {
+button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .card .card-copy a.btn, .card .card-copy a.btn.ghost, .card .card-stats ul li a, .card .card-stats ul li a.ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost, input[type="submit"] {
   border: 1px solid #a96512;
   border-radius: 3px;
   box-shadow: inset 0 1px 0 0 #dfad71;
@@ -38,18 +38,18 @@ button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align
   text-shadow: none;
   height: 40px; }
   /* line 131, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-  button:hover:not(:disabled), .hero .hero-inner button.login:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:hover:not(:disabled), .modal .btn:hover:not(:disabled), .modal .modal-inner.template .mod_right a.btn:hover:not(:disabled), input[type="submit"]:hover:not(:disabled) {
+  button:hover:not(:disabled), .hero .hero-inner button.login:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:hover:not(:disabled), .card .card-copy a.btn:hover:not(:disabled), .card .card-stats ul li a:hover:not(:disabled), .modal .btn:hover:not(:disabled), .modal .modal-inner.template .mod_right a.btn:hover:not(:disabled), input[type="submit"]:hover:not(:disabled) {
     box-shadow: inset 0 1px 0 0 #d79546;
     cursor: pointer;
     background-color: #c37c26;
     background-image: -webkit-linear-gradient(#c37c26, #a86513);
     background-image: linear-gradient(#c37c26, #a86513); }
   /* line 148, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-  button:active:not(:disabled), .hero .hero-inner button.login:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:active:not(:disabled), .modal .btn:active:not(:disabled), .modal .modal-inner.template .mod_right a.btn:active:not(:disabled), input[type="submit"]:active:not(:disabled), button:focus:not(:disabled), .hero .hero-inner button.login:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:focus:not(:disabled), .modal .btn:focus:not(:disabled), .modal .modal-inner.template .mod_right a.btn:focus:not(:disabled), input[type="submit"]:focus:not(:disabled) {
+  button:active:not(:disabled), .hero .hero-inner button.login:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:active:not(:disabled), .card .card-copy a.btn:active:not(:disabled), .card .card-stats ul li a:active:not(:disabled), .modal .btn:active:not(:disabled), .modal .modal-inner.template .mod_right a.btn:active:not(:disabled), input[type="submit"]:active:not(:disabled), button:focus:not(:disabled), .hero .hero-inner button.login:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:focus:not(:disabled), .card .card-copy a.btn:focus:not(:disabled), .card .card-stats ul li a:focus:not(:disabled), .modal .btn:focus:not(:disabled), .modal .modal-inner.template .mod_right a.btn:focus:not(:disabled), input[type="submit"]:focus:not(:disabled) {
     border: 1px solid #a96512;
     box-shadow: inset 0 0 8px 4px #9a5d13, inset 0 0 8px 4px #9a5d13; }
   /* line 51, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-  button:disabled, .hero .hero-inner button.login:disabled, .hero .hero-inner .hero-left .hero-align .hero-links a:disabled, .hero .hero-inner .hero-left .hero-align .hero-links .ghost:disabled, .modal .btn:disabled, .modal .modal-inner.template .mod_right a.btn:disabled, input[type="submit"]:disabled {
+  button:disabled, .hero .hero-inner button.login:disabled, .hero .hero-inner .hero-left .hero-align .hero-links a:disabled, .hero .hero-inner .hero-left .hero-align .hero-links .ghost:disabled, .card .card-copy a.btn:disabled, .card .card-stats ul li a:disabled, .modal .btn:disabled, .modal .modal-inner.template .mod_right a.btn:disabled, input[type="submit"]:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
 
@@ -2127,7 +2127,7 @@ select {
   margin-bottom: 1.5em; }
 
 /* line 90, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/bitters/forms */
-button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost, input[type="submit"] {
+button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .card .card-copy a.btn, .card .card-copy a.btn.ghost, .card .card-stats ul li a, .card .card-stats ul li a.ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost, input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2344,7 +2344,7 @@ header.navigation {
         border-radius: 0.375em;
         margin: 0; }
       /* line 209, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-      header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit], .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost, header.navigation .search-bar .search-and-submit .modal [type=submit].btn, .modal header.navigation .search-bar .search-and-submit [type=submit].btn {
+      header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit], .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit], .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .modal [type=submit].btn, .modal header.navigation .search-bar .search-and-submit [type=submit].btn {
         border: 1px solid #4d4d4d;
         border-radius: 3px;
         box-shadow: inset 0 1px 0 0 #979797;
@@ -2381,33 +2381,33 @@ header.navigation {
         outline: none;
         padding: 5px 15px; }
         /* line 131, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:hover:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:hover:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
           box-shadow: inset 0 1px 0 0 #7d7d7d;
           cursor: pointer;
           background-color: #646464;
           background-image: -webkit-linear-gradient(#646464, #4d4d4d);
           background-image: linear-gradient(#646464, #4d4d4d); }
         /* line 148, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:active:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:active:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:focus:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:focus:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
           border: 1px solid #4d4d4d;
           box-shadow: inset 0 0 8px 4px #454545, inset 0 0 8px 4px #454545; }
         /* line 131, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:hover:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:hover:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
           box-shadow: inset 0 1px 0 0 #748686;
           cursor: pointer;
           background-color: #606767;
           background-image: -webkit-linear-gradient(#606767, #534646);
           background-image: linear-gradient(#606767, #534646); }
         /* line 148, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:active:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:active:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:focus:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:focus:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
           border: 1px solid #534646;
           box-shadow: inset 0 0 8px 4px #4a4040, inset 0 0 8px 4px #4a4040; }
         /* line 51, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/button */
-        header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:disabled, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:disabled, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:disabled, header.navigation .search-bar .search-and-submit .modal [type=submit].btn:disabled, .modal header.navigation .search-bar .search-and-submit [type=submit].btn:disabled {
+        header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:disabled, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:disabled, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:disabled, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:disabled, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:disabled, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:disabled, .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .modal [type=submit].btn:disabled, .modal header.navigation .search-bar .search-and-submit [type=submit].btn:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
         /* line 215, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit] img, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost img, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost img, header.navigation .search-bar .search-and-submit .modal [type=submit].btn img, .modal header.navigation .search-bar .search-and-submit [type=submit].btn img {
+        header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit] img, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost img, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost img, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn img, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn img, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit] img, .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .modal [type=submit].btn img, .modal header.navigation .search-bar .search-and-submit [type=submit].btn img {
           height: 12px;
           opacity: 0.7; }
 
@@ -2489,12 +2489,12 @@ HERO BANNER TOP
       display: table;
       clear: both; }
     /* line 292, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-    .hero .hero-inner button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .modal .btn, .modal .hero .hero-inner .btn, .hero .hero-inner .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .hero .hero-inner a.btn {
+    .hero .hero-inner button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .card .card-copy a.btn, .card .card-copy .hero .hero-inner a.btn, .hero .hero-inner .card .card-stats ul li a, .card .card-stats ul li .hero .hero-inner a, .hero .hero-inner .modal .btn, .modal .hero .hero-inner .btn, .hero .hero-inner .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .hero .hero-inner a.btn {
       font-size: 1em;
       outline: none;
       width: 100%; }
       /* line 296, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-      .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a.login, .hero .hero-inner .hero-left .hero-align .hero-links .login.ghost, .hero .hero-inner .modal .login.btn, .modal .hero .hero-inner .login.btn, .hero .hero-inner .modal .modal-inner.template .mod_right a.login.btn, .modal .modal-inner.template .mod_right .hero .hero-inner a.login.btn {
+      .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a.login, .hero .hero-inner .hero-left .hero-align .hero-links .login.ghost, .hero .hero-inner .card .card-copy a.login.btn, .card .card-copy .hero .hero-inner a.login.btn, .hero .hero-inner .card .card-stats ul li a.login, .card .card-stats ul li .hero .hero-inner a.login, .hero .hero-inner .modal .login.btn, .modal .hero .hero-inner .login.btn, .hero .hero-inner .modal .modal-inner.template .mod_right a.login.btn, .modal .modal-inner.template .mod_right .hero .hero-inner a.login.btn {
         font-size: 1em;
         margin-top: 1em;
         background-color: #4A4A4A; }
@@ -2693,7 +2693,7 @@ MAIN CONTENT GENERAL
   width: 100%;
   max-width: 105em; }
   /* line 491, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-  .content button.call, .content .hero .hero-inner button.call.login, .hero .hero-inner .content button.call.login, .content .hero .hero-inner .hero-left .hero-align .hero-links a.call, .hero .hero-inner .hero-left .hero-align .hero-links .content a.call, .content .hero .hero-inner .hero-left .hero-align .hero-links .call.ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .call.ghost, .content .modal .call.btn, .modal .content .call.btn, .content .modal .modal-inner.template .mod_right a.call.btn, .modal .modal-inner.template .mod_right .content a.call.btn {
+  .content button.call, .content .hero .hero-inner button.call.login, .hero .hero-inner .content button.call.login, .content .hero .hero-inner .hero-left .hero-align .hero-links a.call, .hero .hero-inner .hero-left .hero-align .hero-links .content a.call, .content .hero .hero-inner .hero-left .hero-align .hero-links .call.ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .call.ghost, .content .card .card-copy a.call.btn, .card .card-copy .content a.call.btn, .content .card .card-stats ul li a.call, .card .card-stats ul li .content a.call, .content .modal .call.btn, .modal .content .call.btn, .content .modal .modal-inner.template .mod_right a.call.btn, .modal .modal-inner.template .mod_right .content a.call.btn {
     font-size: 1.8em;
     font-weight: normal;
     cursor: pointer; }
@@ -2702,7 +2702,7 @@ MAIN CONTENT GENERAL
     background: #F7F6F5;
     padding-bottom: 3em; }
   /* line 503, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-  .content.loggedin button, .content.loggedin .hero .hero-inner button.login, .hero .hero-inner .content.loggedin button.login, .content.loggedin .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content.loggedin a, .content.loggedin .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content.loggedin .ghost, .content.loggedin .modal .btn, .modal .content.loggedin .btn, .content.loggedin .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .content.loggedin a.btn {
+  .content.loggedin button, .content.loggedin .hero .hero-inner button.login, .hero .hero-inner .content.loggedin button.login, .content.loggedin .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content.loggedin a, .content.loggedin .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content.loggedin .ghost, .content.loggedin .card .card-copy a.btn, .card .card-copy .content.loggedin a.btn, .content.loggedin .card .card-stats ul li a, .card .card-stats ul li .content.loggedin a, .content.loggedin .modal .btn, .modal .content.loggedin .btn, .content.loggedin .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .content.loggedin a.btn {
     display: none; }
   /* line 508, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .content.signup.loggedin {
@@ -2735,6 +2735,14 @@ MAIN CONTENT GENERAL
         .content .heading h1 {
           font-size: 2.4em; } }
     /* line 532, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    .content .heading h2 {
+      max-width: 75%;
+      margin: 0 auto;
+      font-size: 1.1em; }
+      @media screen and (min-width: 53.75em) {
+        .content .heading h2 {
+          font-size: 2em; } }
+    /* line 540, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .heading h4 {
       color: #DD7527;
       font-size: 0.9em;
@@ -2743,7 +2751,7 @@ MAIN CONTENT GENERAL
       @media screen and (min-width: 53.75em) {
         .content .heading h4 {
           font-size: 1.1em; } }
-  /* line 542, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 550, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .content .content-ribbon {
     margin-bottom: 1.5em;
     padding-bottom: 3em;
@@ -2756,47 +2764,47 @@ MAIN CONTENT GENERAL
       content: "";
       display: table;
       clear: both; }
-    /* line 547, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 555, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .content-ribbon.last {
       border-bottom: 0px; }
-    /* line 550, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 558, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .content-ribbon .text {
       position: relative;
       z-index: 999;
       display: table !important;
       padding-left: 5%; }
-      /* line 555, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 563, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .content .content-ribbon .text .l-box {
         text-align: left;
         display: table-cell;
         vertical-align: middle;
         background: white; }
-        /* line 560, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 568, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .content .content-ribbon .text .l-box h3 {
           padding-bottom: 1em;
           text-align: center; }
-        /* line 564, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 572, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .content .content-ribbon .text .l-box ul {
           margin-bottom: 2em; }
-          /* line 566, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+          /* line 574, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
           .content .content-ribbon .text .l-box ul li {
             list-style-type: none;
             margin: 1em 0 0 0;
             line-height: normal;
             font-size: 1.1em; }
-            /* line 571, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+            /* line 579, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
             .content .content-ribbon .text .l-box ul li span {
               display: block;
               font-size: 0.8em;
               font-style: italic; }
-        /* line 578, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-        .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
+        /* line 586, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .card .card-copy a.btn, .card .card-copy .content .content-ribbon .text .l-box a.btn, .content .content-ribbon .text .l-box .card .card-stats ul li a, .card .card-stats ul li .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
           margin-bottom: 1em;
           width: 95%; }
         @media screen and (min-width: 53.75em) {
           .content .content-ribbon .text .l-box {
             background: none; }
-            /* line 585, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+            /* line 593, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
             .content .content-ribbon .text .l-box ul li {
               list-style-type: disc; } }
         @media screen and (min-width: 40em) {
@@ -2812,14 +2820,14 @@ MAIN CONTENT GENERAL
           /* line 38, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/span-columns */
           .content .content-ribbon .text:last-child {
             margin-right: 0; }
-          /* line 597, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+          /* line 605, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
           .content .content-ribbon .text .l-box {
             text-align: left; }
-            /* line 598, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+            /* line 606, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
             .content .content-ribbon .text .l-box h3 {
               text-align: left; }
-            /* line 601, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-            .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
+            /* line 609, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+            .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .card .card-copy a.btn, .card .card-copy .content .content-ribbon .text .l-box a.btn, .content .content-ribbon .text .l-box .card .card-stats ul li a, .card .card-stats ul li .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
               width: auto; } }
       @media screen and (min-width: 105em) {
         .content .content-ribbon .text {
@@ -2830,41 +2838,41 @@ MAIN CONTENT GENERAL
           /* line 38, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/span-columns */
           .content .content-ribbon .text:last-child {
             margin-right: 0; } }
-    /* line 613, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 621, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .content-ribbon .image .l-box img {
       max-width: none;
       width: 100%; }
-    /* line 617, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 625, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .content-ribbon .image .l-box p {
       font-size: 1.1em; }
-      /* line 619, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 627, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .content .content-ribbon .image .l-box p i {
         padding-top: 5px; }
     @media screen and (min-width: 53.75em) {
-      /* line 625, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 633, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .content .content-ribbon .image .l-box {
         position: absolute;
         left: 40%; }
-        /* line 628, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 636, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .content .content-ribbon .image .l-box img {
           width: auto; }
  }
     @media screen and (min-width: 105em) {
-      /* line 634, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 642, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .content .content-ribbon .image .l-box {
         left: 42%; }
  }
-    /* line 639, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 647, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .content-ribbon#glass {
       margin-bottom: -30px; }
-    /* line 643, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 651, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .content .content-ribbon#library {
       border: none; }
 
 /*****************
 GRID ITEMS
 ******************/
-/* line 673, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 681, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .grid-items {
   padding-bottom: 2em; }
   /* line 15, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/clearfix */
@@ -2872,7 +2880,7 @@ GRID ITEMS
     content: "";
     display: table;
     clear: both; }
-  /* line 699, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 707, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -2893,16 +2901,16 @@ GRID ITEMS
       .grid-items .grid-item {
         width: 8.33333%;
         height: 225px; } }
-    /* line 723, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 731, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .grid-items .grid-item:hover {
       background: rgba(103, 93, 83, 0.7); }
-  /* line 729, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 737, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item img {
     display: block;
     height: 3em;
     margin: auto;
     margin-bottom: 1em; }
-  /* line 736, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 744, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item h1 {
     color: white;
     font-size: 1.3em;
@@ -2913,7 +2921,7 @@ GRID ITEMS
       .grid-items .grid-item h1 {
         margin-top: 3em;
         font-size: 1.6em; } }
-  /* line 748, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 756, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item p {
     margin: auto;
     color: rgba(255, 255, 255, 0.7); }
@@ -2932,73 +2940,73 @@ GRID ITEMS
   @media screen and (min-width: 40em) {
     .grid-items .grid-item-big p {
       max-width: 60%; } }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(1) {
     background-image: url('../images/example-1.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(2) {
     background-image: url('../images/example-2.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(3) {
     background-image: url('../images/example-3.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(4) {
     background-image: url('../images/example-4.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(5) {
     background-image: url('../images/example-5.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(6) {
     background-image: url('../images/example-6.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(7) {
     background-image: url('../images/example-7.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(8) {
     background-image: url('../images/example-8.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(9) {
     background-image: url('../images/example-9.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(10) {
     background-image: url('../images/example-10.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 780, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 788, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items .grid-item-image:nth-child(11) {
     background-image: url('../images/example-11.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover; }
-  /* line 790, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 798, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .grid-items p.go-grid {
     float: left;
     line-height: 10em;
@@ -3012,7 +3020,7 @@ GRID ITEMS
 /*****************
 CARDS MAIN
 ******************/
-/* line 805, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 813, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .cards {
   max-width: 80.5em;
   margin-left: auto;
@@ -3028,8 +3036,57 @@ CARDS MAIN
     content: "";
     display: table;
     clear: both; }
+  /* line 818, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  .cards.wide {
+    max-width: 100%; }
+    /* line 820, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    .cards.wide .card {
+      text-align: left; }
+      /* line 822, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      .cards.wide .card .card-header {
+        font-size: 1em; }
+      @media screen and (min-width: 53.75em) {
+        .cards.wide .card {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 31.76157%; }
+          /* line 38, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/span-columns */
+          .cards.wide .card:last-child {
+            margin-right: 0; }
+          /* line 52, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
+          .cards.wide .card:nth-child(3n) {
+            margin-right: 0; }
+          /* line 57, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
+          .cards.wide .card:nth-child(3n+1) {
+            clear: left; } }
+  /* line 832, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  .cards.single {
+    max-width: 80%; }
+    /* line 835, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    .cards.single .card .card-stats {
+      margin: 0 auto;
+      margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .cards.single .card {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        /* line 38, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/span-columns */
+        .cards.single .card:last-child {
+          margin-right: 0; }
+        /* line 52, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
+        .cards.single .card:nth-child(1n) {
+          margin-right: 0; }
+        /* line 57, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
+        .cards.single .card:nth-child(1n+1) {
+          clear: left; }
+        /* line 842, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        .cards.single .card .card-stats {
+          max-width: 60%; } }
 
-/* line 811, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 850, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .card {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -3050,11 +3107,11 @@ CARDS MAIN
       /* line 38, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/span-columns */
       .card:last-child {
         margin-right: 0; } }
-  /* line 835, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 874, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card .card-image {
     overflow: hidden;
     max-height: 125px; }
-    /* line 839, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 878, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card .card-image img {
       width: 100%;
       margin-top: -15%;
@@ -3064,7 +3121,7 @@ CARDS MAIN
       background: #DBD199;
       border-top-left-radius: 0.1875em;
       border-top-right-radius: 0.1875em; }
-  /* line 849, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 888, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card .ribbon-wrapper {
     width: 85px;
     height: 85px;
@@ -3072,7 +3129,7 @@ CARDS MAIN
     position: absolute;
     top: -1px;
     right: -1px; }
-    /* line 858, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 897, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card .ribbon-wrapper .ribbon {
       font-size: 0.8em;
       font-weight: 800;
@@ -3090,7 +3147,7 @@ CARDS MAIN
       background-color: #DB8A28;
       color: white;
       box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); }
-  /* line 874, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 913, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card .card-header {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -3104,35 +3161,49 @@ CARDS MAIN
     display: table;
     width: 100%;
     font-size: 1.4em; }
-    /* line 885, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 924, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card .card-header p {
       display: table-cell;
       vertical-align: middle; }
-    /* line 889, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 928, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card .card-header span {
       font-size: 0.8em;
       font-weight: 100; }
-  /* line 895, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 934, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card .card-copy {
     padding: 0.75em 0.809em;
     font-size: 0.9em;
     line-height: 1.5em;
     min-height: 120px; }
-    /* line 900, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 939, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card .card-copy b.large {
       font-size: 1.7em;
       padding-top: 1.5em;
       display: block; }
-      /* line 904, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 943, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .card .card-copy b.large span {
         font-size: 0.7em;
         line-height: 2em;
         font-weight: normal; }
-  /* line 912, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 949, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    .card .card-copy a.btn {
+      white-space: normal;
+      margin: 1em 0.5em;
+      line-height: 1.7em !important; }
+      /* line 954, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      .card .card-copy a.btn.ghost {
+        background-color: transparent;
+        border: 1px solid #4A4A4A;
+        color: #4A4A4A; }
+        /* line 6, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/bitters/mixins/ghost-button */
+        .card .card-copy a.btn.ghost:hover {
+          background-color: transparent !important;
+          box-shadow: none !important; }
+  /* line 961, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card .card-stats {
     padding: 0.75em 0.809em;
     overflow: auto; }
-    /* line 916, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 965, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card .card-stats ul li {
       display: inline;
       color: #e2a254;
@@ -3142,66 +3213,60 @@ CARDS MAIN
       border-right: 1px solid rgba(74, 74, 74, 0.2);
       line-height: 1.1em;
       padding: 0 0.7em 0 0.7em; }
-      /* line 926, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 975, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .card .card-stats ul li:first-child {
         padding-left: 0; }
-      /* line 930, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 979, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .card .card-stats ul li:last-child {
         border-right: 0; }
-      /* line 934, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 983, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      .card .card-stats ul li.btn {
+        float: right;
+        padding: 0; }
+      /* line 987, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      .card .card-stats ul li a {
+        white-space: normal;
+        line-height: 1.4em !important;
+        width: 40px; }
+        /* line 992, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        .card .card-stats ul li a.ghost {
+          background-color: transparent;
+          border: 1px solid #4A4A4A;
+          color: #4A4A4A;
+          padding: 7px 10px; }
+          /* line 6, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/bitters/mixins/ghost-button */
+          .card .card-stats ul li a.ghost:hover {
+            background-color: transparent !important;
+            box-shadow: none !important; }
+      /* line 998, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .card .card-stats ul li img {
         max-height: 40px; }
-      /* line 938, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1002, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .card .card-stats ul li span {
         color: #4A4A4A;
         font-size: 0.7em;
         display: block;
         font-weight: normal; }
-  /* line 947, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1011, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card:hover {
     background-color: white; }
-    /* line 950, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1014, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card:hover .card-image img {
       background: #e2daac; }
-    /* line 954, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1018, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card:hover .card-header {
       background-color: white; }
-  /* line 959, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1023, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .card:active {
     background-color: #F7F6F5; }
-    /* line 962, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1026, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .card:active .card-header {
       background-color: #F7F6F5; }
-
-/* line 968, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-.wide {
-  max-width: 100%; }
-  /* line 970, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-  .wide .card {
-    text-align: left; }
-    /* line 972, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-    .wide .card .card-header {
-      font-size: 1em; }
-    @media screen and (min-width: 53.75em) {
-      .wide .card {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%; }
-        /* line 38, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/span-columns */
-        .wide .card:last-child {
-          margin-right: 0; }
-        /* line 52, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
-        .wide .card:nth-child(3n) {
-          margin-right: 0; }
-        /* line 57, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
-        .wide .card:nth-child(3n+1) {
-          clear: left; } }
 
 /*****************
 BULLETS MAIN
 ******************/
-/* line 985, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1035, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .bullets {
   margin-bottom: 3em;
   max-width: 80.5em;
@@ -3213,7 +3278,7 @@ BULLETS MAIN
     content: "";
     display: table;
     clear: both; }
-  /* line 991, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1041, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .bullets .bullet {
     text-align: left; }
   @media screen and (min-width: 53.75em) {
@@ -3261,16 +3326,16 @@ BULLETS MAIN
       /* line 57, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/neat/app/assets/stylesheets/grid/omega */
       .bullets .four-col-bullet:nth-child(4n+1) {
         clear: left; } }
-  /* line 1018, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1068, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .bullets .bullet-icon {
     width: 6.5em;
     height: 6.5em;
     margin: 0 auto; }
-  /* line 1024, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1074, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .bullets .bullet-content {
     margin-bottom: 2em;
     padding: 1em 2em; }
-  /* line 1029, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1079, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .bullets h2 {
     font-size: 1.18182em;
     padding-top: 0.92857em;
@@ -3280,13 +3345,13 @@ BULLETS MAIN
 /*****************
 EXPANDER
 ******************/
-/* line 1045, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1095, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .expander {
   margin: 0 auto;
   width: 90%;
   max-width: 73.18182em; }
 
-/* line 1051, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1101, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .expander-trigger {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3299,64 +3364,64 @@ EXPANDER
   margin-bottom: 1em;
   padding-bottom: 0.25em;
   background: #4A4A4A; }
-  /* line 1060, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1110, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .expander-trigger:before {
     content: '\25BC';
     font-size: 1em;
     margin-right: 0.5em; }
 
-/* line 1068, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1118, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .expander-hidden:before {
   content: '\25BA'; }
 
-/* line 1073, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1123, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .expander-hidden + .expander-content {
   display: none; }
 
-/* line 1077, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1127, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .expander-content {
   overflow: auto;
   padding: 1em;
   background: #F7F6F5;
   margin-bottom: 2em; }
-  /* line 1082, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1132, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .expander-content fieldset {
     margin: 0.5%;
     text-align: left; }
-    /* line 1085, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1135, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .expander-content fieldset span {
       color: red; }
     @media screen and (min-width: 53.75em) {
       .expander-content fieldset {
         float: left;
         width: 49%; } }
-  /* line 1094, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
-  .expander-content button, .expander-content .hero .hero-inner button.login, .hero .hero-inner .expander-content button.login, .expander-content .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .expander-content a, .expander-content .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .expander-content .ghost, .expander-content .modal .btn, .modal .expander-content .btn, .expander-content .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .expander-content a.btn {
+  /* line 1144, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  .expander-content button, .expander-content .hero .hero-inner button.login, .hero .hero-inner .expander-content button.login, .expander-content .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .expander-content a, .expander-content .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .expander-content .ghost, .expander-content .card .card-copy a.btn, .card .card-copy .expander-content a.btn, .expander-content .card .card-stats ul li a, .card .card-stats ul li .expander-content a, .expander-content .modal .btn, .modal .expander-content .btn, .expander-content .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .expander-content a.btn {
     margin-top: 1em; }
 
 /*****************
 MODAL BOX
 ******************/
-/* line 1109, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1159, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal label {
   cursor: pointer;
   margin-bottom: 0; }
-/* line 1114, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1164, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal label img {
   border-radius: 150px;
   display: block;
   max-width: 300px; }
-/* line 1121, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1171, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal input[type="checkbox"] {
   display: none; }
-/* line 1129, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1179, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .text {
   color: #DB8A28;
   text-decoration: underline; }
-/* line 1134, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1184, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .modal-open {
   overflow: hidden; }
-/* line 1138, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1188, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .modal-window {
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
@@ -3371,7 +3436,7 @@ MODAL BOX
   text-align: left;
   visibility: hidden;
   z-index: 99999999999; }
-  /* line 1147, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1197, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-window .modal-bg {
     position: absolute;
     top: 0px;
@@ -3379,7 +3444,7 @@ MODAL BOX
     bottom: 0px;
     left: 0px;
     cursor: pointer; }
-/* line 1153, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1203, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .modal-close {
   position: absolute;
   top: 1.5em;
@@ -3388,7 +3453,7 @@ MODAL BOX
   height: 1.5em;
   cursor: pointer;
   background: #F7F6F5; }
-  /* line 1162, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1212, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-close:after, .modal .modal-close:before {
     position: absolute;
     top: 3px;
@@ -3406,17 +3471,17 @@ MODAL BOX
     content: '';
     display: block;
     margin: -3px 0 0 -1px; }
-  /* line 1173, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1223, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-close:hover:after, .modal .modal-close:hover:before {
     background: #b0b0b0; }
-  /* line 1177, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1227, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-close:before {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-/* line 1182, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1232, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .modal-inner {
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
@@ -3431,23 +3496,23 @@ MODAL BOX
   max-width: 40.25em;
   padding: 1.5em;
   margin-top: 0.6em; }
-  /* line 1195, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1245, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-inner.template {
     max-width: 73.18182em; }
-    /* line 1198, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1248, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .modal .modal-inner.template .mod_right {
       width: 85%;
       float: right; }
-      /* line 1201, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1251, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .modal .modal-inner.template .mod_right .intro {
         color: #4A4A4A;
         font-weight: 600; }
-      /* line 1205, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1255, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .modal .modal-inner.template .mod_right a.btn {
         white-space: normal;
         margin: 1em 0.5em;
         line-height: 1.7em !important; }
-        /* line 1210, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 1260, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .modal .modal-inner.template .mod_right a.btn.ghost {
           background-color: transparent;
           border: 1px solid #4A4A4A;
@@ -3456,11 +3521,11 @@ MODAL BOX
           .modal .modal-inner.template .mod_right a.btn.ghost:hover {
             background-color: transparent !important;
             box-shadow: none !important; }
-      /* line 1214, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1264, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .modal .modal-inner.template .mod_right .stats {
         padding: 0.75em 0.809em;
         overflow: auto; }
-        /* line 1218, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 1268, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .modal .modal-inner.template .mod_right .stats ul li {
           display: inline;
           color: #4A4A4A;
@@ -3470,19 +3535,19 @@ MODAL BOX
           border-right: 1px solid rgba(74, 74, 74, 0.2);
           line-height: 1.1em;
           padding: 0 0.7em 0 0.7em; }
-          /* line 1228, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+          /* line 1278, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
           .modal .modal-inner.template .mod_right .stats ul li:first-child {
             padding-left: 0; }
-          /* line 1232, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+          /* line 1282, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
           .modal .modal-inner.template .mod_right .stats ul li:last-child {
             border-right: 0; }
-          /* line 1236, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+          /* line 1286, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
           .modal .modal-inner.template .mod_right .stats ul li span {
             color: #4A4A4A;
             font-size: 0.7em;
             display: block;
             font-weight: normal; }
-    /* line 1245, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1295, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .modal .modal-inner.template .mod_left {
       width: 10%;
       float: left; }
@@ -3492,23 +3557,23 @@ MODAL BOX
       width: 60%;
       max-height: 90%;
       margin-top: 3em; } }
-  /* line 1260, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1310, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-inner h1 {
     color: #4A4A4A;
     margin-bottom: 0.6em;
     text-align: left;
     text-transform: capitalize;
     font-size: 1.5em; }
-  /* line 1268, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1318, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-inner p.body, .modal .modal-inner p.intro {
     font-size: 1em;
     max-width: 100% !important;
     text-align: left; }
-    /* line 1273, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1323, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .modal .modal-inner p.body.intro, .modal .modal-inner p.intro.intro {
       color: #DB8A28;
       line-height: 1.6em; }
-    /* line 1278, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1328, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .modal .modal-inner p.body.body, .modal .modal-inner p.intro.body {
       color: #4A4A4A;
       line-height: 1.45em; }
@@ -3517,7 +3582,7 @@ MODAL BOX
           -webkit-columns: 2 8em;
           -moz-columns: 2 8em;
           columns: 2 8em; } }
-  /* line 1288, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1338, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-inner p.large {
     font-size: 1.4em;
     text-align: center;
@@ -3528,38 +3593,38 @@ MODAL BOX
         float: left;
         width: 33%;
         height: 100px; } }
-  /* line 1300, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1350, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .modal .modal-inner a.cta {
     color: white;
     display: inline-block;
     margin-right: 0.5em;
     margin-top: 1em; }
-    /* line 1306, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1356, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .modal .modal-inner a.cta:last-child {
       padding: 0 2em; }
-/* line 1312, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1362, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .modal-state:checked + .modal-window {
   opacity: 1;
   visibility: visible; }
-/* line 1317, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1367, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .modal .modal-state:checked + .modal-window .modal-inner {
   top: 0; }
 
 /*****************
 TOOLTIPS
 ******************/
-/* line 1327, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1377, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .tooltip-item {
   border: 1px solid #ECECEC;
   padding: 0.5em 1em;
   border-radius: 0.1875em;
   position: relative;
   margin-bottom: 1.5em; }
-  /* line 1342, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1392, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .tooltip-item:hover .tooltip {
     opacity: 1;
     visibility: visible; }
-  /* line 1347, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1397, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .tooltip-item .tooltip {
     position: absolute;
     left: 50%;
@@ -3584,10 +3649,10 @@ TOOLTIPS
     min-width: 16em;
     z-index: 10;
     font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
-    /* line 1368, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1418, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .tooltip-item .tooltip p {
       margin-bottom: 0; }
-    /* line 1372, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1422, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .tooltip-item .tooltip:after {
       postion: absolute;
       left: 46%;
@@ -3603,7 +3668,7 @@ TOOLTIPS
 /*****************
 DOCUMENTATION MAIN
 ******************/
-/* line 1392, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1442, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 #docs {
   text-align: left;
   margin: 0 auto;
@@ -3622,7 +3687,7 @@ DOCUMENTATION MAIN
     display: table;
     clear: both; }
 
-/* line 1400, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1450, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .vertical-tabs-container {
   border-radius: 0.1875em;
   margin-bottom: 1.5em; }
@@ -3631,22 +3696,22 @@ DOCUMENTATION MAIN
     content: "";
     display: table;
     clear: both; }
-  /* line 1416, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1466, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .vertical-tabs-container .vertical-tabs {
     display: none; }
-    /* line 1418, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1468, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tabs p {
       text-align: left;
       padding: 0.5em 1em;
       margin-bottom: 0;
       border-bottom: 1px solid #ECECEC; }
-    /* line 1424, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1474, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tabs a {
       color: #4A4A4A; }
-      /* line 1426, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1476, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tabs a span {
         float: right; }
-      /* line 1429, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1479, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tabs a.is-active {
         color: #DB8A28; }
     @media screen and (min-width: 40em) {
@@ -3658,11 +3723,11 @@ DOCUMENTATION MAIN
         float: left;
         width: 20%;
         margin-top: 1.5em; }
-        /* line 1441, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 1491, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .vertical-tabs-container .vertical-tabs.scrolling {
           position: fixed;
           top: 10px; } }
-  /* line 1448, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1498, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .vertical-tabs-container .tabs-top {
     width: 100%;
     text-align: center;
@@ -3671,7 +3736,7 @@ DOCUMENTATION MAIN
     background: #F7F6F5;
     border-bottom: 1px solid #ECECEC;
     padding: 0.7em 0; }
-    /* line 1456, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1506, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .tabs-top a {
       width: 100%; }
     @media screen and (min-width: 40em) {
@@ -3686,21 +3751,21 @@ DOCUMENTATION MAIN
       margin-right: -1px;
       padding: 0.75em 0.809em;
       text-align: left; }
-      /* line 1477, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1527, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tab.is-active {
         background-color: white;
         margin-right: -1px; } }
-  /* line 1484, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1534, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .vertical-tabs-container .vertical-tab:focus {
     outline: none; }
-  /* line 1488, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1538, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .vertical-tabs-container .vertical-tab-content-container {
     display: block;
     margin: 0 auto; }
-    /* line 1493, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1543, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content-container a span {
       float: right; }
-    /* line 1498, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1548, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content-container a:focus {
       outline: none; }
     @media screen and (min-width: 40em) {
@@ -3713,50 +3778,50 @@ DOCUMENTATION MAIN
         width: 80%;
         height: auto;
         background-color: white; }
-        /* line 1506, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 1556, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .vertical-tabs-container .vertical-tab-content-container.scrolling {
           position: static;
           margin-left: 20%; } }
-  /* line 1513, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1563, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .vertical-tabs-container .vertical-tab-content {
     background-color: white;
     padding: 1.5em 1.618em; }
-    /* line 1517, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1567, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content ul.sub-items {
       margin-bottom: 1.5em; }
-    /* line 1525, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1575, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content h3, .vertical-tabs-container .vertical-tab-content h5 {
       margin-bottom: 1.5em;
       clear: both; }
-    /* line 1530, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1580, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content h5 .badge {
       padding: 5px 8px;
       color: white;
       border-radius: 10px;
       font-size: 0.7em;
       margin-left: 1em; }
-      /* line 1537, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1587, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tab-content h5 .badge.designer {
         background: green; }
-      /* line 1540, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1590, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tab-content h5 .badge.logger {
         background: blue; }
-    /* line 1545, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1595, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content p {
       margin-bottom: 1.5em;
       clear: both;
       overflow: auto; }
-      /* line 1550, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1600, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tab-content p.caption {
         display: block;
         clear: both; }
-    /* line 1558, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1608, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content i.orange {
       color: #DB8A28; }
-    /* line 1561, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1611, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content i.red {
       color: red; }
-    /* line 1566, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1616, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-content img.screen {
       margin-bottom: 1.5em;
       padding-right: 1.5em; }
@@ -3764,7 +3829,7 @@ DOCUMENTATION MAIN
       .vertical-tabs-container .vertical-tab-content {
         border: none;
         display: none; } }
-  /* line 1577, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+  /* line 1627, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
   .vertical-tabs-container .vertical-tab-accordion-heading {
     background-color: #F7F6F5;
     border-top: 1px solid #ECECEC;
@@ -3772,34 +3837,34 @@ DOCUMENTATION MAIN
     display: block;
     font-weight: bold;
     padding: 0.75em 0.809em; }
-    /* line 1585, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1635, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-accordion-heading:hover {
       color: #DB8A28; }
-    /* line 1589, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1639, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-accordion-heading:first-child {
       border-top: none; }
-    /* line 1593, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1643, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-accordion-heading.is-active {
       background: white;
       border-bottom: none;
       color: #DB8A28; }
-    /* line 1599, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+    /* line 1649, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
     .vertical-tabs-container .vertical-tab-accordion-heading.is-next {
       position: fixed;
       width: 100%;
       bottom: 0; }
-      /* line 1603, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+      /* line 1653, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
       .vertical-tabs-container .vertical-tab-accordion-heading.is-next:before {
         content: "Next Section: "; }
     @media screen and (min-width: 40em) {
       .vertical-tabs-container .vertical-tab-accordion-heading {
         display: none; }
-        /* line 1610, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+        /* line 1660, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
         .vertical-tabs-container .vertical-tab-accordion-heading.is-next {
           position: static; } }
 
 /********************      Chat module custom CSS      *************************/
-/* line 1619, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1669, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 #fchat {
   display: none; }
   @media screen and (min-width: 40em) {
@@ -3809,7 +3874,7 @@ DOCUMENTATION MAIN
       display: block; } }
 
 /********************  OLD REQUIRED or ADDITIONAL CSS  *************************/
-/* line 1631, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1681, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .popup_background {
   display: none;
   position: absolute;
@@ -3823,7 +3888,7 @@ DOCUMENTATION MAIN
   opacity: 0.3;
   filter: alpha(opacity=80); }
 
-/* line 1645, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1695, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .popup {
   display: none;
   position: absolute;
@@ -3834,26 +3899,26 @@ DOCUMENTATION MAIN
   overflow: auto;
   border-radius: 5px; }
 
-/* line 1659, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1709, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .topRibbon {
   border-bottom: 1px solid #E0E0E0;
   height: 85 px;
   width: 100%;
   background: white; }
 
-/* line 1665, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1715, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .topRibbonCenter {
   width: 1134px;
   height: 85 px;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 1672, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1722, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .topRibbonCenter img {
   position: relative;
   top: 10px; }
 
-/* line 1677, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1727, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .topRibbonCenter a {
   color: black;
   font-weight: bold;
@@ -3868,13 +3933,13 @@ DOCUMENTATION MAIN
   position: relative;
   top: 20px; }
 
-/* line 1694, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1744, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .mainContainer {
   width: 100%;
   height: 100%;
   background: #F9F9F9; }
 
-/* line 1700, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1750, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .mainContent {
   width: 1134px;
   min-height: 700px;
@@ -3886,7 +3951,7 @@ DOCUMENTATION MAIN
   background: white;
   text-align: center; }
 
-/* line 1713, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1763, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .resendEmail {
   color: white;
   font-size: 20px;
@@ -3900,66 +3965,66 @@ DOCUMENTATION MAIN
   padding-right: 40px;
   cursor: pointer; }
 
-/* line 1728, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1778, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .boldText {
   font-weight: bold; }
 
-/* line 1732, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1782, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .veryLargeText {
   font-size: 40px; }
 
-/* line 1736, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1786, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .largeText {
   font-size: 22px; }
 
-/* line 1740, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1790, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .lightGray {
   color: #9B9B9B; }
 
-/* line 1743, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1793, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .darkGray {
   color: #413F3C; }
 
-/* line 1748, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1798, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .cancelButton {
   background: none repeat scroll 0 0 #FFFFFF !important;
   color: #000000 !important;
   border: 1px solid black !important; }
 
-/* line 1757, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1807, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .content .list {
   text-align: center;
   padding: 4em 0; }
 
-/* line 1762, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1812, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .content .list .l-box p {
   font-size: 1.1em;
   color: #7C7C7C;
   font-weight: 200; }
 
-/* line 1768, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1818, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .content .list .l-box h3.orange {
   color: #DD7527;
   text-decoration: none;
   text-transform: none; }
 
-/* line 1774, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1824, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .content .list .pure-button {
   font-size: 1.5em; }
 
-/* line 1779, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1829, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .ribbon {
   background: #eee;
   text-align: center;
   padding: 2em;
   color: #999; }
 
-/* line 1785, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1835, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .ribbon h2 {
   display: inline;
   font-weight: normal; }
 
-/* line 1790, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1840, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .footer {
   background: #413F3C;
   color: #fff;
@@ -3967,31 +4032,31 @@ DOCUMENTATION MAIN
   padding: 1em;
   font-size: 80%; }
 
-/* line 1798, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1848, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .footer .inner {
   max-width: 935px;
   margin: 0 auto;
   overflow: auto; }
 
-/* line 1804, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1854, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .footer .left {
   float: left; }
 
-/* line 1808, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1858, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .footer .right {
   float: right; }
 
-/* line 1812, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1862, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .footer a {
   color: #fff;
   text-decoration: none;
   margin: 0 0.1em; }
 
-/* line 1818, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1868, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .footer a:after {
   content: " |"; }
 
-/* line 1823, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
+/* line 1873, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
 .inputWithLabel label {
   display: inline-block;
   width: 100px;

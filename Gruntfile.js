@@ -251,7 +251,7 @@ module.exports = function (grunt) {
         'useminPrepare',
         'concurrent:dist',
         'concat',
-        'uglify',
+        //'uglify',
         'cssmin',
         'copy',
         'usemin'
