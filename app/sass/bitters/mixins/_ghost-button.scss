@@ -4,7 +4,9 @@
   border: 1px solid $dark-brown;
   color:$dark-brown;
   &:hover{
-    background-color: transparent!important;
+    background-color: $base-accent-color!important;
+    color: white;
     box-shadow:none!important;
+      border: 0!important;
   }
 }

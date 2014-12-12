@@ -818,8 +818,13 @@ CARDS MAIN
     max-width: 100%;
     .card{
         text-align: left;
+        height: 400px;
       .card-header{
           font-size: 1em;
+      }
+      .card-stats{
+          position: absolute;
+          bottom: 0;
       }
       @include media($large-screen) {
         @include span-columns(4);
@@ -872,7 +877,7 @@ CARDS MAIN
 
   .card-image {
     overflow: hidden;
-    max-height: 125px;
+    height:25%;
 
     img {
       width: 100%;
@@ -916,10 +921,10 @@ CARDS MAIN
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     padding: $base-line-height/3 $gutter/2;
-    min-height: 35px;
+    max-height:135px;
     display: table;
     width: 100%;
-    font-size: 1.4em;
+    font-size: 1.2em;
     p{
       display: table-cell;
       vertical-align: middle;
@@ -935,6 +940,9 @@ CARDS MAIN
     font-size: .9em;
     line-height: 1.5em;
     min-height: 120px;
+    p{
+
+    }
     b.large{
         font-size: 1.7em;
         padding-top: $base-font-size*1.5;
@@ -980,22 +988,22 @@ CARDS MAIN
       }
 
       &.btn{
-          float: right;
-          padding:0;
+        font-size: 1em;
       }
       a{
         @extend button;
           white-space: normal;
           line-height: 1.4em!important;
-          width: 40px;
            &.ghost{
             @include ghost-button;
             padding: 7px 10px;
+            color: lighten($base-font-color, 20);
+               border-color: lighten($base-font-color, 40);
           }
       }
 
       img{
-        max-height:40px;
+        max-height:35px;
       }
 
       span {

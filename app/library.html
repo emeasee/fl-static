@@ -129,10 +129,10 @@ ALL TEMPLATES
                               <img src="images/temp_ebola1.png" alt="">
                             </div>
                             <div class="card-header">
-                              Identify, Isolate, Inform: Emergency Department Evaluation and Management of Patients with Possible Ebola Virus Disease
+                              <p>Identify, Isolate, Inform: Emergency Department Evaluation and Management of Patients with Possible Ebola Virus Disease</p>
                             </div>
                             <div class="card-copy">
-                              <p>Evaluation algorithm to determine if testing for Ebola is indicated. <br>Sourced from: <a href="http://www.cdc.gov/vhf/ebola/hcp/case-definition.html">CDC</a></p>
+                              <p>Evaluation algorithm to determine if testing for Ebola is indicated. Sourced from the Centers for Disease Control and Prevention</p>
                                 <a class="call">View more detail</a>
                             </div>
                             <div class="card-stats">
@@ -140,7 +140,7 @@ ALL TEMPLATES
                                 <li><img src="images/ebola_logo1.png" alt=""></li>
                                 <li>27<span>Steps</span></li>
                                 <li>9<span>Media</span></li>
-                                <li class="btn"><a class="fa fa-eye fa-lg ghost" href="#"></a></li>
+                                <li class="btn"><a class="fa fa-eye fa-lg ghost" href="#"> View</a></li>
                               </ul>
                             </div>
                           </div>
@@ -153,7 +153,7 @@ ALL TEMPLATES
                               <img src="images/temp_workplace.png" alt="">
                             </div>
                             <div class="card-header">
-                              Checklists for inspecting the workplace – Electricity
+                              <p>Checklists for inspecting the workplace – Electricity</p>
                             </div>
                             <div class="card-copy">
                               <p>WorkSafe has produced checklists to assist you in inspecting your workplace for hazards. Although the checklists do not cover all the requirements under workplace safety and health laws, they will give you... </p>
@@ -164,7 +164,7 @@ ALL TEMPLATES
                                 <li><img src="images/ws_logo.png" alt=""></li>
                                 <li>26<span>Steps</span></li>
                                 <li>0<span>Media</span></li>
-                                <li class="btn"><a class="fa fa-eye fa-lg ghost" href="#"></a></li>
+                                <li class="btn"><a class="fa fa-eye fa-lg ghost" href="#"> View</a></li>
                               </ul>
                             </div>
                           </div>
@@ -177,7 +177,7 @@ ALL TEMPLATES
                               <img src="images/temp_accident.png" alt="">
                             </div>
                             <div class="card-header">
-                              Accident Report Form – SF91
+                                <p>Accident Report Form – SF91</p>
                             </div>
                             <div class="card-copy">
                               <p>Provides information on all parties involved in the accident along with details on how the accident occurred...</p>
@@ -188,7 +188,7 @@ ALL TEMPLATES
                                 <li><img src="images/cali_logo.png" alt=""></li>
                                 <li>123<span>Steps</span></li>
                                 <li>0<span>Media</span></li>
-                                <li class="btn"><a class="fa fa-eye fa-lg ghost" href="#"></a></li>
+                                <li class="btn"><a class="fa fa-eye fa-lg ghost" href="#"> View</a></li>
                               </ul>
                             </div>
                           </div>
@@ -201,7 +201,7 @@ ALL TEMPLATES
                               <img src="images/temp_surgical.png" alt="">
                             </div>
                             <div class="card-header">
-                              Surgical Safety Checklist (WHO)
+                              <p>Surgical Safety Checklist (WHO)</p>
                             </div>
                             <div class="card-copy">
                               <p>Surgical care has been an essential component of health care worldwide for over a century. As the incidences of traumatic injuries, cancers and cardiovascular disease continue to rise, the impact of surgical intervention on public health systems will grow...</p>
@@ -485,8 +485,14 @@ MEDICAL
         </div>
     </div>
     <script type="application/javascript">
-        initDocs();
-        //scrollStick();
+        !function(a){"use strict";a.fn.succinct=function(b){var c=a.extend({size:240,omission:"...",ignore:!0},b);return this.each(function(){var b,d,e=a(this),f=/[!-\/:-@\[-`{-~]$/,g=function(){e.each(function(){b=a(this).html(),b.length>c.size&&(d=a.trim(b).substring(0,c.size).split(" ").slice(0,-1).join(" "),c.ignore&&(d=d.replace(f,"")),a(this).html(d+c.omission))})};g()})}}(jQuery);
+        $(function(){
+            $('.card-copy p').succinct({
+                size: 110
+            });
+           initDocs();
+            scrollStick();
+        });
     </script>
     <script type="text/javascript">
         var FHChat = {
