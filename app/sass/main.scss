@@ -46,8 +46,7 @@ header.navigation {
     padding-left: 1em;
     padding-right: 2em;
     margin: 0 auto;
-    background-image: url(../images/splash_logo_top_new.svg);
-
+    background-image: url(../images/splash_logo_top.svg);
     background-position: left;
     background-repeat: no-repeat;
 
@@ -557,7 +556,6 @@ MAIN CONTENT GENERAL
     }
     .text{
       position:relative;
-      z-index: 999;
       display: table!important;
       padding-left: 5%;
       .l-box{
@@ -1193,7 +1191,7 @@ MODAL BOX
     opacity: 0;
     text-align: left;
     visibility: hidden;
-    z-index: 99999999999;
+    z-index: 999;
 
     .modal-bg {
       @include position(absolute, 0px 0px 0px 0px);
@@ -1687,7 +1685,7 @@ DOCUMENTATION MAIN
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index:1001;
+  z-index:10001;
   -moz-opacity: 0.3;
   opacity:.30;
   filter: alpha(opacity=80);
@@ -1700,7 +1698,7 @@ DOCUMENTATION MAIN
   padding: 16px;
   border: 2px solid black;
   background-color: white;
-  z-index:1002;
+  z-index:10002;
   overflow: auto;
 
   border-radius: 5px;
