@@ -46,6 +46,13 @@ $( document ).ready(function() {
       $(this).toggleClass("expander-hidden");
      });
 
+    $(".dropdown-button").click(function() {
+        $(".dropdown-menu").toggleClass("show-menu");
+        $(".dropdown-menu > li").click(function(){
+          $(".dropdown-menu").removeClass("show-menu");
+        });
+    });
+
     $('.learn').click(function(){
        window.location.href = 'library.html';
     });

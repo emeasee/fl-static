@@ -339,7 +339,7 @@ HERO BANNER TOP
               }
               .hero-links{
                 margin:0 auto;
-                overflow: auto;
+                overflow: visible;
                 max-width: 70%;
                 position:relative;
                 a{
@@ -349,8 +349,8 @@ HERO BANNER TOP
                   white-space: normal;
                   float: left;
                   width: 100%;
-                  font-size: $base-font-size * 1.3;
-                  line-height: 2.5em;
+                  font-size: $base-font-size * 1;
+                  line-height: 3em;
 
                   &.more{
                     background-color: $dark-brown;
@@ -961,6 +961,8 @@ CARDS MAIN
          &.ghost{
           @include ghost-button;
         }
+
+
     }
   }
 
@@ -989,6 +991,27 @@ CARDS MAIN
 
       &.btn{
         font-size: 1em;
+        padding-right: 0;
+        a{
+            &:after{
+                content: " View";
+            }
+        }
+
+        @include media($large-screen){
+            a{
+                &:after{
+                    content: "";
+                }
+            }
+        }
+        @include media($large-screen*1.45){
+            a{
+                &:after{
+                   content: " View";
+                }
+            }
+        }
       }
       a{
         @extend button;
@@ -1379,66 +1402,155 @@ MODAL BOX
 
 
 /*****************
-TOOLTIPS
+DROPDOWNS
 ******************/
-.tooltip-item {
-  $tooltip-background: white;
-  $tooltip-color: $base-font-color;
-  $tooltip-width: 16em;
-  $tooltip-arrow-width: 8px;
-  $tooltip-shadow: 0 2px 2px silver;
-  $tooltip-distance-from-item: 140%;
-  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.2;
+$dropdown-color: $base-font-color;
+$dropdown-description-color: white;
+$dropdown-border: 1px solid silver;
+$dropdown-background: $base-body-color;
+$dropdown-background-hover: darken($dropdown-background, 3);
+$dropdown-inner-border: 1px solid silver;
+$dropdown-height: 32px;
+$dropdown-padding: 1em;
+$dropdown-distance-from-menu: 70px;
+$dropdown-arrow-top-distance: 0;
 
-  border: 1px solid $base-border-color;
-  padding: .5em 1em;
-  border-radius: $base-border-radius;
+.dropdown {
+  float:left;
+  margin: 1em 1em 0 0;
+  width: 100%;
+
+  @include media($medium-screen) {
+    width: auto;
+
+    .dropdown-description, .dropdown-button{
+        width: auto;
+    }
+  }
+}
+
+.dropdown-container {
+  display: inline-block;
   position: relative;
-  margin-bottom: $base-line-height;
+    width: 100%;
+}
 
-  &:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
+.dropdown-description {
+  background: $base-accent-color;
+  border-bottom-left-radius: $base-border-radius;
+  border-top-left-radius: $base-border-radius;
+  color: $dropdown-description-color;
+  float: left;
+  width: 15%;
+  font-size: 1em;
+  line-height: $dropdown-height * 2;
+  margin-bottom: 0;
+  height: $dropdown-height * 2;
+  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+
+  @include media($large-screen) {
+    font-size: 1em;
   }
+}
 
-  .tooltip {
-    position: absolute;
-    left: 50%;
-    @include box-sizing(border-box);
-    @include transition (all 0.2s ease-in-out);
-    bottom: $tooltip-distance-from-item;
-    background-color: $tooltip-background;
-    border-radius: $base-border-radius;
-    color: $tooltip-color;
-    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
-    line-height: 1.5em;
-    margin-left: -($tooltip-width/2);
-    opacity: 0;
-    padding: 1em;
-    box-shadow: $tooltip-shadow;
-    text-align: center;
-    visibility: hidden;
-    min-width: $tooltip-width;
-    z-index: 10;
-    font-family: $serif;
+.dropdown-button {
+  background: $base-accent-color;
+  border-bottom-right-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+  cursor: pointer;
+  float: right;
+  width: 85%;
+  font-size: 1em;
+  font-weight: 800;
+  line-height: $dropdown-height * 2;
+  margin-bottom: 0;
+  height: $dropdown-height * 2;
+  padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+  position: relative;
 
-    p {
-      margin-bottom: 0;
-    }
-
-    &:after {
-      postion:absolute;
-      left:46%;
-      margin-left: -$tooltip-arrow-width;
-      border: $tooltip-arrow-width solid transparent;
-      color: $tooltip-background;
-      content: '▼';
-      text-shadow: $tooltip-shadow;
-      font-size: 1.4em;
-      pointer-events: none;
-      bottom: $tooltip-arrow-distance-from-box;
-    }
+  @include media($large-screen) {
+    font-size: 1em;
+    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
   }
+}
+
+.dropdown-button:hover{
+  background-color: darken($base-accent-color, 10);
+}
+
+.dropdown-button:after {
+  color: white;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: $dropdown-padding;
+  top: $dropdown-arrow-top-distance;
+}
+
+.dropdown-menu {
+  @include transition (all 0.2s ease-in-out);
+  background: $dropdown-background;
+  border-radius: $base-border-radius;
+  border: $dropdown-border;
+  box-shadow: 0 2px 2px transparentize(black, .8);
+  color: $dropdown-color;
+  cursor: pointer;
+  display: none;
+  overflow: visible;
+  position: absolute;
+  right: -8px;
+  top: $dropdown-distance-from-menu;
+  width: 228px;
+  z-index: 99999;
+
+  &:before {
+    @include position(absolute, 0 1em 0 0);
+    color: $dropdown-background;
+    content: "\25b2";
+    font-size: 1.4em;
+    pointer-events: none;
+    text-shadow: 0 -2px 2px transparentize(black, .7);
+    top: -0.8em;
+  }
+}
+
+.dropdown-menu li {
+  border-bottom: $dropdown-inner-border;
+  color: $dropdown-color;
+  padding: $dropdown-padding / 2;
+
+  a{
+      float:none!important;
+      height: auto!important;
+      margin:0!important;
+      width:100%!important;
+      font-size: 1em!important;
+      background-color:darken($base-body-color, 50)!important;
+
+      &:hover{
+          background-color:darken($base-body-color, 40)!important;
+          border: 0!important;
+      }
+  }
+}
+
+.dropdown-menu li:hover {
+  background: $dropdown-background-hover;
+}
+
+.dropdown-menu li:first-child {
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+}
+
+.dropdown-menu li:last-child {
+  border: none;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom-right-radius: $base-border-radius;
+}
+
+.show-menu {
+  display: block;
 }
 
 
