@@ -2193,7 +2193,7 @@ header.navigation {
     width: 80%;
     position: relative;
     z-index: 9999;
-    max-width: 1180px; }
+    max-width: 1020px; }
     /* line 15, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/bower_components/bourbon/dist/addons/clearfix */
     header.navigation .menu-wrapper:after {
       content: "";
@@ -2205,7 +2205,7 @@ header.navigation {
     padding-left: 1em;
     padding-right: 2em;
     margin: 0 auto;
-    background-image: url(../images/splash_logo_top.svg);
+    background-image: url(../images/splash_logo_top_new.svg);
     background-position: left;
     background-repeat: no-repeat; }
     /* line 53, /Users/Mac/MediaFire/Development/FL_STATIC_SITE/app/sass/main.scss */
