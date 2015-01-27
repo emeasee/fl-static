@@ -232,11 +232,10 @@ HERO BANNER TOP
     $hero-color: $base-font-color;
     $hero-color-image: $white;
 
-    //For older browsers
-    background-color: $dark-brown;
-    background-image: url(../images/bg1.png);
+    // @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat);
 
-    @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat);
+    background-color: $dark-brown;
+    background-image: url($hero-image);
     padding-top: $base-font-size * 5;
     margin: 0 auto;
     max-width: $x-large-screen;

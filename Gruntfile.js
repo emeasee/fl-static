@@ -26,11 +26,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            styles: {
-              files: ['<%= yeoman.app %>/styles/{,*/}*.{css}'],
-                tasks: ['copy:styles']
-              },
-
+          styles: {
+            files: ['<%= yeoman.app %>/sass/{,*/}*.scss'],
+              tasks: ['sass']
+          },
         },
         browser_sync: {
             dev: {
@@ -38,7 +37,7 @@ module.exports = function (grunt) {
                     src : ["<%= yeoman.app %>/styles/main.css", "<%= yeoman.app %>/*.html", "<%= yeoman.app %>/scripts/**/*.js"]
                 },
                 options: {
-                    watchTask: false,
+                    watchTask: true,
                     debugInfo: true,
                     server: {
                         baseDir: "app/"
@@ -52,6 +51,24 @@ module.exports = function (grunt) {
                 }
             }
         },
+          sass: {
+            dist: {
+              files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/sass',
+                src: ['*.scss'],
+                dest: '<%= yeoman.app %>/styles',
+                ext: '.css'
+              }],
+
+              options: {
+                loadPath: [
+                  '<%= yeoman.app %>/bower_components/bourbon/dist',
+                  '<%= yeoman.app %>/bower_components/neat/app/assets/stylesheets'
+                ]
+              }
+            }
+          },
         clean: {
             dist: {
                 files: [{
@@ -241,8 +258,8 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'browser_sync'
-            //'watch'
+            'browser_sync',
+            'watch'
         ]);
     });
 
