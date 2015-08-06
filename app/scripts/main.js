@@ -13,12 +13,6 @@ version = ""
 
 $( document ).ready(function() {
 
-	$.smartbanner({
-		title: 'FieldLogs Android',
-		author: 'Trekea SAS',
-		icon: 'images/icon.png'
-	});
-
 	var urlParam = getUrlParameter("param");
 	if(urlParam != null) {
 		redirectTo(config.loginSuccessURL + "?param=" + urlParam);
