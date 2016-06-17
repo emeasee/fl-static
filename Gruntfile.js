@@ -31,7 +31,7 @@ module.exports = function (grunt) {
               tasks: ['sass']
           },
         },
-        browser_sync: {
+        browserSync: {
             dev: {
                 bsFiles: {
                     src : ["<%= yeoman.app %>/styles/main.css", "<%= yeoman.app %>/*.html", "<%= yeoman.app %>/scripts/**/*.js"]
@@ -247,18 +247,13 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('server', function (target) {
-      grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-        grunt.task.run(['serve:' + target]);
-      });
-
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
         }
 
         grunt.task.run([
-            'browser_sync',
+            'browserSync',
             'watch'
         ]);
     });

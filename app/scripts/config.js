@@ -13,6 +13,8 @@ var config = {
 	operation:				"redirect",
 	cookieParam:			"fieldlogs.params",
 	cookiePath:				"/",
-	cookieDomain:			".but4ataxuwr3.fieldlogs.com",
-	staticSiteRoot:			"http://but4ataxuwr3.trekea.com/FieldLogsStatic/"
+	cookieDomain:			"but4ataxuwr3.fieldlogs.com",
+	staticSiteRoot:			"http://but4ataxuwr3.trekea.com/FieldLogsStatic/",
+	appStoreLink:			"https://itunes.apple.com/en/app/fieldlogs/id640497763",
+	googleAppStoreLink:		"https://play.google.com/store/apps/details?id=com.trekea.fieldlogs"
 };

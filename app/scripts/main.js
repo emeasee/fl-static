@@ -1,5 +1,7 @@
 MODE_FORGOT_PWD = "FORGOT_PWD";
 MODE_CREATE_BUYER = "CREATE_BUYER";
+MODE_GLASS_APP_REQUEST = "GLASS_APP_REQUEST";
+MODE_CREATE_INVITED_BUYER = "CREATE_INVITED_BUYER"
 
 global_currentMode = "";
 
@@ -47,9 +49,13 @@ $( document ).ready(function() {
      });
 
     $(".dropdown-button").click(function() {
-        $(".dropdown-menu").toggleClass("show-menu");
-        $(".dropdown-menu > li").click(function(){
-          $(".dropdown-menu").removeClass("show-menu");
+        var $button, $menu;
+        $button = $(this);
+        $menu = $button.siblings(".dropdown-menu");
+        $menu.toggleClass("show-menu");
+        $menu.children("li").click(function() {
+            $menu.removeClass("show-menu");
+            $button.html($(this).html());
         });
     });
 

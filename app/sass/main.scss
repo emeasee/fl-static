@@ -35,10 +35,18 @@ header.navigation {
 
   .menu-wrapper {
     @include outer-container;
-    width: 80%;
+    width: 95%;
     position: relative;
     z-index: 9999;
-    max-width: 1020px;
+    max-width: 1050px;
+
+    &.nav{
+        float: right;
+    }
+
+    @include media($medium-screen) {
+        width: 82%;
+    }
   }
 
   .logo {
@@ -49,14 +57,19 @@ header.navigation {
     background-image: url(../images/splash_logo_top_new.svg);
     background-position: left;
     background-repeat: no-repeat;
+    background-size: 80%;
 
     &.front{
-      max-width: 300px;
-        width:100%;
+      max-width: 180px;
+      width:100%;
       display: block;
       text-align: center;
-        float: left;
+      float: left;
       height: $navigation-height;
+
+        @include media ($large-screen) {
+            max-width: 300px;
+        }
     }
 
     img {
@@ -64,6 +77,20 @@ header.navigation {
       padding: .8em 0;
     }
   }
+
+    .dropdown{
+        display: inline-block;
+        float:right;
+        margin-top: 1.4em;
+
+        @include media ($large-screen) {
+            margin-right: -4em;
+        }
+
+        @include media ($x-large-screen) {
+            margin-right: 0em;
+        }
+    }
 
   .navigation-menu-button {
     color: $navigation-color;
@@ -86,12 +113,6 @@ header.navigation {
     }
   }
 
-  .nav {
-    @include media ($large-screen) {
-      float: right;
-    }
-  }
-
   ul#navigation-menu {
     clear: both;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
@@ -103,14 +124,15 @@ header.navigation {
     z-index: 9999;
 
     @include media ($large-screen) {
-      display: inline;
+      display: inline-block;
       margin: 0;
       padding: 0;
-      margin-right: $base-font-size * 6;
+        width:auto;
+      //margin-right: $base-font-size * 6;
     }
   }
 
-  ul li {
+  ul#navigation-menu > li {
     background: $navigation-background;
     display: block;
     line-height: $navigation-height;
@@ -141,10 +163,11 @@ header.navigation {
 
   .sign-up {
     @include media ($large-screen) {
-      position:absolute;
-      right: 0;
-      top: 0;
-      padding-right: 0em;
+      //position:absolute;
+      //right: 0;
+      //top: 0;
+      //padding-right: 0em;
+        float:right;
 
         a.call {
         @include transition (all 0.2s ease-in-out);
@@ -317,45 +340,63 @@ HERO BANNER TOP
               .hero-copy {
                   text-align: left;
                   margin: 0 auto;
-                  max-width: 70%;
+                  max-width: 95%;
                   h1 {
                       font-size: 1.6em;
-                      margin-bottom: 1em;
+                      margin-bottom: 0.8em;
                       font-weight: 100;
-                      max-width: 450px;
+                      max-width: 580px;
                      @include media($large-screen) {
                           font-size: 3em;
                       }
                   }
                   p {
                       margin: auto;
-                      font-size: 1.2em;
+                      font-size: 1em;
                       @include media($large-screen) {
-                          font-size: 1.2em;
+                          font-size: 1em;
                           margin-bottom: 2em;
                       }
+                  }
+                  @include media($medium-screen) {
+                      max-width: 75%;
                   }
               }
               .hero-links{
                 margin:0 auto;
                 overflow: visible;
-                max-width: 70%;
+                max-width: 95%;
                 position:relative;
                 a{
                   @extend button;
-                  margin: 1em 1em 0 0;
-                  height:65px;
+                  margin: 0.6em 0.6em 0 0;
                   white-space: normal;
                   float: left;
-                  width: 100%;
-                  font-size: $base-font-size * 1;
-                  line-height: 3em;
+                  line-height: 1.7em;
 
                   &.more{
                     background-color: $dark-brown;
                   }
+
+                  &.store{
+                      background-color:transparent;
+                      width:119px;
+                      &.apple{
+                        background-image: url("../images/apple-app-store.png") !important;
+                      }
+
+                      &.google{
+                          background-image: url("../images/google-app-store.png") !important;
+                      }
+                      &:hover{
+                          background-color: transparent;
+                          box-shadow: none;
+                      }
+                  }
+
                   @include media($medium-screen){
                     width: auto;
+                    margin: 1em 1em 0 0;
                   }
 
                 }
@@ -383,6 +424,10 @@ HERO BANNER TOP
                 .ghost{
                   @include ghost-button;
                 }
+
+                  @include media($medium-screen) {
+                      max-width: 75%;
+                  }
               }
           }
             @include media($large-screen){
@@ -811,7 +856,7 @@ CARDS MAIN
 .cards {
   @include clearfix;
   @include outer-container();
-  max-width: 60%;
+  max-width: 90%;
 
   &.wide{
     max-width: 100%;
@@ -848,6 +893,10 @@ CARDS MAIN
       }
     }
   }
+
+    @include media($medium-screen) {
+        max-width: 60%;
+    }
 }
 
 .card {
@@ -1403,153 +1452,141 @@ MODAL BOX
 /*****************
 DROPDOWNS
 ******************/
-$dropdown-color: $base-font-color;
-$dropdown-description-color: white;
-$dropdown-border: 1px solid silver;
-$dropdown-background: $base-body-color;
-$dropdown-background-hover: darken($dropdown-background, 3);
-$dropdown-inner-border: 1px solid silver;
-$dropdown-height: 32px;
-$dropdown-padding: 1em;
-$dropdown-distance-from-menu: 70px;
-$dropdown-arrow-top-distance: 0;
-
 .dropdown {
-  float:left;
-  margin: 1em 1em 0 0;
-  width: 100%;
+    $base-border-color: gainsboro !default;
+    $base-border-radius: 3px !default;
+    $base-line-height: 1.5em !default;
+    $base-background-color: white !default;
+    $dark-gray: #333 !default;
+    $large-screen: 53.75em !default;
+    $base-font-color: $dark-gray !default;
+    $dropdown-color: $base-font-color;
+    $dropdown-description-color: lighten($dropdown-color, 40%);
+    $dropdown-border: 1px solid silver;
+    $dropdown-background: $base-background-color;
+    $dropdown-background-hover: darken($dropdown-background, 3%);
+    $dropdown-inner-border: 1px solid silver;
+    $dropdown-height: 40px;
+    $dropdown-padding: 1em;
+    $dropdown-distance-from-menu: 50px;
+    $dropdown-arrow-top-distance: 0;
 
-  @include media($medium-screen) {
-    width: auto;
+    line-height: $base-line-height;
 
-    .dropdown-description, .dropdown-button{
-        width: auto;
+    .dropdown-container {
+        display: inline-block;
+        position: relative;
+        text-align: center;
     }
-  }
-}
 
-.dropdown-container {
-  display: inline-block;
-  position: relative;
-    width: 100%;
-}
+    .dropdown-description {
+        background: $dropdown-background;
+        border-bottom: $dropdown-border;
+        border-bottom-left-radius: $base-border-radius;
+        border-left: $dropdown-border;
+        border-top-left-radius: $base-border-radius;
+        border-top: $dropdown-border;
+        color: $dropdown-description-color;
+        float: left;
+        font-size: 0.7em;
+        line-height: $dropdown-height;
+        margin: 0;
+        padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+        height: 42px;
 
-.dropdown-description {
-  background: $base-accent-color;
-  border-bottom-left-radius: $base-border-radius;
-  border-top-left-radius: $base-border-radius;
-  color: $dropdown-description-color;
-  float: left;
-  width: 15%;
-  font-size: 1em;
-  line-height: $dropdown-height * 2;
-  margin-bottom: 0;
-  height: $dropdown-height * 2;
-  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+        @include media($large-screen) {
+            font-size: 1em;
+        }
+    }
 
-  @include media($large-screen) {
-    font-size: 1em;
-  }
-}
+    .dropdown-button {
+        background: $dropdown-background;
+        border-bottom: $dropdown-border;
+        border-bottom-right-radius: $base-border-radius;
+        border-right: $dropdown-border;
+        border-top: $dropdown-border;
+        border-top-right-radius: $base-border-radius;
+        cursor: pointer;
+        float: right;
+        font-size: 0.7em;
+        line-height: $dropdown-height;
+        margin: 0;
+        padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+        position: relative;
 
-.dropdown-button {
-  background: $base-accent-color;
-  border-bottom-right-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-  cursor: pointer;
-  float: right;
-  width: 85%;
-  font-size: 1em;
-  font-weight: 800;
-  line-height: $dropdown-height * 2;
-  margin-bottom: 0;
-  height: $dropdown-height * 2;
-  padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
-  position: relative;
+        @include media($large-screen) {
+            font-size: 1em;
+            padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+        }
+    }
 
-  @include media($large-screen) {
-    font-size: 1em;
-    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
-  }
-}
+    .dropdown-button:hover {
+        background-color: $dropdown-background-hover;
+    }
 
-.dropdown-button:hover{
-  background-color: darken($base-accent-color, 10);
-}
+    .dropdown-button::after {
+        color: $base-font-color;
+        content: "\25BE";
+        display: block;
+        position: absolute;
+        right: $dropdown-padding;
+        top: $dropdown-arrow-top-distance;
+    }
 
-.dropdown-button:after {
-  color: white;
-  content: "\25BE";
-  display: block;
-  position: absolute;
-  right: $dropdown-padding;
-  top: $dropdown-arrow-top-distance;
-}
+    .dropdown-menu {
+        background: $dropdown-background;
+        border: $dropdown-border;
+        border-radius: $base-border-radius;
+        box-shadow: 0 2px 2px transparentize(black, 0.8);
+        color: $dropdown-color;
+        cursor: pointer;
+        display: none;
+        margin: 0;
+        overflow: show;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: $dropdown-distance-from-menu;
+        transition: all 0.2s ease-in-out;
+        width: 228px;
+        z-index: 99999;
 
-.dropdown-menu {
-  @include transition (all 0.2s ease-in-out);
-  background: $dropdown-background;
-  border-radius: $base-border-radius;
-  border: $dropdown-border;
-  box-shadow: 0 2px 2px transparentize(black, .8);
-  color: $dropdown-color;
-  cursor: pointer;
-  display: none;
-  overflow: visible;
-  position: absolute;
-  right: -8px;
-  top: $dropdown-distance-from-menu;
-  width: 228px;
-  z-index: 99999;
+        &::before {
+            @include position(absolute, 0 1em 0 0);
+            color: $dropdown-background;
+            content: "\25b2";
+            font-size: 1.4em;
+            pointer-events: none;
+            text-shadow: 0 -2px 2px transparentize(black, 0.7);
+            top: -0.7em;
+        }
+    }
 
-  &:before {
-    @include position(absolute, 0 1em 0 0);
-    color: $dropdown-background;
-    content: "\25b2";
-    font-size: 1.4em;
-    pointer-events: none;
-    text-shadow: 0 -2px 2px transparentize(black, .7);
-    top: -0.8em;
-  }
-}
+    .dropdown-menu li {
+        border-bottom: $dropdown-inner-border;
+        color: $dropdown-color;
+        list-style: none;
+        padding: $dropdown-padding / 2;
+    }
 
-.dropdown-menu li {
-  border-bottom: $dropdown-inner-border;
-  color: $dropdown-color;
-  padding: $dropdown-padding / 2;
+    .dropdown-menu li:hover {
+        background: $dropdown-background-hover;
+    }
 
-  a{
-      float:none!important;
-      height: auto!important;
-      margin:0!important;
-      width:100%!important;
-      font-size: 1em!important;
-      background-color:darken($base-body-color, 50)!important;
+    .dropdown-menu li:first-child {
+        border-top-left-radius: $base-border-radius;
+        border-top-right-radius: $base-border-radius;
+    }
 
-      &:hover{
-          background-color:darken($base-body-color, 40)!important;
-          border: 0!important;
-      }
-  }
-}
+    .dropdown-menu li:last-child {
+        border: 0;
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+    }
 
-.dropdown-menu li:hover {
-  background: $dropdown-background-hover;
-}
-
-.dropdown-menu li:first-child {
-  border-top-left-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-}
-
-.dropdown-menu li:last-child {
-  border: none;
-  border-bottom-left-radius: $base-border-radius;
-  border-bottom-right-radius: $base-border-radius;
-}
-
-.show-menu {
-  display: block;
+    .show-menu {
+        display: block;
+    }
 }
 
 
