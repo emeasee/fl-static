@@ -55,11 +55,11 @@ $( document ).ready(function() {
         $button = $(this);
         $menu = $button.siblings(".dropdown-menu");
         $menu.toggleClass("show-menu");
-        $(document).click( function(){
+        $(document).on( "click touchend" ,function(){
             $menu.removeClass("show-menu");
-            $(document).unbind("click");
+            $(document).unbind("click touchend");
         });
-        $menu.children("li").click(function() {
+        $menu.children("li").on("click touchend", function() {
             $menu.removeClass("show-menu");
             $button.html($(this).html());
         });
