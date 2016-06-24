@@ -1466,9 +1466,9 @@ DROPDOWNS
     $dropdown-background: $base-background-color;
     $dropdown-background-hover: darken($dropdown-background, 3%);
     $dropdown-inner-border: 1px solid silver;
-    $dropdown-height: 40px;
-    $dropdown-padding: 1em;
-    $dropdown-distance-from-menu: 50px;
+    $dropdown-height: 30px;
+    $dropdown-padding: 0.8em;
+    $dropdown-distance-from-menu: 40px;
     $dropdown-arrow-top-distance: 0;
 
     line-height: $base-line-height;
@@ -1492,7 +1492,7 @@ DROPDOWNS
         line-height: $dropdown-height;
         margin: 0;
         padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
-        height: 42px;
+        height: 32px;
 
         @include media($large-screen) {
             font-size: 1em;

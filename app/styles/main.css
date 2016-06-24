@@ -2985,10 +2985,10 @@ DROPDOWNS
     color: #b0b0b0;
     float: left;
     font-size: 0.7em;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0;
-    padding: 0 0.5em 0 1em;
-    height: 42px; }
+    padding: 0 0.4em 0 0.8em;
+    height: 32px; }
     @media screen and (min-width: 53.75em) {
       .dropdown .dropdown-description {
         font-size: 1em; } }
@@ -3002,14 +3002,14 @@ DROPDOWNS
     cursor: pointer;
     float: right;
     font-size: 0.7em;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0;
-    padding: 0 2.5em 0 0.5em;
+    padding: 0 2em 0 0.4em;
     position: relative; }
     @media screen and (min-width: 53.75em) {
       .dropdown .dropdown-button {
         font-size: 1em;
-        padding: 0 2.5em 0 0.5em; } }
+        padding: 0 2em 0 0.4em; } }
   .dropdown .dropdown-button:hover {
     background-color: #f7f7f7; }
   .dropdown .dropdown-button::after {
@@ -3017,7 +3017,7 @@ DROPDOWNS
     content: "\25BE";
     display: block;
     position: absolute;
-    right: 1em;
+    right: 0.8em;
     top: 0; }
   .dropdown .dropdown-menu {
     background: white;
@@ -3032,7 +3032,7 @@ DROPDOWNS
     padding: 0;
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 40px;
     transition: all 0.2s ease-in-out;
     width: 228px;
     z-index: 99999; }
@@ -3049,7 +3049,7 @@ DROPDOWNS
     border-bottom: 1px solid silver;
     color: #4A4A4A;
     list-style: none;
-    padding: 0.5em; }
+    padding: 0.4em; }
   .dropdown .dropdown-menu li:hover {
     background: #f7f7f7; }
   .dropdown .dropdown-menu li:first-child {

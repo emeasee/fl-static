@@ -48,11 +48,17 @@ $( document ).ready(function() {
       $(this).toggleClass("expander-hidden");
      });
 
+
     $(".dropdown-button").click(function() {
+        event.stopPropagation();
         var $button, $menu;
         $button = $(this);
         $menu = $button.siblings(".dropdown-menu");
         $menu.toggleClass("show-menu");
+        $(document).click( function(){
+            $menu.removeClass("show-menu");
+            $(document).unbind("click");
+        });
         $menu.children("li").click(function() {
             $menu.removeClass("show-menu");
             $button.html($(this).html());
