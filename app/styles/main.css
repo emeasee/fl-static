@@ -2110,10 +2110,9 @@ HERO BANNER TOP
         border-radius: 0.1875em;
         box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.14);
         background: RGBA(247, 246, 245, 0.95);
-        background-color: 1B1B1B;
         padding: 1em;
         position: relative;
-        height: 560px; }
+        height: 600px; }
         .hero .hero-inner .hero-right .side .hero-email {
           margin-bottom: 2em; }
         .hero .hero-inner .hero-right .side h6 {
