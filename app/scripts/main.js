@@ -44,6 +44,10 @@ $( document ).ready(function() {
 		$("label#lblAnswerCaptcha").css('display','none');
 	}
 
+    try {
+        Typekit.load();
+    } catch (e) {}
+
      $('#js-expander-trigger').click(function(){
       $(this).toggleClass("expander-hidden");
      });

@@ -465,6 +465,7 @@ HERO BANNER TOP
                    -o-transition: -o-transform 0.6s;
                       transition: transform 0.6s;
             @include transform-style(preserve-3d);
+            backface-visiblity: hidden;
             .front{
             }
             .back{

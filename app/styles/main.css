@@ -54,13 +54,13 @@ input[type="submit"] {
 
 body {
   color: #4A4A4A;
-  font-family: "proxima-nova";
+  font-family: "proxima-nova", sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova";
+  font-family: "proxima-nova", sans-serif;
   line-height: 1.25em;
   margin: 0;
   text-rendering: optimizeLegibility; }
@@ -1609,7 +1609,7 @@ fieldset {
 input,
 label,
 select {
-  font-family: "proxima-nova";
+  font-family: "proxima-nova", sans-serif;
   font-size: 1em; }
 
 label {
@@ -1633,7 +1633,7 @@ select[multiple=multiple] {
   border-radius: 0.1875em;
   border: 1px solid #ECECEC;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-  font-family: "proxima-nova";
+  font-family: "proxima-nova", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em 0.5em;
@@ -1716,7 +1716,7 @@ HEADER
 ******************/
 header.navigation {
   background-color: #4A4A4A;
-  font-family: "proxima-nova";
+  font-family: "proxima-nova", sans-serif;
   height: 90px;
   width: 100%;
   z-index: 999; }
@@ -1777,7 +1777,7 @@ header.navigation {
     cursor: pointer;
     display: block;
     float: right;
-    font-family: "proxima-nova";
+    font-family: "proxima-nova", sans-serif;
     font-weight: 700;
     line-height: 90px;
     margin: 0;
@@ -2128,7 +2128,8 @@ HERO BANNER TOP
         -moz-transform-style: preserve-3d;
         -ms-transform-style: preserve-3d;
         -o-transform-style: preserve-3d;
-        transform-style: preserve-3d; }
+        transform-style: preserve-3d;
+        backface-visiblity: hidden; }
         .hero .hero-inner .hero-right.flip .back {
           margin-top: -580px;
           -webkit-transform: rotateY(180deg);
