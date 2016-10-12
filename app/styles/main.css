@@ -10,7 +10,7 @@
   font-style: normal;
   src: url("../styles/fonts/fieldlogs.eot");
   src: url("../styles/fonts/fieldlogs.eot?#iefix") format("embedded-opentype"), url("../styles/fonts/fieldlogs.woff") format("woff"), url("../styles/fonts/fieldlogs.ttf") format("truetype"), url("../styles/fonts/fieldlogs.svg#FlIconFont") format("svg"); }
-button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .card .card-copy a.btn, .card .card-copy a.btn.ghost, .card .card-stats ul li a, .card .card-stats ul li a.ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost,
+button, .hero_new .hero-content .hero-links a, .hero_new .hero-content .hero-links .ghost, .card .card-copy a.btn, .card .card-copy a.btn.ghost, .card .card-stats ul li a, .card .card-stats ul li a.ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost,
 input[type="submit"] {
   border: 1px solid #a96512;
   border-radius: 3px;
@@ -35,19 +35,19 @@ input[type="submit"] {
   box-shadow: none;
   text-shadow: none;
   height: 40px; }
-  button:hover:not(:disabled), .hero .hero-inner button.login:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:hover:not(:disabled), .card .card-copy a.btn:hover:not(:disabled), .card .card-stats ul li a:hover:not(:disabled), .modal .btn:hover:not(:disabled), .modal .modal-inner.template .mod_right a.btn:hover:not(:disabled),
+  button:hover:not(:disabled), .hero_new .hero-content .hero-links a:hover:not(:disabled), .hero_new .hero-content .hero-links .ghost:hover:not(:disabled), .card .card-copy a.btn:hover:not(:disabled), .card .card-stats ul li a:hover:not(:disabled), .modal .btn:hover:not(:disabled), .modal .modal-inner.template .mod_right a.btn:hover:not(:disabled),
   input[type="submit"]:hover:not(:disabled) {
     box-shadow: inset 0 1px 0 0 #d79546;
     cursor: pointer;
     background-color: #c37c26;
     background-image: -webkit-linear-gradient(#c37c26, #a86513);
     background-image: linear-gradient(#c37c26, #a86513); }
-  button:active:not(:disabled), .hero .hero-inner button.login:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:active:not(:disabled), .card .card-copy a.btn:active:not(:disabled), .card .card-stats ul li a:active:not(:disabled), .modal .btn:active:not(:disabled), .modal .modal-inner.template .mod_right a.btn:active:not(:disabled),
-  input[type="submit"]:active:not(:disabled), button:focus:not(:disabled), .hero .hero-inner button.login:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links a:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links .ghost:focus:not(:disabled), .card .card-copy a.btn:focus:not(:disabled), .card .card-stats ul li a:focus:not(:disabled), .modal .btn:focus:not(:disabled), .modal .modal-inner.template .mod_right a.btn:focus:not(:disabled),
+  button:active:not(:disabled), .hero_new .hero-content .hero-links a:active:not(:disabled), .hero_new .hero-content .hero-links .ghost:active:not(:disabled), .card .card-copy a.btn:active:not(:disabled), .card .card-stats ul li a:active:not(:disabled), .modal .btn:active:not(:disabled), .modal .modal-inner.template .mod_right a.btn:active:not(:disabled),
+  input[type="submit"]:active:not(:disabled), button:focus:not(:disabled), .hero_new .hero-content .hero-links a:focus:not(:disabled), .hero_new .hero-content .hero-links .ghost:focus:not(:disabled), .card .card-copy a.btn:focus:not(:disabled), .card .card-stats ul li a:focus:not(:disabled), .modal .btn:focus:not(:disabled), .modal .modal-inner.template .mod_right a.btn:focus:not(:disabled),
   input[type="submit"]:focus:not(:disabled) {
     border: 1px solid #a96512;
     box-shadow: inset 0 0 8px 4px #9a5d13, inset 0 0 8px 4px #9a5d13; }
-  button:disabled, .hero .hero-inner button.login:disabled, .hero .hero-inner .hero-left .hero-align .hero-links a:disabled, .hero .hero-inner .hero-left .hero-align .hero-links .ghost:disabled, .card .card-copy a.btn:disabled, .card .card-stats ul li a:disabled, .modal .btn:disabled, .modal .modal-inner.template .mod_right a.btn:disabled,
+  button:disabled, .hero_new .hero-content .hero-links a:disabled, .hero_new .hero-content .hero-links .ghost:disabled, .card .card-copy a.btn:disabled, .card .card-stats ul li a:disabled, .modal .btn:disabled, .modal .modal-inner.template .mod_right a.btn:disabled,
   input[type="submit"]:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -1674,7 +1674,7 @@ select {
   max-width: 100%;
   margin-bottom: 1.5em; }
 
-button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .card .card-copy a.btn, .card .card-copy a.btn.ghost, .card .card-stats ul li a, .card .card-stats ul li a.ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost,
+button, .hero_new .hero-content .hero-links a, .hero_new .hero-content .hero-links .ghost, .card .card-copy a.btn, .card .card-copy a.btn.ghost, .card .card-stats ul li a, .card .card-stats ul li a.ghost, .modal .btn, .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right a.btn.ghost,
 input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1730,16 +1730,17 @@ header.navigation {
     width: 95%;
     position: relative;
     z-index: 9999;
-    max-width: 1050px; }
+    max-width: 90.5em;
+    min-width: 10em; }
     header.navigation .menu-wrapper:after {
       content: "";
       display: table;
       clear: both; }
     header.navigation .menu-wrapper.nav {
       float: right; }
-    @media screen and (min-width: 40em) {
+    @media screen and (min-width: 53.75em) {
       header.navigation .menu-wrapper {
-        width: 82%; } }
+        min-width: 61em; } }
   header.navigation .logo {
     max-height: 90px;
     padding-left: 1em;
@@ -1765,13 +1766,7 @@ header.navigation {
   header.navigation .dropdown {
     display: inline-block;
     float: right;
-    margin-top: 1.4em; }
-    @media screen and (min-width: 53.75em) {
-      header.navigation .dropdown {
-        margin-right: -4em; } }
-    @media screen and (min-width: 105em) {
-      header.navigation .dropdown {
-        margin-right: 0em; } }
+    margin-top: 1.8em; }
   header.navigation .navigation-menu-button {
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
@@ -1825,6 +1820,8 @@ header.navigation {
       color: rgba(255, 255, 255, 0.7); }
       header.navigation ul#navigation-menu > li a:hover {
         color: white; }
+  header.navigation .login .logincall {
+    cursor: pointer; }
   @media screen and (min-width: 53.75em) {
     header.navigation .sign-up {
       float: right; }
@@ -1834,11 +1831,12 @@ header.navigation {
         transition: all 0.2s ease-in-out;
         background: #DB8A28;
         border-radius: 0.1875em;
-        color: white;
+        color: white !important;
         font-size: 1em;
-        font-weight: 800;
         padding: .6em 1em;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold !important; }
         header.navigation .sign-up a.call:hover {
           background: #e2a254; } }
   header.navigation .sign-up .modal > * {
@@ -1873,7 +1871,7 @@ header.navigation {
         color: rgba(255, 255, 255, 0.7);
         border-radius: 0.375em;
         margin: 0; }
-      header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit], .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit], .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .modal [type=submit].btn, .modal header.navigation .search-bar .search-and-submit [type=submit].btn {
+      header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit], .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost, .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit], .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .modal [type=submit].btn, .modal header.navigation .search-bar .search-and-submit [type=submit].btn {
         border: 1px solid #4d4d4d;
         border-radius: 3px;
         box-shadow: inset 0 1px 0 0 #979797;
@@ -1908,270 +1906,167 @@ header.navigation {
         bottom: 0.3em;
         outline: none;
         padding: 5px 15px; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:hover:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:hover:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:hover:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:hover:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:hover:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:hover:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
           box-shadow: inset 0 1px 0 0 #7d7d7d;
           cursor: pointer;
           background-color: #646464;
           background-image: -webkit-linear-gradient(#646464, #4d4d4d);
           background-image: linear-gradient(#646464, #4d4d4d); }
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:active:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:active:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:focus:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:focus:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:active:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:active:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:active:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:active:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:focus:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:focus:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:focus:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:focus:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
           border: 1px solid #4d4d4d;
           box-shadow: inset 0 0 8px 4px #454545, inset 0 0 8px 4px #454545; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:hover:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:hover:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:hover:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:hover:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:hover:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:hover:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:hover:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
           box-shadow: inset 0 1px 0 0 #7d7d7d;
           cursor: pointer;
           background-color: #646464;
           background-image: -webkit-linear-gradient(#646464, #534646);
           background-image: linear-gradient(#646464, #534646); }
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:active:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:active:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:active:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:focus:not(:disabled), .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:focus:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:focus:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:active:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:active:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:active:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:active:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:active:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:focus:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:focus:not(:disabled), .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:focus:not(:disabled), .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:focus:not(:disabled), header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:focus:not(:disabled), .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:focus:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
           border: 1px solid #534646;
           box-shadow: inset 0 0 8px 4px #4a4040, inset 0 0 8px 4px #4a4040; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit]:disabled, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost:disabled, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:disabled, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:disabled, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:disabled, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:disabled, .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .modal [type=submit].btn:disabled, .modal header.navigation .search-bar .search-and-submit [type=submit].btn:disabled {
+        header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit]:disabled, .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost:disabled, .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost:disabled, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn:disabled, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn:disabled, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit]:disabled, .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit]:disabled, header.navigation .search-bar .search-and-submit .modal [type=submit].btn:disabled, .modal header.navigation .search-bar .search-and-submit [type=submit].btn:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
-        header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links a[type=submit] img, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .hero .hero-inner .hero-left .hero-align .hero-links [type=submit].ghost img, .hero .hero-inner .hero-left .hero-align .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost img, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn img, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn img, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit] img, .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .modal [type=submit].btn img, .modal header.navigation .search-bar .search-and-submit [type=submit].btn img {
+        header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit] img, .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost img, .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost img, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn img, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn img, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit] img, .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit] img, header.navigation .search-bar .search-and-submit .modal [type=submit].btn img, .modal header.navigation .search-bar .search-and-submit [type=submit].btn img {
           height: 12px;
           opacity: .7; }
 
 /*****************
 HERO BANNER TOP
 ******************/
-.hero {
+.hero_new {
+  align-items: center;
   background-color: #4A4A4A;
   background-image: url("../images/bg1.png");
-  padding-top: 5em;
-  margin: 0 auto;
+  background-position: right;
+  background-size: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  min-height: 50em;
   max-width: 105em;
-  -webkit-perspective: 3000px;
-  -moz-perspective: 3000px;
-  perspective: 3000px; }
-  .hero .learn {
+  margin: 0 auto; }
+  @media screen and (min-width: 53.75em) {
+    .hero_new {
+      background-position: left;
+      background-size: cover;
+      justify-content: flex-start; } }
+  .hero_new .hero-content {
+    max-width: 60em;
+    order: 1;
+    text-align: left;
+    color: white;
+    padding: 11em 2em 8em 2em;
+    margin: 0 5%; }
+    @media screen and (min-width: 53.75em) {
+      .hero_new .hero-content {
+        padding: 10em 2em 3em 2em; } }
+    .hero_new .hero-content .hero-copy {
+      text-align: left;
+      margin: 0 auto; }
+      .hero_new .hero-content .hero-copy h1 {
+        font-size: 1.6em;
+        margin-bottom: 0.8em;
+        font-weight: 100; }
+        @media screen and (min-width: 53.75em) {
+          .hero_new .hero-content .hero-copy h1 {
+            font-size: 3em; } }
+      .hero_new .hero-content .hero-copy p {
+        margin: auto;
+        font-size: 1em; }
+        @media screen and (min-width: 53.75em) {
+          .hero_new .hero-content .hero-copy p {
+            font-size: 1em;
+            margin-bottom: 2em; } }
+    .hero_new .hero-content .hero-links {
+      margin: 0 auto;
+      overflow: visible;
+      max-width: 95%;
+      position: relative; }
+      .hero_new .hero-content .hero-links a {
+        margin: 0.6em 0.6em 0 0;
+        white-space: normal;
+        float: left;
+        line-height: 1.7em; }
+        .hero_new .hero-content .hero-links a.more {
+          background-color: #4A4A4A; }
+        .hero_new .hero-content .hero-links a.store {
+          background-color: transparent;
+          width: 119px; }
+          .hero_new .hero-content .hero-links a.store.apple {
+            background-image: url("../images/apple-app-store.png") !important; }
+          .hero_new .hero-content .hero-links a.store.google {
+            background-image: url("../images/google-app-store.png") !important; }
+          .hero_new .hero-content .hero-links a.store:hover {
+            background-color: transparent;
+            box-shadow: none; }
+        @media screen and (min-width: 40em) {
+          .hero_new .hero-content .hero-links a {
+            width: auto;
+            margin: 1em 1em 0 0; } }
+      .hero_new .hero-content .hero-links .platforms {
+        float: left;
+        width: 100%;
+        text-align: left;
+        padding: 1em 0; }
+        .hero_new .hero-content .hero-links .platforms i {
+          margin-right: 0.5em; }
+          .hero_new .hero-content .hero-links .platforms i.glass {
+            background: url(../images/glass_logo_white.png);
+            background: url(../images/glass_logo_white.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            width: 80px;
+            height: 15px;
+            display: inline-block; }
+      .hero_new .hero-content .hero-links .ghost {
+        background-color: transparent;
+        border: 1px solid #4A4A4A;
+        color: #4A4A4A; }
+        .hero_new .hero-content .hero-links .ghost:hover {
+          background-color: #DB8A28 !important;
+          color: white;
+          box-shadow: none !important;
+          border: 0 !important; }
+  .hero_new .learn {
+    order: 2;
+    color: white;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
     display: table;
     text-align: center;
-    color: #fff;
     background: rgba(72, 185, 249, 0.8);
     cursor: pointer;
     min-height: 14em;
     font-size: 0.83333em; }
-    .hero .learn:last-child {
+    .hero_new .learn:last-child {
       margin-right: 0; }
-    .hero .learn .heading {
+    .hero_new .learn .heading {
       display: table-cell;
       vertical-align: middle;
       padding: 1.6em; }
-      .hero .learn .heading > * {
+      .hero_new .learn .heading > * {
         font-weight: 100; }
-      .hero .learn .heading h4 {
+      .hero_new .learn .heading h4 {
         font-size: 1em; }
-      .hero .learn .heading i {
+      .hero_new .learn .heading i {
         opacity: 0.8; }
     @media screen and (min-width: 40em) {
-      .hero .learn i {
+      .hero_new .learn i {
         position: absolute;
         height: 0px;
         margin-top: -3%;
         margin-left: 6%;
         font-size: 2em; } }
     @media screen and (min-width: 53.75em) {
-      .hero .learn {
+      .hero_new .learn {
         font-size: 1em;
         min-height: 10em; } }
-  .hero .hero-inner {
-    max-width: 80.5em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-    margin: auto;
-    text-align: center;
-    color: #4A4A4A; }
-    .hero .hero-inner:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .hero .hero-inner:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .hero .hero-inner button, .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .card .card-copy a.btn, .card .card-copy .hero .hero-inner a.btn, .hero .hero-inner .card .card-stats ul li a, .card .card-stats ul li .hero .hero-inner a, .hero .hero-inner .modal .btn, .modal .hero .hero-inner .btn, .hero .hero-inner .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .hero .hero-inner a.btn {
-      font-size: 1em;
-      outline: none;
-      width: 100%; }
-      .hero .hero-inner button.login, .hero .hero-inner .hero-left .hero-align .hero-links a.login, .hero .hero-inner .hero-left .hero-align .hero-links .login.ghost, .hero .hero-inner .card .card-copy a.login.btn, .card .card-copy .hero .hero-inner a.login.btn, .hero .hero-inner .card .card-stats ul li a.login, .card .card-stats ul li .hero .hero-inner a.login, .hero .hero-inner .modal .login.btn, .modal .hero .hero-inner .login.btn, .hero .hero-inner .modal .modal-inner.template .mod_right a.login.btn, .modal .modal-inner.template .mod_right .hero .hero-inner a.login.btn {
-        font-size: 1em;
-        margin-top: 1em;
-        background-color: #4A4A4A; }
-    .hero .hero-inner a.button {
-      font-size: 1em;
-      outline: none;
-      width: 100%; }
-    .hero .hero-inner .hero-left {
-      width: 100%;
-      display: table !important;
-      height: 400px;
-      color: #fff; }
-      .hero .hero-inner .hero-left .hero-align {
-        display: table-cell;
-        vertical-align: middle; }
-        .hero .hero-inner .hero-left .hero-align .hero-copy {
-          text-align: left;
-          margin: 0 auto;
-          max-width: 95%; }
-          .hero .hero-inner .hero-left .hero-align .hero-copy h1 {
-            font-size: 1.6em;
-            margin-bottom: 0.8em;
-            font-weight: 100;
-            max-width: 580px; }
-            @media screen and (min-width: 53.75em) {
-              .hero .hero-inner .hero-left .hero-align .hero-copy h1 {
-                font-size: 3em; } }
-          .hero .hero-inner .hero-left .hero-align .hero-copy p {
-            margin: auto;
-            font-size: 1em; }
-            @media screen and (min-width: 53.75em) {
-              .hero .hero-inner .hero-left .hero-align .hero-copy p {
-                font-size: 1em;
-                margin-bottom: 2em; } }
-          @media screen and (min-width: 40em) {
-            .hero .hero-inner .hero-left .hero-align .hero-copy {
-              max-width: 75%; } }
-        .hero .hero-inner .hero-left .hero-align .hero-links {
-          margin: 0 auto;
-          overflow: visible;
-          max-width: 95%;
-          position: relative; }
-          .hero .hero-inner .hero-left .hero-align .hero-links a {
-            margin: 0.6em 0.6em 0 0;
-            white-space: normal;
-            float: left;
-            line-height: 1.7em; }
-            .hero .hero-inner .hero-left .hero-align .hero-links a.more {
-              background-color: #4A4A4A; }
-            .hero .hero-inner .hero-left .hero-align .hero-links a.store {
-              background-color: transparent;
-              width: 119px; }
-              .hero .hero-inner .hero-left .hero-align .hero-links a.store.apple {
-                background-image: url("../images/apple-app-store.png") !important; }
-              .hero .hero-inner .hero-left .hero-align .hero-links a.store.google {
-                background-image: url("../images/google-app-store.png") !important; }
-              .hero .hero-inner .hero-left .hero-align .hero-links a.store:hover {
-                background-color: transparent;
-                box-shadow: none; }
-            @media screen and (min-width: 40em) {
-              .hero .hero-inner .hero-left .hero-align .hero-links a {
-                width: auto;
-                margin: 1em 1em 0 0; } }
-          .hero .hero-inner .hero-left .hero-align .hero-links .platforms {
-            float: left;
-            width: 100%;
-            text-align: left;
-            padding: 1em 0; }
-            .hero .hero-inner .hero-left .hero-align .hero-links .platforms i {
-              margin-right: 0.5em; }
-              .hero .hero-inner .hero-left .hero-align .hero-links .platforms i.glass {
-                background: url(../images/glass_logo_white.png);
-                background: url(../images/glass_logo_white.svg);
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: 50%;
-                width: 80px;
-                height: 15px;
-                display: inline-block; }
-          .hero .hero-inner .hero-left .hero-align .hero-links .ghost {
-            background-color: transparent;
-            border: 1px solid #4A4A4A;
-            color: #4A4A4A; }
-            .hero .hero-inner .hero-left .hero-align .hero-links .ghost:hover {
-              background-color: #DB8A28 !important;
-              color: white;
-              box-shadow: none !important;
-              border: 0 !important; }
-          @media screen and (min-width: 40em) {
-            .hero .hero-inner .hero-left .hero-align .hero-links {
-              max-width: 75%; } }
-      @media screen and (min-width: 53.75em) {
-        .hero .hero-inner .hero-left {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 65.88078%;
-          height: 570px;
-          width: 70%; }
-          .hero .hero-inner .hero-left:last-child {
-            margin-right: 0; }
-          .hero .hero-inner .hero-left .hero-links {
-            margin-bottom: 0em; } }
-    .hero .hero-inner .hero-right {
-      display: none; }
-      .hero .hero-inner .hero-right .side {
-        border-radius: 0.1875em;
-        box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.14);
-        background: RGBA(247, 246, 245, 0.95);
-        padding: 1em;
-        position: relative;
-        height: 600px; }
-        .hero .hero-inner .hero-right .side .hero-email {
-          margin-bottom: 2em; }
-        .hero .hero-inner .hero-right .side h6 {
-          padding: 1em 0; }
-        .hero .hero-inner .hero-right .side select {
-          width: 100%; }
-      .hero .hero-inner .hero-right.flip {
-        -webkit-transition: -webkit-transform 0.6s;
-        -moz-transition: -moz-transform 0.6s;
-        -o-transition: -o-transform 0.6s;
-        transition: transform 0.6s;
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        backface-visiblity: hidden; }
-        .hero .hero-inner .hero-right.flip .back {
-          margin-top: -580px;
-          -webkit-transform: rotateY(180deg);
-          -moz-transform: rotateY(180deg);
-          -ms-transform: rotateY(180deg);
-          -o-transform: rotateY(180deg);
-          transform: rotateY(180deg); }
-      @media screen and (min-width: 40em) {
-        .hero .hero-inner .hero-right {
-          display: block; } }
-      @media screen and (min-width: 53.75em) {
-        .hero .hero-inner .hero-right {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 24.93772%;
-          display: block; }
-          .hero .hero-inner .hero-right:last-child {
-            margin-right: 0; } }
-      .hero .hero-inner .hero-right.flipped {
-        -webkit-transform: rotateY(-180deg);
-        -moz-transform: rotateY(-180deg);
-        -ms-transform: rotateY(-180deg);
-        -o-transform: rotateY(-180deg);
-        transform: rotateY(-180deg); }
-    .hero .hero-inner .hero-invite {
-      max-width: 500px;
-      width: 100% !important;
-      margin: 0 auto !important;
-      float: none !important;
-      border-radius: 8px;
-      box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.14);
-      background: #F7F6F5; }
-      .hero .hero-inner .hero-invite .side {
-        height: auto; }
-  .hero.loggedin .hero-inner .hero-left {
-    width: 100%; }
-  .hero.loggedin .hero-inner .hero-right {
-    display: none; }
-  @media screen and (min-width: 53.75em) {
-    .hero {
-      padding-bottom: 10em; } }
+  .hero_new .hero-logo {
+    margin: auto; }
 
 /*****************
 MAIN CONTENT GENERAL
@@ -2184,14 +2079,14 @@ MAIN CONTENT GENERAL
   position: relative;
   width: 100%;
   max-width: 105em; }
-  .content button.call, .content .hero .hero-inner button.call.login, .hero .hero-inner .content button.call.login, .content .hero .hero-inner .hero-left .hero-align .hero-links a.call, .hero .hero-inner .hero-left .hero-align .hero-links .content a.call, .content .hero .hero-inner .hero-left .hero-align .hero-links .call.ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .call.ghost, .content .card .card-copy a.call.btn, .card .card-copy .content a.call.btn, .content .card .card-stats ul li a.call, .card .card-stats ul li .content a.call, .content .modal .call.btn, .modal .content .call.btn, .content .modal .modal-inner.template .mod_right a.call.btn, .modal .modal-inner.template .mod_right .content a.call.btn {
+  .content button.call, .content .hero_new .hero-content .hero-links a.call, .hero_new .hero-content .hero-links .content a.call, .content .hero_new .hero-content .hero-links .call.ghost, .hero_new .hero-content .hero-links .content .call.ghost, .content .card .card-copy a.call.btn, .card .card-copy .content a.call.btn, .content .card .card-stats ul li a.call, .card .card-stats ul li .content a.call, .content .modal .call.btn, .modal .content .call.btn, .content .modal .modal-inner.template .mod_right a.call.btn, .modal .modal-inner.template .mod_right .content a.call.btn {
     font-size: 1.8em;
     font-weight: normal;
     cursor: pointer; }
   .content.colored {
     background: #F7F6F5;
     padding-bottom: 3em; }
-  .content.loggedin button, .content.loggedin .hero .hero-inner button.login, .hero .hero-inner .content.loggedin button.login, .content.loggedin .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content.loggedin a, .content.loggedin .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content.loggedin .ghost, .content.loggedin .card .card-copy a.btn, .card .card-copy .content.loggedin a.btn, .content.loggedin .card .card-stats ul li a, .card .card-stats ul li .content.loggedin a, .content.loggedin .modal .btn, .modal .content.loggedin .btn, .content.loggedin .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .content.loggedin a.btn {
+  .content.loggedin button, .content.loggedin .hero_new .hero-content .hero-links a, .hero_new .hero-content .hero-links .content.loggedin a, .content.loggedin .hero_new .hero-content .hero-links .ghost, .hero_new .hero-content .hero-links .content.loggedin .ghost, .content.loggedin .card .card-copy a.btn, .card .card-copy .content.loggedin a.btn, .content.loggedin .card .card-stats ul li a, .card .card-stats ul li .content.loggedin a, .content.loggedin .modal .btn, .modal .content.loggedin .btn, .content.loggedin .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .content.loggedin a.btn {
     display: none; }
   .content.signup.loggedin {
     display: none; }
@@ -2270,7 +2165,7 @@ MAIN CONTENT GENERAL
               display: block;
               font-size: 0.8em;
               font-style: italic; }
-        .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .card .card-copy a.btn, .card .card-copy .content .content-ribbon .text .l-box a.btn, .content .content-ribbon .text .l-box .card .card-stats ul li a, .card .card-stats ul li .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
+        .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero_new .hero-content .hero-links a, .hero_new .hero-content .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero_new .hero-content .hero-links .ghost, .hero_new .hero-content .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .card .card-copy a.btn, .card .card-copy .content .content-ribbon .text .l-box a.btn, .content .content-ribbon .text .l-box .card .card-stats ul li a, .card .card-stats ul li .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
           margin-bottom: 1em;
           width: 95%; }
         @media screen and (min-width: 53.75em) {
@@ -2294,7 +2189,7 @@ MAIN CONTENT GENERAL
             text-align: left; }
             .content .content-ribbon .text .l-box h3 {
               text-align: left; }
-            .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .card .card-copy a.btn, .card .card-copy .content .content-ribbon .text .l-box a.btn, .content .content-ribbon .text .l-box .card .card-stats ul li a, .card .card-stats ul li .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
+            .content .content-ribbon .text .l-box button, .content .content-ribbon .text .l-box .hero_new .hero-content .hero-links a, .hero_new .hero-content .hero-links .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .hero_new .hero-content .hero-links .ghost, .hero_new .hero-content .hero-links .content .content-ribbon .text .l-box .ghost, .content .content-ribbon .text .l-box .card .card-copy a.btn, .card .card-copy .content .content-ribbon .text .l-box a.btn, .content .content-ribbon .text .l-box .card .card-stats ul li a, .card .card-stats ul li .content .content-ribbon .text .l-box a, .content .content-ribbon .text .l-box .modal .btn, .modal .content .content-ribbon .text .l-box .btn, .content .content-ribbon .text .l-box .modal .modal-inner.template .mod_right a.btn.ghost, .modal .modal-inner.template .mod_right .content .content-ribbon .text .l-box a.btn.ghost {
               width: auto; } }
       @media screen and (min-width: 105em) {
         .content .content-ribbon .text {
@@ -2745,7 +2640,8 @@ EXPANDER
 .expander {
   margin: 0 auto;
   width: 90%;
-  max-width: 73.18182em; }
+  max-width: 73.18182em;
+  clear: both; }
 
 .expander-trigger {
   -webkit-user-select: none;
@@ -2784,7 +2680,7 @@ EXPANDER
       .expander-content fieldset {
         float: left;
         width: 49%; } }
-  .expander-content button, .expander-content .hero .hero-inner button.login, .hero .hero-inner .expander-content button.login, .expander-content .hero .hero-inner .hero-left .hero-align .hero-links a, .hero .hero-inner .hero-left .hero-align .hero-links .expander-content a, .expander-content .hero .hero-inner .hero-left .hero-align .hero-links .ghost, .hero .hero-inner .hero-left .hero-align .hero-links .expander-content .ghost, .expander-content .card .card-copy a.btn, .card .card-copy .expander-content a.btn, .expander-content .card .card-stats ul li a, .card .card-stats ul li .expander-content a, .expander-content .modal .btn, .modal .expander-content .btn, .expander-content .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .expander-content a.btn {
+  .expander-content button, .expander-content .hero_new .hero-content .hero-links a, .hero_new .hero-content .hero-links .expander-content a, .expander-content .hero_new .hero-content .hero-links .ghost, .hero_new .hero-content .hero-links .expander-content .ghost, .expander-content .card .card-copy a.btn, .card .card-copy .expander-content a.btn, .expander-content .card .card-stats ul li a, .card .card-stats ul li .expander-content a, .expander-content .modal .btn, .modal .expander-content .btn, .expander-content .modal .modal-inner.template .mod_right a.btn, .modal .modal-inner.template .mod_right .expander-content a.btn {
     margin-top: 1em; }
 
 /*****************
@@ -2960,6 +2856,8 @@ MODAL BOX
     margin-top: 1em; }
     .modal .modal-inner a.cta:last-child {
       padding: 0 2em; }
+  .modal .modal-inner .hide {
+    display: none; }
 .modal .modal-state:checked + .modal-window {
   opacity: 1;
   visibility: visible; }

@@ -63,9 +63,11 @@
             <a href="#" class="logo front"></a>
             <div class="nav">
                 <ul id="navigation-menu">
-                <li class="sign-up"><a href="mailto:contact@fieldlogs.com">Contact Us</a></li>
-                    <li class="sign-up"><a href="mailto:contact@fieldlogs.com">Contact Us</a></li>
-                    <li class="sign-up"><a href="mailto:contact@fieldlogs.com">Contact Us</a></li>
+                    <li class=""><a href="mailto:contact@fieldlogs.com">Features</a></li>
+                    <li class=""><a href="mailto:contact@fieldlogs.com">Public Library</a></li>
+                    <li class=""><a href="mailto:contact@fieldlogs.com">Contact Us</a></li>
+                    <li class="login"><a class="logincall">Login</a></li>
+                    <li class="sign-up"><a class="call">Sign Up</a></li>                   
                 </ul>
                 <div class="dropdown">
                     <div class="dropdown-container">
@@ -81,7 +83,36 @@
             </div>
         </div>
     </header>
-    <div class="hero">
+
+    <div class="hero_new">
+        <div class="hero-content">
+            <div class="hero-copy">
+                <h1><b>Standardize Work &amp; Field Data Capture <br>to the Last Mile</b></h1>
+                <p>Drive your workforce to perform consistently in the field by standardizing your processes.  <br/>Capture all field operation data and collaborate within Teams in real-time.<br/>Optimize continuously.</p>
+                <p>Manage through the Cloud. Mobile First.</p>
+            </div>
+            <div class="hero-links">
+                <a href="" class="store apple"></a>
+                <a href="" class="store google"></a>
+                <a href="#features" class="features">Key Features</a>
+                <div class="platforms">
+                    <i class="fa fa-apple fa-lg"></i>
+                    <i class="fa fa-android fa-lg"></i>
+                    <i class="fa fa-laptop fa-lg"></i>
+                    <i class="glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="learn">
+            <div class="heading">
+                <h1>Explore our library of <br>Standard Work<i class="fa fa-arrow-circle-right"></i></h1>
+                <h4>AGRICULTURE &middot; FIELD DATA &middot; MEDICAL &middot; OIL &amp; GAS &middot; QHSE &middot; SPORTS and more..</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="hero">
         <div class="hero-inner">
             <div class="hero-left">
                 <div class="hero-align">
@@ -150,7 +181,7 @@
                 <h4>AGRICULTURE &middot; FIELD DATA &middot; MEDICAL &middot; OIL &amp; GAS &middot; QHSE &middot; SPORTS and more..</h4>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <div class="content colored" id="more">
         <div class="heading">
@@ -197,40 +228,7 @@
 
         </div>
 
-
-        <div class="modal">
-          <label for="modal-1">
-            <div class="btn js-btn call">Sign up now</div>
-          </label>
-          <input class="modal-state" id="modal-1" type="checkbox" />
-          <div class="modal-window">
-            <div class="modal-inner">
-              <label class="modal-close" for="modal-1"></label>
-              <h1>Sign up for a new FREE account</h1>
-              <p class="intro">Please enter a valid email address so you can confirm your account</p>
-              <form class="hero-signup">
-                    <fieldset>
-                        <label for="email_2">Your Email Address</label>
-                        <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
-                        <label for="pass">Enter a Password</label>
-                        <input id="pass" type="password" class="pure-input-1" placeholder="Password">
-                        <label for="confirm">Confirm your Password</label>
-                        <input type="password" class="pure-input-1" placeholder="Confirm Password">
-                    </fieldset>
-                    <fieldset>
-                        <label for="region">Select your Region</label>
-                        <select id="region" class="pure-input-1">
-                            <option>North America</option>
-                            <option>Europe</option>
-                            <option>Asia</option>
-                        </select>
-                        <img src="http://placehold.it/315x125" alt="Captcha">
-                    </fieldset>
-                    <button type="submit">Complete sign up</button>
-                </form>
-            </div>
-          </div>
-        </div>
+        <button class="call">Sign up now</button>
     </div>
 
     <div class="content" id="features">
@@ -299,12 +297,33 @@
                 </div>
             </div>
         </div>
-
-        <div class="content-ribbon" id="glass">
-            <div class="heading">
-                <h4>GET IT NOW</h4>
-                <h1>Available on Google <span style="width:170px; height: 32px; display: inline-block;"><img src="images/glass_logo.png"></span></h1>
+        <div class="content-ribbon last" id="tech">
+             <div class="heading">
+                <h4>HOW IT WORKS</h4>
+                <h1>Technology</h1>
             </div>
+            <div class="text">
+                <div class="l-box">
+                    <ul>
+                        <li>Cloud first, Mobile first</li>
+                        <li>Native Smartphone, Tablet, Google Glass support.</li>
+                        <li>Browser support: Chrome, Firefox, Safari, IE</li>
+                        <li>Rich, granular and stateless API set for data access</li>
+                        <li>Full API set for dynamic Template generation</li>
+                        <li>Grid-based scalability</li>
+                        <li>Built for high volume media capture and brokering
+                            <span><a href="#glass">See continuing video capture on Google Glass during job execution</a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image">
+                <div class="l-box">
+                    <img src="images/Tech-shot.png" alt="Placeholder image for example.">
+                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> the Inbox</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-ribbon last" id="tech">
             <div class="image">
                 <div class="l-box">
                     <img src="images/Glass-shot.png" align="right" alt="Placeholder image for example.">
@@ -327,7 +346,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
             <div class="expander">
                 <button id="js-expander-trigger" class="expander-trigger expander-hidden">Download Glass App</button>
                 <div id="js-expander-content" class="expander-content">
@@ -351,31 +369,6 @@
                   <small style="display:block;">(24 hour response guaranteed)</small>
               </div>
           </div>
-
-        <div class="content-ribbon last" id="tech">
-            <div class="text">
-                <div class="l-box">
-                    <h3>
-                        Technology
-                    </h3>
-                    <ul>
-                        <li>Cloud first, Mobile first</li>
-                        <li>Native Smartphone, Tablet, Google Glass support.</li>
-                        <li>Browser support: Chrome, Firefox, Safari, IE</li>
-                        <li>Rich, granular and stateless API set for data access</li>
-                        <li>Full API set for dynamic Template generation</li>
-                        <li>Grid-based scalability</li>
-                        <li>Built for high volume media capture and brokering
-                            <span><a href="#glass">See continuing video capture on Google Glass during job execution</a></span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="image">
-                <div class="l-box">
-                    <img src="images/Tech-shot.png" alt="Placeholder image for example.">
-                    <p><i class="fa fa-mail-forward fa-rotate-270"></i> the Inbox</p>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -412,13 +405,13 @@
             </div>
         </div>
         <div class="modal">
-          <label for="modal-3">
+          <label for="modal-1">
             <div class="btn js-btn call">Sign up now</div>
           </label>
-          <input class="modal-state" id="modal-3" type="checkbox" />
+          <input class="modal-state" id="modal-1" type="checkbox" />
           <div class="modal-window">
             <div class="modal-inner">
-              <label class="modal-close" for="modal-3"></label>
+              <label class="modal-close" for="modal-1"></label>
               <h1>Sign up for a new FREE account</h1>
               <p class="intro">Please enter a valid email address so you can confirm your account</p>
               <form class="hero-signup">
@@ -436,10 +429,50 @@
                             <option>North America</option>
                             <option>Europe</option>
                             <option>Asia</option>
-                        </select>
-                        <img src="http://placehold.it/315x125" alt="Captcha">
+                        </select><br/>
+                        <label for="acc-type">Select account type</label>
+                        <select id="acc-type" class="pure-input-1">
+                            <option>Individual</option>
+                            <option>Enterprise</option>
+                        </select><br/>
+                        <div class="hide">
+                            <label for="entname">Enterprise Name</label>
+                            <input type="text" class="pure-input-1" placeholder="Enterprise name">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" class="pure-input-1" placeholder="Phone Number">
+                            <label for="industry">Select your Industry</label>
+                            <select id="industry" class="pure-input-1">
+                                <option>Aerospace</option>
+                                <option>Agriculture</option>
+                                <option>Assembly</option>
+                                <option>Asset Management</option>
+                                <option>Government</option>
+                                <option>Healthcare</option>
+                                <option>Oil & Gas</option>
+                                <option>Utilities</option>
+                                <option>None of the above</option>
+                            </select>
+                         </div>                                              
                     </fieldset>
                     <button type="submit">Complete sign up</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal">
+          <input class="modal-state" id="modal-2" type="checkbox" />
+          <div class="modal-window">
+            <div class="modal-inner">
+              <label class="modal-close" for="modal-2"></label>
+              <h1>Login to your account</h1>
+              <form class="hero-signup">
+                    <fieldset>
+                        <label for="email_2">Your Email Address</label>
+                        <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
+                        <label for="pass">Enter a Password</label>
+                        <input id="pass" type="password" class="pure-input-1" placeholder="Password">
+                    </fieldset>
+                    <button type="submit">Login</button>
                 </form>
             </div>
           </div>

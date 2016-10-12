@@ -52,6 +52,23 @@ $( document ).ready(function() {
       $(this).toggleClass("expander-hidden");
      });
 
+	 $('.call').on('click', function(event){
+		 $('#modal-1').prop("checked", true).change();
+	 });
+
+
+	 $('.logincall').on('click', function(event){
+		 $('#modal-2').prop("checked", true).change();
+	 });
+
+	 $('#acc-type').on("change", function(){
+		 if ($(this).val() == "Enterprise") {
+			$(".hero-signup .hide").show();
+		 } else {
+			$(".hero-signup .hide").hide();
+		 }
+	 });
+
 
     $(".dropdown-button").click(function() {
         event.stopPropagation();

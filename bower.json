@@ -2,12 +2,12 @@
   "name": "static",
   "version": "0.0.0",
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.11.1"
+    "modernizr": "~3.3.1",
+    "jquery": "~3.1.1"
   },
   "devDependencies": {
     "bourbon": "~3.2.3",
     "neat": "~1.5.1",
-    "normalize-css": "~3.0.1"
+    "normalize-css": "~5.0.0"
   }
 }

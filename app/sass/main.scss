@@ -38,14 +38,16 @@ header.navigation {
     width: 95%;
     position: relative;
     z-index: 9999;
-    max-width: 1050px;
+    max-width: 90.5em;
+    min-width: 10em;
 
     &.nav{
         float: right;
+        
     }
 
-    @include media($medium-screen) {
-        width: 82%;
+    @include media($large-screen) {
+        min-width: 61em;
     }
   }
 
@@ -81,15 +83,7 @@ header.navigation {
     .dropdown{
         display: inline-block;
         float:right;
-        margin-top: 1.4em;
-
-        @include media ($large-screen) {
-            margin-right: -4em;
-        }
-
-        @include media ($x-large-screen) {
-            margin-right: 0em;
-        }
+        margin-top: 1.8em;
     }
 
   .navigation-menu-button {
@@ -161,6 +155,12 @@ header.navigation {
     }
   }
 
+  .login{
+    .logincall{
+      cursor: pointer;
+    }
+  }
+
   .sign-up {
     @include media ($large-screen) {
       //position:absolute;
@@ -173,11 +173,12 @@ header.navigation {
         @include transition (all 0.2s ease-in-out);
         background: $navigation-nav-button-background;
         border-radius: $base-border-radius;
-        color: white;
+        color: white!important;
         font-size: 1em;
-        font-weight: 800;
         padding: .6em 1em;
         text-transform: uppercase;
+        cursor: pointer;
+        font-weight:bold!important;
 
         &:hover {
           background: lighten($navigation-nav-button-background, 10);
@@ -247,276 +248,175 @@ header.navigation {
 /*****************
 HERO BANNER TOP
 ******************/
-.hero {
-    $hero-background-top: #7F99BE;
-    $hero-background-bottom: #20392B;
-    $hero-image: "../images/bg1.png";
-    $gradient-angle: 100deg;
-    $hero-color: $base-font-color;
-    $hero-color-image: $white;
+.hero_new {
+  $large-screen: 50em !default;
+  align-items: center;
+  background-color: $dark-brown;
+  background-image: url("../images/bg1.png");
+  background-position: right;
+  background-size: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  min-height: 50em;
+  max-width: 105em;
+  margin: 0 auto;
 
-    // @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat);
+  @include media($large-screen) {
+    background-position: left;
+    background-size: cover;
+    justify-content: flex-start;
+  }
 
-    background-color: $dark-brown;
-    background-image: url($hero-image);
-    padding-top: $base-font-size * 5;
-    margin: 0 auto;
-    max-width: $x-large-screen;
+  .hero-content {
+    max-width: 60em;
+    order:1;
+    text-align: left;
+    color: white;
+    padding: 11em 2em 8em 2em;
+    margin: 0 5%;
 
-    @include perspective(3000px);
-      .learn{
-          @include span-columns(12);
-          display: table;
-          text-align:center;
-          color: $hero-color-image;
-          background: rgba(72, 185, 249, .8);
-          cursor:pointer;
-          min-height: $base-font-size * 14;
-          font-size: $base-font-size / 1.2;
-          .heading {
-              display: table-cell;
-              vertical-align: middle;
-              padding: 1.6em;
-              & > *{
-                  font-weight: 100;
-              }
-              h4{
-                  font-size: 1em;
-              }
-              i{
-                  opacity:0.8;
-              }
-          }
-          @include media($medium-screen){
-              i{
-                position:absolute;
-                height: 0px;
-                margin-top:-3%;
-                margin-left: 6%;
-                  font-size: 2em;
-              }
-          }
-          @include media($large-screen){
-            font-size: $base-font-size;
-            min-height: $base-font-size * 10;
-          }
-        }
+    @include media($large-screen) {
+      padding: 10em 2em 3em 2em;
+    }
 
-    .hero-inner {
-        @include outer-container;
-        @include clearfix;
-        padding: $base-font-size/2;
-        margin: auto;
-        text-align: center;
-        color: $hero-color;
-
-        button {
-            font-size: $base-font-size;
-            outline: none;
-            width: 100%;
-            &.login{
-              font-size: $base-font-size;
-              margin-top: 1em;
-              @extend button;
-              background-color: $dark-brown;
+    .hero-copy {
+        text-align: left;
+        margin: 0 auto;
+        h1 {
+            font-size: 1.6em;
+            margin-bottom: 0.8em;
+            font-weight: 100;
+            //max-width: 580px;
+            @include media($large-screen) {
+                font-size: 3em;
             }
         }
-
-        a.button{
-          font-size: $base-font-size;
-          outline: none;
-          width: 100%;
-        }
-
-        .hero-left{
-          width: 100%;
-          display: table!important;
-          height: 400px;
-          color: $hero-color-image;
-          .hero-align{
-
-              display: table-cell;
-              vertical-align: middle;
-              .hero-copy {
-                  text-align: left;
-                  margin: 0 auto;
-                  max-width: 95%;
-                  h1 {
-                      font-size: 1.6em;
-                      margin-bottom: 0.8em;
-                      font-weight: 100;
-                      max-width: 580px;
-                     @include media($large-screen) {
-                          font-size: 3em;
-                      }
-                  }
-                  p {
-                      margin: auto;
-                      font-size: 1em;
-                      @include media($large-screen) {
-                          font-size: 1em;
-                          margin-bottom: 2em;
-                      }
-                  }
-                  @include media($medium-screen) {
-                      max-width: 75%;
-                  }
-              }
-              .hero-links{
-                margin:0 auto;
-                overflow: visible;
-                max-width: 95%;
-                position:relative;
-                a{
-                  @extend button;
-                  margin: 0.6em 0.6em 0 0;
-                  white-space: normal;
-                  float: left;
-                  line-height: 1.7em;
-
-                  &.more{
-                    background-color: $dark-brown;
-                  }
-
-                  &.store{
-                      background-color:transparent;
-                      width:119px;
-                      &.apple{
-                        background-image: url("../images/apple-app-store.png") !important;
-                      }
-
-                      &.google{
-                          background-image: url("../images/google-app-store.png") !important;
-                      }
-                      &:hover{
-                          background-color: transparent;
-                          box-shadow: none;
-                      }
-                  }
-
-                  @include media($medium-screen){
-                    width: auto;
-                    margin: 1em 1em 0 0;
-                  }
-
-                }
-                .platforms{
-                    float:left;
-                    width: 100%;
-                    text-align: left;
-                    padding: $base-font-size  0;
-
-                    i{
-                        margin-right: $base-font-size /2;
-
-                        &.glass{
-                            background: url(../images/glass_logo_white.png);
-                            background: url(../images/glass_logo_white.svg);
-                            background-size: 100%;
-                            background-repeat: no-repeat;
-                            background-position: 50%;
-                            width: 80px;
-                            height: 15px;
-                            display: inline-block;
-                        }
-                    }
-                }
-                .ghost{
-                  @include ghost-button;
-                }
-
-                  @include media($medium-screen) {
-                      max-width: 75%;
-                  }
-              }
-          }
-            @include media($large-screen){
-              @include span-columns(8);
-                height: 570px;
-                width: 70%;
-              .hero-links{
-                margin-bottom:0em;
-              }
+        p {
+            margin: auto;
+            font-size: 1em;
+            @include media($large-screen) {
+                font-size: 1em;
+                margin-bottom: 2em;
             }
         }
-
-        .hero-right{
-          display:none;
-          .side{
-            border-radius: $base-border-radius;
-            box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
-            background: RGBA(247, 246, 245, 0.95);
-            padding: 1em;
-            position: relative;
-            height: 600px;
-            .hero-email{
-              margin-bottom: 2em;
-            }
-            h6{
-              padding:1em 0;
-            }
-            select{
-              width:100%;
-            }
-          }
-          &.flip{
-            -webkit-transition: -webkit-transform 0.6s;
-                 -moz-transition: -moz-transform 0.6s;
-                   -o-transition: -o-transform 0.6s;
-                      transition: transform 0.6s;
-            @include transform-style(preserve-3d);
-            backface-visiblity: hidden;
-            .front{
-            }
-            .back{
-              margin-top:-580px;
-              @include transform(rotateY( 180deg ));
-            }
-          }
-          @include media($medium-screen){
-            display:block;
-          }
-          @include media($large-screen){
-            @include span-columns(3.2);
-            display:block;
-            &.flip{
-              .side{
-
-              }
-            }
-          }
-          &.flipped{
-            @include transform(rotateY(-180deg));
-          }
-        }
-
-        .hero-invite{
-          max-width: 500px;
-          width: 100%!important;
-          margin: 0 auto!important;
-          float: none!important;
-          border-radius: 8px;
-          box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.14);
-          background: #F7F6F5;
-          .side{
-            height: auto;
-          }
+        @include media($medium-screen) {
+          //max-width: 75%;
         }
     }
 
-    &.loggedin{
-      .hero-inner{
-        .hero-left{
-          width: 100%;
+    .hero-links{
+        margin:0 auto;
+        overflow: visible;
+        max-width: 95%;
+        position:relative;
+        a{
+          @extend button;
+          margin: 0.6em 0.6em 0 0;
+          white-space: normal;
+          float: left;
+          line-height: 1.7em;
+
+          &.more{
+            background-color: $dark-brown;
+          }
+
+          &.store{
+              background-color:transparent;
+              width:119px;
+              &.apple{
+                background-image: url("../images/apple-app-store.png") !important;
+              }
+
+              &.google{
+                  background-image: url("../images/google-app-store.png") !important;
+              }
+              &:hover{
+                  background-color: transparent;
+                  box-shadow: none;
+              }
+          }
+
+          @include media($medium-screen){
+            width: auto;
+            margin: 1em 1em 0 0;
+          }
+
         }
-        .hero-right{
-          display:none;
+        .platforms{
+            float:left;
+            width: 100%;
+            text-align: left;
+            padding: $base-font-size  0;
+
+            i{
+                margin-right: $base-font-size /2;
+
+                &.glass{
+                    background: url(../images/glass_logo_white.png);
+                    background: url(../images/glass_logo_white.svg);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    width: 80px;
+                    height: 15px;
+                    display: inline-block;
+                }
+            }
         }
+        .ghost{
+          @include ghost-button;
+        }
+
+          @include media($medium-screen) {
+              //max-width: 75%;
+          }
       }
+
+  }
+
+  .learn{
+    order: 2;
+    color: white;
+    @include span-columns(12);
+    display: table;
+    text-align:center;
+    background: rgba(72, 185, 249, .8);
+    cursor:pointer;
+    min-height: $base-font-size * 14;
+    font-size: $base-font-size / 1.2;
+    .heading {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 1.6em;
+        & > *{
+            font-weight: 100;
+        }
+        h4{
+            font-size: 1em;
+        }
+        i{
+            opacity:0.8;
+        }
+    }
+    @include media($medium-screen){
+        i{
+          position:absolute;
+          height: 0px;
+          margin-top:-3%;
+          margin-left: 6%;
+            font-size: 2em;
+        }
     }
     @include media($large-screen){
-        padding-bottom: $base-font-size * 10;
+      font-size: $base-font-size;
+      min-height: $base-font-size * 10;
     }
+  }
+
+  .hero-logo {
+    margin: auto;
+  }
 }
 
 /*****************
@@ -1174,6 +1074,7 @@ $expander-toggle-margin: 1em;
   margin: 0 auto;
   width: 90%;
   max-width: $max-width/1.1;
+  clear: both;
 }
 
 .expander-trigger {
@@ -1435,6 +1336,10 @@ MODAL BOX
         padding: 0 2em;
       }
     }
+    .hide{
+      display: none;
+    }
+
   }
 
   .modal-state:checked + .modal-window {

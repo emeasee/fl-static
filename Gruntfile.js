@@ -248,10 +248,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('serve', function (target) {
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-        }
-
         grunt.task.run([
             'browserSync',
             'watch'
