@@ -1727,7 +1727,7 @@ header.navigation {
     max-width: 80.5em;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 86%;
     position: relative;
     z-index: 9999;
     max-width: 90.5em;
@@ -1749,7 +1749,7 @@ header.navigation {
     background-image: url(../images/splash_logo_top_new.svg);
     background-position: left;
     background-repeat: no-repeat;
-    background-size: 80%; }
+    background-size: 90%; }
     header.navigation .logo.front {
       max-width: 180px;
       width: 100%;
@@ -1759,7 +1759,7 @@ header.navigation {
       height: 90px; }
       @media screen and (min-width: 53.75em) {
         header.navigation .logo.front {
-          max-width: 300px; } }
+          max-width: 240px; } }
     header.navigation .logo img {
       max-height: 90px;
       padding: .8em 0; }
@@ -1768,7 +1768,7 @@ header.navigation {
     float: right;
     margin-top: 1.8em; }
   header.navigation .navigation-menu-button {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     cursor: pointer;
     display: block;
     float: right;
@@ -1816,29 +1816,37 @@ header.navigation {
         text-decoration: none;
         width: auto; } }
     header.navigation ul#navigation-menu > li a {
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.7); }
+      font-weight: bold;
+      color: white; }
       header.navigation ul#navigation-menu > li a:hover {
         color: white; }
-  header.navigation .login .logincall {
-    cursor: pointer; }
+  header.navigation .login {
+    float: right;
+    display: none;
+    margin-top: 2em;
+    margin-right: 2em; }
+    header.navigation .login .logincall {
+      cursor: pointer;
+      color: white;
+      font-weight: bold; }
+    @media screen and (min-width: 53.75em) {
+      header.navigation .login {
+        display: inline-block; } }
   @media screen and (min-width: 53.75em) {
-    header.navigation .sign-up {
-      float: right; }
-      header.navigation .sign-up a.call {
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        background: #DB8A28;
-        border-radius: 0.1875em;
-        color: white !important;
-        font-size: 1em;
-        padding: .6em 1em;
-        text-transform: uppercase;
-        cursor: pointer;
-        font-weight: bold !important; }
-        header.navigation .sign-up a.call:hover {
-          background: #e2a254; } }
+    header.navigation .sign-up a.call {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      background: #DB8A28;
+      border-radius: 0.1875em;
+      color: white !important;
+      font-size: 1em;
+      padding: .6em 1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: bold !important; }
+      header.navigation .sign-up a.call:hover {
+        background: #e2a254; } }
   header.navigation .sign-up .modal > * {
     line-height: normal !important; }
   header.navigation li.navigation-search-bar {
@@ -1868,7 +1876,7 @@ header.navigation {
         padding: .6em .8em;
         font-size: .9em;
         font-style: italic;
-        color: rgba(255, 255, 255, 0.7);
+        color: white;
         border-radius: 0.375em;
         margin: 0; }
       header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links a[type=submit], .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .hero_new .hero-content .hero-links [type=submit].ghost, .hero_new .hero-content .hero-links header.navigation .search-bar .search-and-submit [type=submit].ghost, header.navigation .search-bar .search-and-submit .card .card-copy a[type=submit].btn, .card .card-copy header.navigation .search-bar .search-and-submit a[type=submit].btn, header.navigation .search-bar .search-and-submit .card .card-stats ul li a[type=submit], .card .card-stats ul li header.navigation .search-bar .search-and-submit a[type=submit], header.navigation .search-bar .search-and-submit .modal [type=submit].btn, .modal header.navigation .search-bar .search-and-submit [type=submit].btn {
@@ -1936,14 +1944,13 @@ HERO BANNER TOP
 ******************/
 .hero_new {
   align-items: center;
-  background-color: #4A4A4A;
-  background-image: url("../images/bg1.png");
+  background-color: rgba(74, 74, 74, 0.5);
   background-position: right;
   background-size: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: 50em;
+  min-height: 52em;
   max-width: 105em;
   margin: 0 auto; }
   @media screen and (min-width: 53.75em) {
@@ -1952,28 +1959,36 @@ HERO BANNER TOP
       background-size: cover;
       justify-content: flex-start; } }
   .hero_new .hero-content {
-    max-width: 60em;
+    max-width: 50em;
     order: 1;
     text-align: left;
     color: white;
-    padding: 11em 2em 8em 2em;
-    margin: 0 5%; }
+    padding: 1em;
+    margin: 0 5%;
+    margin-top: 3em; }
     @media screen and (min-width: 53.75em) {
       .hero_new .hero-content {
-        padding: 10em 2em 3em 2em; } }
+        padding: 2em; } }
     .hero_new .hero-content .hero-copy {
       text-align: left;
       margin: 0 auto; }
       .hero_new .hero-content .hero-copy h1 {
         font-size: 1.6em;
-        margin-bottom: 0.8em;
-        font-weight: 100; }
+        margin-bottom: 0.8em; }
         @media screen and (min-width: 53.75em) {
           .hero_new .hero-content .hero-copy h1 {
             font-size: 3em; } }
+      .hero_new .hero-content .hero-copy h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-bottom: 0.8em; }
+        @media screen and (min-width: 53.75em) {
+          .hero_new .hero-content .hero-copy h3 {
+            font-size: 2em; } }
       .hero_new .hero-content .hero-copy p {
         margin: auto;
-        font-size: 1em; }
+        font-size: 1em;
+        font-weight: 600; }
         @media screen and (min-width: 53.75em) {
           .hero_new .hero-content .hero-copy p {
             font-size: 1em;
@@ -1981,7 +1996,6 @@ HERO BANNER TOP
     .hero_new .hero-content .hero-links {
       margin: 0 auto;
       overflow: visible;
-      max-width: 95%;
       position: relative; }
       .hero_new .hero-content .hero-links a {
         margin: 0.6em 0.6em 0 0;
@@ -2158,7 +2172,7 @@ MAIN CONTENT GENERAL
           margin-bottom: 2em; }
           .content .content-ribbon .text .l-box ul li {
             list-style-type: none;
-            margin: 1em 0 0 0;
+            margin: 0.5em 0 0 0;
             line-height: normal;
             font-size: 1.1em; }
             .content .content-ribbon .text .l-box ul li span {
@@ -2885,11 +2899,8 @@ DROPDOWNS
     font-size: 0.7em;
     line-height: 30px;
     margin: 0;
-    padding: 0 0.4em 0 0.8em;
+    padding: 0 0.4em;
     height: 32px; }
-    @media screen and (min-width: 53.75em) {
-      .dropdown .dropdown-description {
-        font-size: 1em; } }
   .dropdown .dropdown-button {
     background: white;
     border-bottom: 1px solid silver;
@@ -2906,7 +2917,7 @@ DROPDOWNS
     position: relative; }
     @media screen and (min-width: 53.75em) {
       .dropdown .dropdown-button {
-        font-size: 1em;
+        font-size: 0.9em;
         padding: 0 2em 0 0.4em; } }
   .dropdown .dropdown-button:hover {
     background-color: #f7f7f7; }

@@ -39,11 +39,13 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/jquery.smartbanner.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="styles/smoothslides.theme.css" type="text/css" media="screen">
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" language="javascript" src="scripts/jquery.smartbanner.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/smoothslides-2.1.0.js"></script>
     <script type="text/javascript" language="javascript" src="scripts/config.js"></script>
     <script type="text/javascript" language="javascript" src="scripts/servletCalls.js"></script>
     <script type="text/javascript" language="javascript" src="scripts/main.js"></script>
@@ -64,9 +66,9 @@
             <div class="nav">
                 <ul id="navigation-menu">
                     <li class=""><a href="mailto:contact@fieldlogs.com">Features</a></li>
-                    <li class=""><a href="mailto:contact@fieldlogs.com">Public Library</a></li>
-                    <li class=""><a href="mailto:contact@fieldlogs.com">Contact Us</a></li>
-                    <li class="login"><a class="logincall">Login</a></li>
+                    <li class=""><a href="mailto:contact@fieldlogs.com">Pricing</a></li>
+                    <li class=""><a href="mailto:contact@fieldlogs.com">AppCentral</a></li>
+                    <li class=""><a href="mailto:contact@fieldlogs.com">Contact</a></li>
                     <li class="sign-up"><a class="call">Sign Up</a></li>                   
                 </ul>
                 <div class="dropdown">
@@ -80,21 +82,32 @@
                         </ul>
                     </div>
                 </div>
+                <div class="login"><a class="logincall">Login</a></div>
             </div>
         </div>
     </header>
-
+    <div class="bg">
+        <div class="smoothslides" id="slider1">
+            <img src="../images/bg1.png" alt="">
+            <img src="../images/bg2.png" alt="">
+            <img src="../images/bg3.png" alt="">
+            <img src="../images/bg4.png" alt="">
+            <img src="../images/bg5.png" alt="">
+        </div>
+    </div>
     <div class="hero_new">
         <div class="hero-content">
             <div class="hero-copy">
-                <h1><b>Standardize Work &amp; Field Data Capture <br>to the Last Mile</b></h1>
+                <h1>FieldLogs is a Digital Field Execution Platform</h1>
+                <h3>Standardize Work &amp; Field Data Capture <br>to the Last Mile</h3>
                 <p>Drive your workforce to perform consistently in the field by standardizing your processes.  <br/>Capture all field operation data and collaborate within Teams in real-time.<br/>Optimize continuously.</p>
-                <p>Manage through the Cloud. Mobile First.</p>
+                <p>Manage through the Cloud. Digitize it and Mobilize it.</p>
+                <p>Organizations easily define how their wide variety of field service or shop floor jobs should be done using FieldLogs. FieldLogs then provides the application clients to execute them, and the analytics to continuously optimize.
+                <br>FieldLogs closes the loop to “the last mile” between what really happens in the field and IT systems in place.</p>
             </div>
             <div class="hero-links">
                 <a href="" class="store apple"></a>
                 <a href="" class="store google"></a>
-                <a href="#features" class="features">Key Features</a>
                 <div class="platforms">
                     <i class="fa fa-apple fa-lg"></i>
                     <i class="fa fa-android fa-lg"></i>
@@ -103,12 +116,12 @@
                 </div>
             </div>
         </div>
-        <div class="learn">
+        <!--<div class="learn">
             <div class="heading">
                 <h1>Explore our library of <br>Standard Work<i class="fa fa-arrow-circle-right"></i></h1>
                 <h4>AGRICULTURE &middot; FIELD DATA &middot; MEDICAL &middot; OIL &amp; GAS &middot; QHSE &middot; SPORTS and more..</h4>
             </div>
-        </div>
+        </div>-->
     </div>
 
 
@@ -197,7 +210,7 @@
                 <h1>QHSE</h1>
             </a>
             <a href="javascript:void(0)" class="grid-item grid-item-mid grid-item-image">
-                <h1>Sports</h1>
+                <h1>Aerospace</h1>
             </a>
             <a href="javascript:void(0)" class="grid-item grid-item-mid grid-item-image">
                 <h1>Oil &amp; Gas</h1>
@@ -210,7 +223,7 @@
             </a>
             <!-- COLUMN 2 -->
             <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
-                <h1>Equipment Assembly</h1>
+                <h1>Utilities</h1>
             </a>
             <a href="javascript:void(0)" class="grid-item grid-item-mid grid-item-image">
                 <h1>Construction</h1>
@@ -222,12 +235,12 @@
                 <h1>Medical</h1>
             </a>
             <a href="javascript:void(0)" class="grid-item grid-item-mid grid-item-image">
-                <h1>Law Enforcement</h1>
+                <h1>Non-profit (NGOs)</h1>
             </a>
              <p class="go-grid">And many more...</p>
 
         </div>
-
+        <a href="">Explore some examples from FieldLogs AppCentral <i class="fa fa-arrow-circle-right"></i></a><br/><br/>
         <button class="call">Sign up now</button>
     </div>
 
@@ -244,16 +257,21 @@
                         Product
                     </h3>
                     <ul>
-                      <li>Web-based Standard Work (a FieldLogs <i>Template</i>) editor
-                      <span>Matured definition language including conditions, loops, branches</span></li>
-                      <li>Broad Field Data Capture options</li>
-                      <li>Start &amp; Resume Jobs across devices including Google Glass</li>
+                      <li>Supports fully disconnected mode in the field</li>
+                      <li>Operation and Tasks Dashboard</li>
                       <li>Real-time Job sharing and Team collaboration</li>
-                      <li>‘Google-like’ Search anywhere</li>
+                      <li>Start & Resume Jobs across all devices including Google Glass</li>
                       <li>Post completion Job edition <span>Full history retained</span></li>
-                      <li>Template prototyping - observe and capture raw Jobs, convert to a Standard Work template via the Editor</li>
+                      <li>‘Google-like’ Search anywhere</li>
+                      <li>Process prototyping - observe and capture raw Jobs, convert to a FieldLogs process via the Editor</li>
+                      <li>Web-based field or shop floor process editor (in FieldLogs, a process is a Template)<span>(Write-once, run anywhere)</span></li>
+                      <li>Full feature definition language including conditions, loops, and complete JavaScript-based SDK</li>
                       <li>Time &amp; GPS-stamping of all actions</li>
                       <li>Full-media support (video, photo, etc.) across all actions - at design &amp; run-time</li>
+                      <li>Broad Field Data Capture options</li>
+                      <li>Dynamic Map KML integration</li>
+                      <li>Complementary focus: Map vs. Tasks emphasis.</li>
+                      <li>Internationalize in over 80 languages</li>
                     </ul>
                 </div>
             </div>
@@ -277,15 +295,24 @@
                         Enterprise
                     </h3>
                     <ul>
-                      <li>Enterprise roles &amp; rules (Template and Job access authorization)
+                      <li>Organization structure definition</li>
+                      <li>Project management and synchronized data sets</li>
+                      <li>Planning, scheduling (an option) and dynamic, team-based job assignment
                       <span>Includes Job assignment exceptions and delegation/proxy</span></li>
-                      <li>Multi-user Template edition with fit-to-purpose workflows</li>
-                      <li>Complex and dynamic Job definition with enterprise-level workflow support</li>
-                      <li>Strong password encryption</li>
-                      <li>Secure, HTTPS communication throughout all communication paths</li>
+                      <li>Enterprise roles & rules on all main Enterprise objects</li>
                       <li>Audit trail on all authorization and organization design changes</li>
-                      <li>Multi-tiered back-ups on Amazon Web Services</li>
-                      <li>OEM options available</li>
+                      <li>"Google-like" Enterprise level search</li>
+                      <li>Monitor your workforce jobs in real-time</li>
+                      <li>Group and help desk chat integration</li>
+                      <li>Multi-user process development support through custom governance workflows</li>
+                      <li>Embed any complex field/shop floor decision model in processes; run them disconnected when mobile</li>
+                      <li>Enterprise-wide object model available for process design</li>
+                      <li>Integrate your smart tooling in real-time and influence the processes</li>
+                      <li>OEM (“White Labelling”) and styling option available</li>
+                      <li>Enterprise report management</li>
+                      <li>Enterprise Identity Management Integration</li>
+                      <li>ESB integration ready</li>
+                      <li>Ready for MDM deployment</li>
                     </ul>
                 </div>
             </div>
@@ -304,13 +331,19 @@
             </div>
             <div class="text">
                 <div class="l-box">
+                    <h3>
+                        Technology
+                    </h3>
                     <ul>
-                        <li>Cloud first, Mobile first</li>
+                        <li>Made for the Cloud first, Mobile first</li>
                         <li>Native Smartphone, Tablet, Google Glass support.</li>
                         <li>Browser support: Chrome, Firefox, Safari, IE</li>
                         <li>Rich, granular and stateless API set for data access</li>
-                        <li>Full API set for dynamic Template generation</li>
-                        <li>Grid-based scalability</li>
+                        <li>Full API set for dynamic Template (process) generation</li>
+                        <li>Secure, HTTPS communication throughout all communication paths</li>
+                        <li>Data Encryption</li>
+                        <li>Multi-tiered system ("Grid-like") architecture for high availability on Amazon Web Services</li>
+                        <li>Secured data back-ups on Amazon Web Services</li>
                         <li>Built for high volume media capture and brokering
                             <span><a href="#glass">See continuing video capture on Google Glass during job execution</a></span></li>
                     </ul>
@@ -392,14 +425,16 @@
 
               <div class="card">
                 <div class="card-header">
-                  Enterprise Users*
+                  Enterprises*
                 </div>
                 <div class="card-copy">
-                  <p><b class="large">$15 per user per month<br><span>Upgrade once you have an account</span></b></p>
-                    <p>$10 user/month after 100 users<br>
-                        $5 user/month after 1000 users<br>
-                        $2 user/month after 10000 users</p>
-                    <small>(*) Contact us if you are etc etc.</small>
+                <p><b class="large">Try FieldLogs Enterprise Free for 30 days</b></p>
+                  <p><b class="large">$25 per user per month<br><span>Upgrade once you have an account</span></b></p>
+                    <p>$20 user/month after 100 users<br>
+                        $15 user/month after 1000 users<br>
+                        $10 user/month after 5000 users<br/>
+                        Please enquire for Enterprise licenses</p>
+                    <small>(*) FieldLogs is currently free of charge for NGOs, academic research, or non-profit use. Full feature, unlimited. Contact us if you have a special situation.</small>
                 </div>
               </div>
             </div>
@@ -444,13 +479,34 @@
                             <select id="industry" class="pure-input-1">
                                 <option>Aerospace</option>
                                 <option>Agriculture</option>
-                                <option>Assembly</option>
-                                <option>Asset Management</option>
+                                <option>Automotive</option>
+                                <option>Construction</option>
+                                <option>Consumer goods</option>
+                                <option>Education</option>
+                                <option>Finance</option>
+                                <option>Food & Beverage</option>
+                                <option>Health Care Equipment & Services</option>
+                                <option>Insurance</option>
                                 <option>Government</option>
-                                <option>Healthcare</option>
+                                <option>Mining & Materials</option>
+                                <option>Non-profit (NGOs)</option>
+                                <option>Pharmaceuticals, Biotechnology & Life Sciences</option>
+                                <option>Retail</option>
+                                <option>Software</option>
+                                <option>Real Estate</option>
+                                <option>Telecom</option>
+                                <option>Transportation</option>
                                 <option>Oil & Gas</option>
                                 <option>Utilities</option>
-                                <option>None of the above</option>
+                            </select>
+                            <label for="use">Select your Industry</label>
+                            <select id="use" class="pure-input-1">
+                                <option>Asset Management</option>
+                                <option>Distributor</option>
+                                <option>Field Data Collection</option>
+                                <option>HSE (Health, Safety, Environment)</option>
+                                <option>Standard Work</option>
+                                <option>Don't know</option>
                             </select>
                          </div>                                              
                     </fieldset>

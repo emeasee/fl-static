@@ -12,7 +12,7 @@ HEADER
 ******************/
 header.navigation {
   $navigation-background: $dark-brown;
-  $navigation-color: transparentize(white, 0.3);
+  $navigation-color: white;
   $navigation-color-hover: white;
   $navigation-height: 90px;
   $navigation-nav-button-background: $base-accent-color;
@@ -35,7 +35,7 @@ header.navigation {
 
   .menu-wrapper {
     @include outer-container;
-    width: 95%;
+    width: 86%;
     position: relative;
     z-index: 9999;
     max-width: 90.5em;
@@ -59,7 +59,7 @@ header.navigation {
     background-image: url(../images/splash_logo_top_new.svg);
     background-position: left;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 90%;
 
     &.front{
       max-width: 180px;
@@ -70,7 +70,7 @@ header.navigation {
       height: $navigation-height;
 
         @include media ($large-screen) {
-            max-width: 300px;
+            max-width: 240px;
         }
     }
 
@@ -146,7 +146,7 @@ header.navigation {
     }
 
     a {
-      font-weight: 400;
+      font-weight: bold;
       color: $navigation-color;
 
       &:hover {
@@ -156,8 +156,19 @@ header.navigation {
   }
 
   .login{
+    float:right;
+    display: none;
+    margin-top: 2em;
+    margin-right: 2em;
+
     .logincall{
       cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+    
+    @include media($large-screen) {
+      display: inline-block;
     }
   }
 
@@ -167,7 +178,7 @@ header.navigation {
       //right: 0;
       //top: 0;
       //padding-right: 0em;
-        float:right;
+      //float:right;
 
         a.call {
         @include transition (all 0.2s ease-in-out);
@@ -251,14 +262,15 @@ HERO BANNER TOP
 .hero_new {
   $large-screen: 50em !default;
   align-items: center;
-  background-color: $dark-brown;
-  background-image: url("../images/bg1.png");
+  background-color: transparentize($dark-brown, 0.5);
+  //background-color: $dark-brown;
+  //background-image: url("../images/bg1.png");
   background-position: right;
   background-size: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: 50em;
+  min-height: 52em;
   max-width: 105em;
   margin: 0 auto;
 
@@ -269,15 +281,16 @@ HERO BANNER TOP
   }
 
   .hero-content {
-    max-width: 60em;
+    max-width: 50em;
     order:1;
     text-align: left;
     color: white;
-    padding: 11em 2em 8em 2em;
+    padding: 1em;
     margin: 0 5%;
+    margin-top: 3em;
 
     @include media($large-screen) {
-      padding: 10em 2em 3em 2em;
+      padding: 2em;
     }
 
     .hero-copy {
@@ -286,15 +299,24 @@ HERO BANNER TOP
         h1 {
             font-size: 1.6em;
             margin-bottom: 0.8em;
-            font-weight: 100;
-            //max-width: 580px;
+
             @include media($large-screen) {
                 font-size: 3em;
+            }
+        }
+        h3{
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 0.8em;
+
+            @include media($large-screen) {
+                font-size: 2em;
             }
         }
         p {
             margin: auto;
             font-size: 1em;
+            font-weight: 600;
             @include media($large-screen) {
                 font-size: 1em;
                 margin-bottom: 2em;
@@ -308,7 +330,6 @@ HERO BANNER TOP
     .hero-links{
         margin:0 auto;
         overflow: visible;
-        max-width: 95%;
         position:relative;
         a{
           @extend button;
@@ -515,7 +536,7 @@ MAIN CONTENT GENERAL
           margin-bottom: $base-font-size * 2;
           li{
             list-style-type: none;
-            margin: $base-font-size 0 0 0;
+            margin: $base-font-size/2 0 0 0;
             line-height: normal;
             font-size: $base-font-size + 0.1;
             span{
@@ -1396,12 +1417,9 @@ DROPDOWNS
         font-size: 0.7em;
         line-height: $dropdown-height;
         margin: 0;
-        padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+        padding: 0 ($dropdown-padding / 2);
         height: 32px;
 
-        @include media($large-screen) {
-            font-size: 1em;
-        }
     }
 
     .dropdown-button {
@@ -1420,7 +1438,7 @@ DROPDOWNS
         position: relative;
 
         @include media($large-screen) {
-            font-size: 1em;
+            font-size: 0.9em;
             padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
         }
     }

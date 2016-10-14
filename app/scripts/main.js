@@ -48,6 +48,18 @@ $( document ).ready(function() {
         Typekit.load();
     } catch (e) {}
 
+	 $('#slider1').smoothSlides({
+		 effectDuration: 10000,
+		 transitionDuration: 1000,
+		 effectModifier: 0.3,
+		 effectEasing: 'ease-in-out',
+		 captions: false,
+		 pagination: false,
+		 navigation: false,
+		 effect: 'zoomIn',
+		 matchImageSize: false
+	 });
+
      $('#js-expander-trigger').click(function(){
       $(this).toggleClass("expander-hidden");
      });
