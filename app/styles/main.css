@@ -2872,6 +2872,15 @@ MODAL BOX
       padding: 0 2em; }
   .modal .modal-inner .hide {
     display: none; }
+.modal select {
+  font-size: 1.2em; }
+.modal .showonagri {
+  display: none; }
+  .modal .showonagri input[type="checkbox"] {
+    display: inline; }
+  .modal .showonagri label {
+    font-size: 0.9em;
+    font-weight: 300; }
 .modal .modal-state:checked + .modal-window {
   opacity: 1;
   visibility: visible; }

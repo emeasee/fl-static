@@ -81,6 +81,14 @@ $( document ).ready(function() {
 		 }
 	 });
 
+	 $('#industry').on("change", function(){
+		 if ($(this).val() == "Agriculture") {
+			 $(".hero-signup .showonagri").show();
+		 } else{
+			 $(".hero-signup .showonagri").hide();
+		 }
+	 });
+
 
     $(".dropdown-button").click(function() {
         event.stopPropagation();

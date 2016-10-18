@@ -1363,6 +1363,23 @@ MODAL BOX
 
   }
 
+  select{
+    font-size: 1.2em;
+  }
+
+  .showonagri{
+    display: none;
+
+    input[type="checkbox"]{
+      display: inline;
+    }
+
+    label{
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+  }
+
   .modal-state:checked + .modal-window {
     opacity: 1;
     visibility: visible;
