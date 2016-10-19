@@ -1357,6 +1357,15 @@ MODAL BOX
         padding: 0 2em;
       }
     }
+
+    .dropdown{
+        width: 100%;
+
+        @include media ($medium-screen){
+          width: auto;
+        }
+      }
+
     .hide{
       display: none;
     }

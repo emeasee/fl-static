@@ -2870,6 +2870,11 @@ MODAL BOX
     margin-top: 1em; }
     .modal .modal-inner a.cta:last-child {
       padding: 0 2em; }
+  .modal .modal-inner .dropdown {
+    width: 100%; }
+    @media screen and (min-width: 40em) {
+      .modal .modal-inner .dropdown {
+        width: auto; } }
   .modal .modal-inner .hide {
     display: none; }
 .modal select {
