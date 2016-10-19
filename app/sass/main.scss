@@ -580,6 +580,7 @@ MAIN CONTENT GENERAL
       }
     }
     .image{
+      //position: relative;
       .l-box{
         img{
           max-width: none;
@@ -595,6 +596,8 @@ MAIN CONTENT GENERAL
       @include media($large-screen){
         .l-box{
           position: absolute;
+          //top:50%;
+          //transform: translateY(-50%);
           left: 40%;
           img{
             width: auto;
@@ -674,7 +677,7 @@ GRID ITEMS
     width: 50%;
     overflow: hidden;
     float: left;
-    padding: 2em;
+    padding: 1.2em;
     border-top: 0;
 //    border-bottom: $grid-item-border-size solid $grid-items-background;
 //    border-left: $grid-item-border-size /2 solid $grid-items-background;
@@ -706,13 +709,13 @@ GRID ITEMS
 
   .grid-item h1 {
       color: $grid-item-color;
-      font-size: 1.3em;
+      font-size: 1.1em;
       font-weight: bolder;
       margin-top: 1.5em;
       margin-bottom: .4em;
       @include media($large-screen) {
           margin-top: 3em;
-          font-size: 1.6em;
+          font-size: 1.4em;
       }
     }
 
