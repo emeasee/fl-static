@@ -51,7 +51,7 @@ $( document ).ready(function() {
 	 $('#slider1').smoothSlides({
 		 effectDuration: 10000,
 		 transitionDuration: 1000,
-		 effectModifier: 0.3,
+		 effectModifier: 1.2,
 		 effectEasing: 'ease-in-out',
 		 captions: false,
 		 pagination: false,
