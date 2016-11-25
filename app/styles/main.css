@@ -1959,13 +1959,13 @@ HERO BANNER TOP
       background-size: cover;
       justify-content: flex-start; } }
   .hero_new .hero-content {
-    max-width: 50em;
+    max-width: 54em;
     order: 1;
     text-align: left;
     color: white;
     padding: 1em;
     margin: 0 5%;
-    margin-top: 3em; }
+    margin-top: 1em; }
     @media screen and (min-width: 53.75em) {
       .hero_new .hero-content {
         padding: 2em; } }
@@ -1974,14 +1974,21 @@ HERO BANNER TOP
       margin: 0 auto; }
       .hero_new .hero-content .hero-copy h1 {
         font-size: 1.6em;
-        margin-bottom: 0.8em; }
+        margin-top: 0.2em; }
         @media screen and (min-width: 53.75em) {
           .hero_new .hero-content .hero-copy h1 {
-            font-size: 3em; } }
+            font-size: 2.8em; } }
+      .hero_new .hero-content .hero-copy h2 {
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 0.6em; }
+        @media screen and (min-width: 53.75em) {
+          .hero_new .hero-content .hero-copy h2 {
+            font-size: 2.3em; } }
       .hero_new .hero-content .hero-copy h3 {
         font-size: 1.2em;
         font-weight: 600;
-        margin-bottom: 0.8em; }
+        margin-bottom: 0.6em; }
         @media screen and (min-width: 53.75em) {
           .hero_new .hero-content .hero-copy h3 {
             font-size: 2em; } }
@@ -1991,8 +1998,8 @@ HERO BANNER TOP
         font-weight: 600; }
         @media screen and (min-width: 53.75em) {
           .hero_new .hero-content .hero-copy p {
-            font-size: 1em;
-            margin-bottom: 2em; } }
+            font-size: 1.1em;
+            margin-bottom: 1em; } }
     .hero_new .hero-content .hero-links {
       margin: 0 auto;
       overflow: visible;
@@ -2020,9 +2027,8 @@ HERO BANNER TOP
             margin: 1em 1em 0 0; } }
       .hero_new .hero-content .hero-links .platforms {
         float: left;
-        width: 100%;
         text-align: left;
-        padding: 1em 0; }
+        padding: 1.5em 0; }
         .hero_new .hero-content .hero-links .platforms i {
           margin-right: 0.5em; }
           .hero_new .hero-content .hero-links .platforms i.glass {
@@ -2878,7 +2884,7 @@ MODAL BOX
   .modal .modal-inner .hide {
     display: none; }
 .modal select {
-  font-size: 1.2em; }
+  font-size: 1em; }
 .modal .showonagri {
   display: none; }
   .modal .showonagri input[type="checkbox"] {

@@ -281,13 +281,13 @@ HERO BANNER TOP
   }
 
   .hero-content {
-    max-width: 50em;
+    max-width: 54em;
     order:1;
     text-align: left;
     color: white;
     padding: 1em;
     margin: 0 5%;
-    margin-top: 3em;
+    margin-top: 1em;
 
     @include media($large-screen) {
       padding: 2em;
@@ -298,16 +298,23 @@ HERO BANNER TOP
         margin: 0 auto;
         h1 {
             font-size: 1.6em;
-            margin-bottom: 0.8em;
-
+            margin-top: 0.2em;
             @include media($large-screen) {
-                font-size: 3em;
+                font-size: 2.8em;
+            }
+        }
+        h2{
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 0.6em;
+            @include media($large-screen) {
+                font-size: 2.3em;
             }
         }
         h3{
             font-size: 1.2em;
             font-weight: 600;
-            margin-bottom: 0.8em;
+            margin-bottom: 0.6em;
 
             @include media($large-screen) {
                 font-size: 2em;
@@ -318,8 +325,8 @@ HERO BANNER TOP
             font-size: 1em;
             font-weight: 600;
             @include media($large-screen) {
-                font-size: 1em;
-                margin-bottom: 2em;
+                font-size: 1.1em;
+                margin-bottom: 1em;
             }
         }
         @include media($medium-screen) {
@@ -366,9 +373,8 @@ HERO BANNER TOP
         }
         .platforms{
             float:left;
-            width: 100%;
             text-align: left;
-            padding: $base-font-size  0;
+            padding: $base-font-size * 1.5  0;
 
             i{
                 margin-right: $base-font-size /2;
@@ -1376,7 +1382,7 @@ MODAL BOX
   }
 
   select{
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .showonagri{
