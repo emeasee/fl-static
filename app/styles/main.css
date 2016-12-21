@@ -2886,7 +2886,8 @@ MODAL BOX
 .modal select {
   font-size: 1em; }
 .modal .showonagri {
-  display: none; }
+  display: none;
+  color: red; }
   .modal .showonagri input[type="checkbox"] {
     display: inline; }
   .modal .showonagri label {
