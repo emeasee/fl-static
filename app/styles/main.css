@@ -2715,6 +2715,8 @@ MODAL BOX
   max-width: 300px; }
 .modal input[type="checkbox"] {
   display: none; }
+.modal input.rememberme {
+  display: inherit; }
 .modal .text {
   color: #DB8A28;
   text-decoration: underline; }

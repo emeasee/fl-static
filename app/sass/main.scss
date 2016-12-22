@@ -1181,6 +1181,10 @@ MODAL BOX
     display: none;
   }
 
+  input.rememberme{
+    display: inherit;
+  }
+
   .btn {
     @extend button;
   }

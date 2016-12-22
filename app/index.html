@@ -67,7 +67,7 @@
                 <ul id="navigation-menu">
                     <li class=""><a href="mailto:contact@fieldlogs.com">Features</a></li>
                     <li class=""><a href="mailto:contact@fieldlogs.com">Pricing</a></li>
-                    <li class=""><a href="mailto:contact@fieldlogs.com">AppCentral</a></li>
+                    <!--<li class=""><a href="mailto:contact@fieldlogs.com">AppCentral</a></li>-->
                     <li class=""><a href="mailto:contact@fieldlogs.com">Contact</a></li>
                     <li class="sign-up"><a class="call">Sign Up</a></li>                   
                 </ul>
@@ -164,7 +164,7 @@
              <p class="go-grid">And many more...</p>
 
         </div>
-        <a onclick="javascript:navigateTo('library.html');return true;">Explore some examples from FieldLogs AppCentral <i class="fa fa-arrow-circle-right"></i></a><br><br>
+        <!--<a onclick="javascript:navigateTo('library.html');return true;">Explore some examples from FieldLogs AppCentral <i class="fa fa-arrow-circle-right"></i></a><br><br>-->
         <button class="call">Sign up now</button>
     </div>
 
@@ -379,7 +379,7 @@
                         <label for="pass">Enter a Password</label>
                         <input id="pass" type="password" class="pure-input-1" placeholder="Password">
                         <label for="confirm">Confirm your Password</label>
-                        <input type="password" class="pure-input-1" placeholder="Confirm Password">
+                        <input id="confirmPwd" type="password" class="pure-input-1" placeholder="Confirm Password">
                     </fieldset>
                     <fieldset>
                         <label for="region">Select your Region</label><br/>
@@ -453,6 +453,9 @@
                         <input id="email_2" type="email" placeholder="Your Email" class="pure-input-1">
                         <label for="pass">Enter a Password</label>
                         <input id="pass" type="password" class="pure-input-1" placeholder="Password">
+                        <div><label for="remember" class="pure-checkbox">
+                            <input class="rememberme" id="remember" type="checkbox"> #rememberMe#
+                        </label></div>
                     </fieldset>
                     <button type="submit">Login</button>
                 </form>
